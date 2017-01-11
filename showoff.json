@@ -1,0 +1,45 @@
+{
+    "name": "POO - Senac",
+    "author": "Paulo Rosa",
+    "sections": [
+        {
+            "section": "Curso"
+        },
+        {
+            "section": "Classes_e_Objetos"
+        },
+        {
+            "section": "Herança"
+        },
+        {
+            "section": "Polimorfismo"
+        },
+        {
+            "section": "Abstração"
+        },
+        {
+            "section": "Associação_Simples"
+        },
+        {
+            "section": "Teste_Unitário"
+        },
+        {
+            "section": "Inicialização_Objeto"
+        },
+        {
+            "section": "Vinculação_Dinâmica"
+        },
+        {
+            "section": "Coleções"
+        },
+        {
+            "section": "Tratamento_de_Exceções"
+        },
+        {
+            "section": "ADO"
+        },
+        {
+            "section": "Provas"
+        }
+    ]
+}
