@@ -8,30 +8,42 @@
 Exercitar a _Programação Orientada a Objetos_ utilizando as etapas do 
 desenvolvimento de software orientado a objetos com UML.
 
-<!SLIDE>
+
+<!SLIDE incremental>
 # Formato
-
-*1a. Parte* (antes do intervalo)
-
-* Aula Teórica
-* Correção de Exercícios
-* Exemplos Professor
-
-<!SLIDE>
-# Formato
-
-
 ## 1a. Parte (antes do intervalo)
-
 * Aula Teórica
-* Correção de Exercícios
 * Exemplos Professor
+* Correção de Exercícios
 
-## 2a. Parte_ (depois do intervalo)
 
+<!SLIDE incremental>
+# Formato
+## 2a. Parte (depois do intervalo)
 * Aula Prática 
 * Exemplos Professor
-* Exercícios Alunos
+* Atividade Alunos na Sala de Aula
+* Divulgação Exercícios Extra-Classe
+* Divulgação ADOs
+
+
+<!SLIDE incremental>
+# Exercícios Sala de Aula
+* Aplicação da Teoria
+* Desenvolvido pelos Alunos (Auxílio Professor)
+* Não precisa ser individual
+* Não vale nota
+* Importante praticar
+* Correção na própria aula (quando possível)
+* Caso o aluno deseje uma correção, o exercício deverá ser entregue até o final da aula, via email.
+
+
+<!SLIDE incremental>
+# Exercícios Extra Classes
+* Lista de exercícios relacionados com a aula
+* Não há atribuição de nota
+* Não é necessário entregar
+* Caso o aluno deseje que seus exercícios sejam corrigidos, deverá entregar por email para o professor.
 
 
 <!SLIDE incremental>
@@ -45,48 +57,34 @@ desenvolvimento de software orientado a objetos com UML.
 * Entrega pelo Blackboard
 * Entrega Atrasada: Nota Zero
 
-<!SLIDE incremental>
-# Exercícios Sala de Aula
-* Aplicação da Teoria
-* Desenvolvido pelos Alunos (Auxílio Professor)
-* Não precisa ser individual
-* Não vale nota
-* Importante praticar
-* Correção na própria aula (quando possível)
-* Caso o aluno deseje uma correção, o exercício deverá ser entregue até o final da aula, via email.
 
 <!SLIDE incremental>
-# Exercícios Extra Classes
-* Lista de exercícios relacionados com a aula
-* Não há atribuição de nota
-* Não é necessário entregar
-* Caso o aluno deseje que seus exercícios sejam corrigidos, deverá entregar por email para o professor.
-
-
-
-<!SLIDE>
 # Provas
-Provas Escritas
-P1 (20%) - P2 (20%) - P3 (40%)
-Prova Substitutiva - Semana 18 (matéria inteira)
-Prova Substitutiva somente para quem faltou em Prova
-Divulgação Notas - Semana 18
-Formato: múltipla escolha, V/F, discursiva, implementação, modelagem UML.
+* Provas Escritas (Sem Computador)
+* Sem Consulta
+* 3 Provas
+* P1 (40%) - P2 (40%)
+* Prova Substitutiva - Semana 18 (matéria inteira)
+* Prova Substitutiva somente para quem faltou em Prova
+* Divulgação Notas - na semana seguinte (Black e entrega)
+* Formato: múltipla escolha, V/F, discursiva, implementação, modelagem UML.
 
 
 <!SLIDE>
+# Composição da Nota
+* PI - Projeto Integrador III
+* P1 - Nota da Prova 1
+* P2 - Nota da Prova 2
+* A - Média Aritméticas das Notas das ADOs
 
-Composição Nota com Projeto Integrador
-Média = P1*0.2 +P2*0.2 +P3*0.4 + A*0.1 + PI*0.1
-PI - Projeto Integrador III
-P1, P2 e P3 - Notas das Provas
-A - Média das Notas das ADOs
+<!SLIDE>
+# Composição Nota com Projeto Integrador
+.callout Média = P1*0.2 +P2*0.2 +P3*0.4 + A*0.1 + PI*0.1
 
-Composição Nota sem Projeto Integrador
-Média = P1*0.2 +P2*0.2 +P3*0.5 + A*0.1
-PI - Projeto Interativo III
-P1 e P2 - Notas das Provas
-A - Média das Notas das ADOs
+<!SLIDE>
+# Composição Nota sem Projeto Integrador
+.callout Média = P1*0.2 +P2*0.2 +P3*0.5 + A*0.1
+
 
 
 <!SLIDE>
