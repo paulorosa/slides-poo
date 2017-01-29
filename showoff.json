@@ -1,6 +1,8 @@
 {
     "name": "POO - Senac",
     "author": "Paulo Rosa",
+      "highlight": "agate",
+
     "sections": [
         {
             "section": "Curso"
@@ -27,7 +29,10 @@
             "section": "Teste_Unitário"
         },
         {
-            "section": "Inicialização_Objeto"
+            "section": "Inicialização_Objetos"
+        },
+        {
+            "section": "Interface"
         },
         {
             "section": "Vinculação_Dinâmica"
