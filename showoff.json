@@ -5,52 +5,58 @@
 
     "sections": [
         {
-            "section": "Curso"
+            "section": "*** Curso ***"
         },
         {
-            "section": "Compilador"
+            "section": "*** Compilador ***"
         },
         {
-            "section": "Conceitos Gerais"
+            "section": "*** Conceitos Gerais ***"
         },
         {
-            "section": "Classes_e_Objetos"
+            "section": "Paradigma_Poo"
         },
         {
-            "section": "Herança"
+            "section": "***Java***"
         },
         {
-            "section": "Polimorfismo"
+            "section": "*** Classes_e_Objetos ***"
         },
         {
-            "section": "Abstração"
+            "section": "***Herança*** (X)"
         },
         {
-            "section": "Associação_Simples"
+            "section": "***Polimorfismo*** (X)"
         },
         {
-            "section": "Teste_Unitário"
+            "section": "***Abstração*** (X)"
         },
         {
-            "section": "Inicialização_Objetos"
+            "section": "***Associação_Simples*** (X)"
         },
         {
-            "section": "Interface"
+            "section": "***Teste_Unitário*** (X)"
         },
         {
-            "section": "Vinculação_Dinâmica"
+            "section": "***Inicialização_Objetos*** (X)"
         },
         {
-            "section": "Coleções"
+            "section": "***Interface*** (X)"
         },
         {
-            "section": "Tratamento_de_Exceções"
+            "section": "***Vinculação_Dinâmica*** (X)"
         },
         {
-            "section": "ADO"
+            "section": "***Coleções*** (X)"
         },
         {
-            "section": "Provas"
+            "section": "***Tratamento_de_Exceções*** (X)"
+        },
+        {
+            "section": "***ADO*** (X)"
+        },
+        {
+            "section": "***Provas*** (X)"
         }
     ]
 }
