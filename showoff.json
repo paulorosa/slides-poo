@@ -5,16 +5,16 @@
 
     "sections": [
         {
-            "section": "*** Curso ***"
+            "section": "Estrutura do Curso"
         },
         {
-            "section": "*** Compilador ***"
+            "section": "Compilador"
         },
         {
-            "section": "*** Conceitos Gerais ***"
+            "section": "Paradigmas de Programação"
         },
         {
-            "section": "Paradigma_Poo"
+            "section": "Paradigma POO"
         },
         {
             "section": "***Java***"

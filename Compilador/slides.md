@@ -1,58 +1,55 @@
 <!SLIDE section center>
 # Papel do Compilador em relação do Computador
 
-<!SLIDE>
+<!SLIDE incremental>
 # Computador
 
-* efetuar cálculos complexos, repetidos, com rapidez e confiabilidade
-* entreter com jogos e informações de multimídia
-* manipular contas bancárias
-* manipular cadastro de alunos
-* armazenar e procurar informações em grandes volumes de dados
+.callout.question O que o computador é capaz de fazer?
 
-![.fancyborder](../_images/tela_computador.png)
+* Efetuar cálculos complexos, repetidos, com rapidez e confiabilidade;
+* Entreter as pessoas com jogos e informações de multimídia;
+* Manipular contas bancárias;
+* Manipular cadastro de alunos;
+* Asrmazenar e procurar informações em grandes volumes de dados;
 
 
 <!SLIDE>
-# Computador
+# Programa de Computador (Software)
 
-* O que faz um computador ser capaz de efetuar estas tarefas são seus softwares (ou programas de computadores).
+O que faz um computador ser capaz de efetuar tarefas são os Programas de Computadores.
+
+**Programas de Computadores** são _conjuntos de comandos e regras_ que um programador deve conhecer para poder manipular os recursos de um computador.
 
 O programa diz ao computador o que fazer:
-
 
 * ler de arquivo
 * exibir informações no monitor
 * efetuar cálculos usando o processsador
 * etc...
 
-**Programas** são _conjuntos de comandos e regras_ que um programador deve conhecer para poder manipular os recursos de um computador.
-
-
 
 <!SLIDE>
-# Computador
+# Linguagem de Programação
 
-Programas são escritos usando linguagens de programação, que definem regras específicas e bem determinadas e um conjunto de operadores e comandos que podem ser usados.
+Programas de Computadores são escritos usando _Linguagens de Programação_, que definem regras específicas 
+e bem determinadas para que um conjunto de operadores e comandos possam ser utilizados.
 
-Colocar imagem
-
-
-
+![.fancyborder](_images/linguagem_programacao.png)
 
 
 <!SLIDE>
 # Código-Fonte
 
-O conteúdo dos programas, escrito por programadores de forma que outros programadores possam ler e entendê-los, também é chamado de código ou código-fonte.
+O conteúdo dos programas, escrito por programadores de forma que outros programadores possam ler e entendê-los,
+também é chamado de código ou _Código-Fonte_.
 
-Colocar imagem
-
+![.fancyborder](_images/codigo_fonte.png)
 
 
 <!SLIDE>
 # Compilação
 
-Para que o código seja executado por um computador, ele deve ser traduzido da linguagem de programação (alto nível) para uma linguagem que possa ser compreendida pelo computador (baixo nível) através de um compilador.
+Para que o código seja executado por um computador, ele deve ser traduzido da linguagem de programação (alto nível)
+para uma linguagem que possa ser compreendida pelo computador (baixo nível) através de um compilador.
 
-Colocar imagem
+![.fancyborder](_images/compilacao.png)
