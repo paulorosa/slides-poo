@@ -5,25 +5,31 @@
 
     "sections": [
         {
-            "section": "Estrutura do Curso"
+            "section": "**Estrutura do Curso"
         },
         {
-            "section": "Compilador"
+            "section": "**Compilador"
         },
         {
-            "section": "Paradigmas de Programação"
+            "section": "**Paradigmas de Programação"
         },
         {
-            "section": "Paradigma POO"
+            "section": "**Paradigma POO"
         },
         {
-            "section": "***Java***"
+            "section": "***Java"
+        },
+        {
+            "section": "***Nomenclatura"
+        },
+        {
+            "section": "***Acoplamento e Coesão"
         },
         {
             "section": "*** Classes_e_Objetos ***"
         },
         {
-            "section": "***Herança*** (X)"
+            "section": "***Herança"
         },
         {
             "section": "***Polimorfismo*** (X)"
@@ -47,7 +53,7 @@
             "section": "***Vinculação_Dinâmica*** (X)"
         },
         {
-            "section": "***Coleções*** (X)"
+            "section": "Coleções"
         },
         {
             "section": "***Tratamento_de_Exceções*** (X)"
