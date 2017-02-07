@@ -1,6 +1,6 @@
 <!SLIDE section center>
 # Interface
-## Todos slides copiadoss
+## Todos slides copiados
 
 <!SLIDE>
 # Slide Inicial (de apresentação)

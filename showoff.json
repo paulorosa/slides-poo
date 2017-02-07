@@ -38,25 +38,34 @@
             "section": "***Abstração*** (X)"
         },
         {
-            "section": "***Associação_Simples*** (X)"
+            "section": "***Associação"
         },
         {
-            "section": "***Teste_Unitário*** (X)"
+            "section": "***Modificadores"
+        },
+        {
+            "section": "Pacotes"
         },
         {
             "section": "***Inicialização_Objetos*** (X)"
         },
         {
-            "section": "***Interface*** (X)"
+            "section": "***Interface"
         },
         {
-            "section": "***Vinculação_Dinâmica*** (X)"
+            "section": "***Vinculação Dinâmica"
         },
         {
-            "section": "Coleções"
+            "section": "***Estáticos"
         },
         {
-            "section": "***Tratamento_de_Exceções*** (X)"
+            "section": "**Coleções"
+        },
+        {
+            "section": "***Tratamento Exceção"
+        },
+        {
+            "section": "***Teste de Software"
         },
         {
             "section": "***ADO*** (X)"
