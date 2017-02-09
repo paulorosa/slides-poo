@@ -4,24 +4,13 @@
       "highlight": "agate",
 
     "sections": [
-        {
-            "section": "**Estrutura do Curso"
-        },
-        {
-            "section": "**Compilador"
-        },
-        {
-            "section": "**Paradigmas de Programação"
-        },
-        {
-            "section": "**Paradigma POO"
-        },
-        {
-            "section": "***Java"
-        },
-        {
-            "section": "***Nomenclatura"
-        },
+        {"section": "AULA 01"},
+        {"section": "Estrutura do Curso"},
+        {"section": "Compilador"},
+        {"section": "Paradigmas de Programação"},
+        {"section": "Paradigma POO"},
+        {"section": "Java"},
+        {"section": "Nomenclatura"},
         {
             "section": "***Acoplamento e Coesão"
         },
@@ -29,7 +18,7 @@
             "section": "***Classes e Objetos"
         },
         {
-            "section": "Herança"
+            "section": "***Herança"
         },
         {
             "section": "***Polimorfismo*** (X)"

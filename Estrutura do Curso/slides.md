@@ -4,6 +4,7 @@
 
 <!SLIDE>
 # Objetivo
+
 Exercitar a _Programação Orientada a Objetos_ utilizando as etapas do 
 desenvolvimento de software orientado a objetos com UML.
 
@@ -12,7 +13,9 @@ desenvolvimento de software orientado a objetos com UML.
 
 <!SLIDE incremental>
 # Formato - 1a. Parte
+
 * Antes do intervalo - 19:10h / 20:50h
+* Sala de Aula Normal (Sem Computador)
 * Aula Teórica
 * Exemplos Professor
 * Correção de Exercícios
@@ -20,7 +23,10 @@ desenvolvimento de software orientado a objetos com UML.
 
 <!SLIDE incremental>
 # Formato - 2a. Parte
+
 * Depois do intervalo - 21:05h / 22:45h
+* Sala de Laboratório
+* Aula Teórica (algumas aulas)
 * Aula Prática 
 * Exemplos Professor
 * Atividade Alunos na Sala de Aula
@@ -30,6 +36,7 @@ desenvolvimento de software orientado a objetos com UML.
 
 <!SLIDE incremental>
 # Exercícios Sala de Aula
+
 * Aplicação da Teoria
 * Desenvolvido pelos Alunos (Auxílio Professor)
 * Não precisa ser individual
@@ -41,6 +48,7 @@ desenvolvimento de software orientado a objetos com UML.
 
 <!SLIDE incremental>
 # Exercícios Extra Classes
+
 * Conjunto de exercícios relacionados com a aula para praticar
 * Não há atribuição de nota
 * Não é necessário entregar
@@ -49,6 +57,7 @@ desenvolvimento de software orientado a objetos com UML.
 
 <!SLIDE incremental>
 # ADO
+
 * 3 atividades durante o curso
 * 1 semana para entrega
 * Entrega Individual
@@ -61,6 +70,7 @@ desenvolvimento de software orientado a objetos com UML.
 
 <!SLIDE incremental>
 # Provas
+
 * Provas Escritas (Sem Computador)
 * Sem Consulta
 * 2 Provas
@@ -73,10 +83,11 @@ desenvolvimento de software orientado a objetos com UML.
 
 <!SLIDE >
 # Composição da Nota
-* PI - Projeto Integrador III
+
 * P1 - Nota da Prova 1
 * P2 - Nota da Prova 2
 * A - Média Aritméticas das Notas das ADOs
+* PI - Projeto Integrador III
 
 ## Com Projeto Integrador
 .callout Média = P1*0.2 +P2*0.2 +P3*0.4 + A*0.1 + PI*0.1
@@ -87,8 +98,8 @@ desenvolvimento de software orientado a objetos com UML.
 
 
 <!SLIDE>
-# Previsão de Conteúdo de Aulas
-## 
+# Conteúdo de Aulas
+## Programação 
 
 <table border=1>
 <tr><th align=center>Aula</th><th>Tema</th> <th>Aula</th><th>Tema</th></tr>
@@ -105,9 +116,6 @@ desenvolvimento de software orientado a objetos com UML.
 </table>
 
 
-
-
-
 <!SLIDE>
 # Ambiente de Desenvolvimento
 
@@ -117,3 +125,18 @@ desenvolvimento de software orientado a objetos com UML.
 
 * Ferramenta de Modelagem também
 * Obrigatório uso da linguagem Java
+
+
+<!SLIDE>
+# Linguagem de Programação
+
+Será utilizado a linguagem de programação Java.
+
+<!SLIDE>
+# IDE de Desenvolvimento
+
+
+
+~~~SECTION:notes~~~
+teste
+~~~ENDSECTION~~~
