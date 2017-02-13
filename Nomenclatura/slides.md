@@ -11,15 +11,12 @@ Cada linguagem de programação possui suas convenções de nomenclatura.
 
 
 <!SLIDE>
-# 
+# Motivos para seguir uma Nomenclatura
 
 * Nomes bem escolhidos tornam o código mais legível.
 * Código mais legível diminui a necessidade de comentários que expliquem o que o código faz.
 * O código pode ser a própria documentação
 
-Google Java Style Guide
-
-https://google.github.io/styleguide/javaguide.html
 
 
 <!SLIDE>
@@ -27,6 +24,12 @@ O nome deve ser:
 claro (sem ambiquidade)
 simples (composto com mínimo de palavras)
 único (referir-se a um único conceito).
+
+
+
+Google Java Style Guide
+
+https://google.github.io/styleguide/javaguide.html
 
 
 

@@ -2,36 +2,37 @@
 # Programação Orientada a Objetos
 ## Prof. Paulo Rosa
 
+
 <!SLIDE>
 # Objetivo
 
 Exercitar a _Programação Orientada a Objetos_ utilizando as etapas do 
 desenvolvimento de software orientado a objetos com UML.
 
-<i>Fonte: Plano de Ensino</i>
+<i>Fonte: Plano de Ensino (a ser disponibilizado no Black)</i>
+
 
 
 <!SLIDE incremental>
-# Formato - 1a. Parte
+# Formato das Aulas
 
-* Antes do intervalo - 19:10h / 20:50h
-* Sala de Aula Normal (Sem Computador)
 * Aula Teórica
-* Exemplos Professor
-* Correção de Exercícios
-
-
-<!SLIDE incremental>
-# Formato - 2a. Parte
-
-* Depois do intervalo - 21:05h / 22:45h
-* Sala de Laboratório
-* Aula Teórica (algumas aulas)
 * Aula Prática 
 * Exemplos Professor
+* Correção de Exercícios
 * Atividade Alunos na Sala de Aula
 * Divulgação Exercícios Extra-Classe
 * Divulgação ADOs
+
+
+<!SLIDE incremental>
+# Conteúdo das Aulas
+
+* slides sincronizados no computador do aluno
+* endereço disponibilizado a cada aula
+* slides disponibilizados no black 
+* 1 único arquivo contendo todos os slides
+* arquivo atualizado toda aula
 
 
 <!SLIDE incremental>
@@ -58,12 +59,8 @@ desenvolvimento de software orientado a objetos com UML.
 <!SLIDE incremental>
 # ADO
 
-* 3 atividades durante o curso
-* 1 semana para entrega
-* Entrega Individual
-* Notas participam da nota final
-* Data da divulgação: ao final da aula
-* Data da entrega: um dia antes da próxima aula
+* 4 atividades durante o curso
+* Participam da nota final
 * Entrega pelo Blackboard
 * Entrega Atrasada: Nota Zero
 
@@ -73,9 +70,7 @@ desenvolvimento de software orientado a objetos com UML.
 
 * Provas Escritas (Sem Computador)
 * Sem Consulta
-* 2 Provas
-* P1 (40%) - P2 (40%)
-* Prova Substitutiva - Semana 18 (matéria inteira)
+* 2 Provas (P1 e P2)
 * Prova Substitutiva somente para quem faltou em Prova
 * Divulgação Notas - na semana seguinte (Black e entrega)
 * Formato: múltipla escolha, V/F, discursiva, implementação, modelagem UML.
@@ -87,13 +82,8 @@ desenvolvimento de software orientado a objetos com UML.
 * P1 - Nota da Prova 1
 * P2 - Nota da Prova 2
 * A - Média Aritméticas das Notas das ADOs
-* PI - Projeto Integrador III
 
-## Com Projeto Integrador
-.callout Média = P1*0.2 +P2*0.2 +P3*0.4 + A*0.1 + PI*0.1
-
-## Sem Projeto Integrador
-.callout Média = P1*0.2 +P2*0.2 +P3*0.5 + A*0.1
+.callout Média = P1 * 0.4 + P2 * 0.5 + A * 0.1
 
 
 
@@ -103,28 +93,26 @@ desenvolvimento de software orientado a objetos com UML.
 
 <table border=1>
 <tr><th align=center>Aula</th><th>Tema</th> <th>Aula</th><th>Tema</th></tr>
-<tr><td>1</td><td>Java e POO</td>           <td>10</td><td>Acoplamento e Coesão</td></tr>
-<tr><td>2</td><td>Herança</td>              <td>11</td><td>Coleções</td></tr>
-<tr><td>3</td><td>Polimorfismo</td>         <td>12</td><td>Exercícios</td></tr>
-<tr><td>4</td><td>Abstração</td>            <td>13</td><td>Prova P2</td></tr>
-<tr><td>5</td><td>Exercícios</td>           <td>14</td><td>Vinculação</td></tr>
-<tr><td>6</td><td>Prova P1</td>             <td>15</td><td>Tratamento de Erros</td></tr>
-<tr><td>7</td><td>Associação</td>           <td>16</td><td>Exemplos</td></tr>
-<tr><td>8</td><td>Interface</td>            <td>17</td><td>Semana PI</td></tr>
-<tr><td>9</td><td>Interface</td>            <td>18</td><td>Prova Substitutiva
-</td></tr>
+<tr><td>1</td><td>Classes e Objetos</td>           <td>10</td><td>Composição e Agregação</td></tr>
+<tr><td>2</td><td>Herança</td>              <td>11</td><td>Interface</td></tr>
+<tr><td>3</td><td>Polimorfismo</td>         <td>12</td><td>Acoplamento e Coesão</td></tr>
+<tr><td>4</td><td>Abstração</td>            <td>13</td><td>Tratamento de Erros</td></tr>
+<tr><td>5</td><td>Associação Simples</td>           <td>14</td><td>Testes Unitários</td></tr>
+<tr><td>6</td><td>Modificadores de Acesso</td>             <td>15</td><td>Coleções</td></tr>
+<tr><td>7</td><td>Exercícios</td>           <td>16</td><td>Exercícios</td></tr>
+<tr><td>8</td><td>Prova P1</td>            <td>17</td><td>Prova P2</td></tr>
+<tr><td>9</td><td>Vinculação Dinâmica</td>            <td>18</td><td>Prova Substitutiva</td></tr>
 </table>
 
 
 <!SLIDE>
 # Ambiente de Desenvolvimento
 
-* IDE pode ser usada qualquer uma
+Durante o curso serão utilizadas os seguintes tipos de software.
 
-.callout.info O professor utilizará o Eclipse.
-
-* Ferramenta de Modelagem também
-* Obrigatório uso da linguagem Java
+* Linguagem de Programação
+* IDE de desenvolvimento
+* Ferramenta de Modelagem UML
 
 
 <!SLIDE>
@@ -132,11 +120,40 @@ desenvolvimento de software orientado a objetos com UML.
 
 Será utilizado a linguagem de programação Java.
 
+A versão a ser utilizada será a disponibilizada nos computadores do laboratório.
+
+
 <!SLIDE>
 # IDE de Desenvolvimento
 
+Qualquer IDE pode ser utilizada durante o curso pelos alunos.
 
+.callout.info O professor utilizará o Eclipse.
+
+
+<!SLIDE>
+# Ferramenta de Modelagem UML
+
+Qualquer Ferramenta de Modelagem UML pode ser utilizada durante o curso pelos alunos.
+
+.callout.info O professor utilizará o Astah.
+
+
+
+<!SLIDE form=questoes_estrutura_curso>
+# Pesquisa Simples
+##
+   
+linguagens -> Quais as linguagens que já programou? (Coloque as linguagens separadas por vírgulas) =___[50]
+  
+  
 
 ~~~SECTION:notes~~~
-teste
+
+
+~~~FORM:questoes_estrutura_curso~~~
+
 ~~~ENDSECTION~~~
+
+
+

@@ -1,66 +1,85 @@
+
 <!SLIDE section center>
 # Paradigma de Programação Orientado a Objetos
 
-<!SLIDE>
+<!SLIDE section >
 # Definição
-A Programação Orientada a Objetos é um paradigma de Programação de Computadores que utiliza o  conceito de Objetos como elementos centrais para representar e processar dados usados nos programas.
 
-
-<!SLIDE>
-# Histórico
-Os conceitos de POO surgiram no final da década de 1960.
-
-Primeiras Ideias de Orientação a Objetos
-Linguagem Simula-68  em 1968
-
-Linguagem Simula-68 introduziu os conceitos de objetos e mensagens para a construção de programas.
+A Programação Orientada a Objetos (POO) é um paradigma de Programação de Computadores que utiliza o  conceito de Objetos como elementos centrais para representar e processar dados usados nos programas.
 
 
 
-<!SLIDE>
+
+<!SLIDE incremental>
 # Histórico
 
-Programação Orientada a Objetos
-	Criador do termo
-Alan Kay (Linguagem Smalltalk nos anos 70)
-Desenvolvida no laboratório de pesquisa da Xerox, EUA.
+* **Final da década de 1960**: surgimento dos primeiros conceitos de POO.
+* **1968**: Primeiras Ideias de Orientação a Objetos (Linguagem Simula-68)
+ * Linguagem Simula-68 introduziu os conceitos de objetos e mensagens para a construção de programas.
+* **Década de 70**: Criação do Termo Programação Orientada a Objetos
+  * Criador do termo: Alan Kay
+* **Década de 70**: Criação da Linguagem Smalltalk
+ * Desenvolvida no laboratório de pesquisa da Xerox, EUA.
+* **Década de 90**: Popularização do Paradigma
+ * Influência grande das Linguagens C++ e Java
 
-A popularização ocorreu durante os anos 1980 e 1990 com
-as linguagens C++ e Java.
 
 
- * Criação: Década de 60
- * Confusão: Década de 80
- * Amadurecimento: Década de 90
+
+<!SLIDE>
+# Características Orientadas a Objetos
+
+.callout.question Quais as caracteríscas devem existir em uma Linguagem de programação para identificá-la como Orientada a Objetos?
+
+Esta questão gerou muita controvérsia nos Anos 80.
+
+
+
+
+<!SLIDE incremental>
+# Características Orientadas a Objetos
+##  Artigo OOPSLA
+
+De acordo com o artigo OOPSLA (publicado em 1987), de Peter Wegner, para uma linguagem ser Orientada a Objetos ela precisa:
+
+* Ser baseada em Objetos
+* Ser baseada em Classes
+* Permitir Herança
+
+Dimensions of object-based language design (http://dl.acm.org/citation.cfm?id=38823)
+
+
+
+
+<!SLIDE incremental>
+# Características Orientadas a Objetos
+## Outras Opiniões
+
+Além das anteriores, alguns autores também consideram que as seguintes características devem estar presentes em uma linguagem orientada a objetos:
+
+* Vinculação dinâmica (late binding)
+* Coleta automática de lixo (garbage collection)
+* Herança múltipla
+* Agregação
+
 
 
 <!SLIDE>
-# O que faz uma Linguagem Orientada a Objetos?
+# Linguagens
 
-Assunto controverso nos Anos 80.
-Resolvido em 87 - Artigo OOPSLA - Peter Wegner
-Para uma linguagem ser Orientada a Objetos ela precisa:
-Ser baseada em Objetos
-Ser baseaada em Classes
-Permitir Herança
-Outras Opiniões:
-enlaçe dinâmico, tardio (late binding)
-Coleta automática de lixo
-Herança múltipla
-Agregação
-
-<!SLIDE>
-# TIOBE Index for February 2016
-## Índice é um indicador da popularidade de linguagens de programação
-
-incluir imagem
-
-<!SLIDE>
-# Linguagens de Programação Orientada a Objetos
-
-colocar imagem ou a lista das linguagens
-
-.callout https://pt.wikipedia.org/wiki/Categoria:Linguagens_de_programação_orientadas_a_objetos
+ * C++
+ * C#
+ * Java
+ * Groovy
+ * Objective C
+ * R
+ * Ruby (multiparadigma)
+ * Scala (Multiparadigma)
+ * Simula
+ * Smalltalk
+ * ...
+ 
+<p align=right><i><font size=3>Fonte: https://pt.wikipedia.org/wiki/Categoria:Linguagens_de_programação_orientadas_a_objetos</font></i></p>
 
 
 <!SLIDE>
@@ -69,7 +88,6 @@ colocar imagem ou a lista das linguagens
 No Paradigma de Orientação a Objetos, um programa é visto como um **conjunto de objetos** que se comunicam através de mensagens.
 
 Um programa OO possui objetos que colaboram entre si, executando tarefas específicas em busca de um objetivo comum.
-
 
 
 <!SLIDE>
@@ -81,7 +99,7 @@ A POO está sedimentada sobre 4 Pilares.
 * **Abstração**
 * **Encapsulamento**
 
-colocar imagem
+
 
 
 <!SLIDE>
@@ -89,7 +107,7 @@ colocar imagem
 
 Mecanismo pelo qual uma classe pode derivar de outra classe, aproveitando seus comportamentos e estados.
 
-colocar imagem
+![.fancyborder](_images/heranca.png)
 
 Os animais são divididos em uma hierárquia de categorias, sendo que a mais inferior herda a classificação das categorias superiores.
 
@@ -101,7 +119,7 @@ Os animais são divididos em uma hierárquia de categorias, sendo que a mais inf
 
 Princípio pelo qual classes derivadas de uma mesma superclasse podem invocar método que têm a mesma identificação mas comportamento distintos
 
-colocar imagem
+![.fancyborder](_images/pilimorfismo.png)
 
 Todos animais emitem algum som, mas cada animal possui sua forma de emitir som.
 
@@ -112,10 +130,12 @@ Todos animais emitem algum som, mas cada animal possui sua forma de emitir som.
 
 Consiste na separação de aspectos internos e externos de um objeto.
 
-colocar imagem
+![.fancyborder](_images/encapsulamento.png)
 	
 Não é necessário saber como funciona internamente um motor para utilizá-lo.
 
+
+http://techblog.desenvolvedores.net/2011/01/17/encapsulamento-poo/
 
 
 <!SLIDE>
@@ -123,6 +143,7 @@ Não é necessário saber como funciona internamente um motor para utilizá-lo.
 
 É a habilidade de concentrar nos aspectos essenciais de um contexto qualquer, ignorando características menos importantes.
 
+![.fancyborder](_images/abstracao.png)
 
 Quando um médico torna-se especialista em algum órgão do nosso corpo, ele abstrai sem desconsiderar as influências dos outros órgãos e foca apenas sua atenção nesse órgão.
 
@@ -185,10 +206,11 @@ Imagens de exemplo slide 13
 
 <!SLIDE>
 # Objetos
+## Características
 
 Objetos possuem características pelas quais os identificamos e finalidades para as quais os utilizamos.
-Em OO:
-Características = Atributos
+
+.callout Características = Atributos
 
 
 Imagens de exemplo slide 14
@@ -197,12 +219,12 @@ Imagens de exemplo slide 14
 
 <!SLIDE>
 # Objetos
+## Comportamentos
+
 Objetos possuem comportamentos associados.
-Em OO:
-Comportamentos = Métodos
 
+.callout Comportamentos = Métodos
 
-Imagens de exemplo slide 15
 
 
 <!SLIDE>
@@ -407,4 +429,16 @@ Princípio pelo qual duas ou mais classes derivadas de uma mesma superclasse pod
 <!SLIDE>
 # Pacotes (ou Namespaces)
 São referências para organização lógica de classes e interfaces.
+
+Dimensions of Object-Based Language Design 
+Peter Wegner 
+Department of Computer Science 
+Brown University 
+168 OOPSLA ‘87 Proceedings October 4-8,1987 S	
+http://www.cse.msu.edu/~stire/cse891/wegner.pdf
+
+Concepts and Paradigms of Object-Oriented Programming 
+Expansion of Oct 400PSLA-89 Keynote Talk 
+Peter Wegner, Brown University 
+http://www.cs.technion.ac.il/users/yechiel/Hassava/OOP-material/1990--p7-wegner.pdf
 
