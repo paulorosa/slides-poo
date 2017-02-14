@@ -89,23 +89,8 @@ De acordo com a ACM, podem ser classificados em:
 
 <!SLIDE>
 # Programação Imperativa
-* Linguagens expressam sequências de comandos que realizam transformações sobre dados.
 
-
-<!SLIDE>
-# Programação Declarativa
-* Linguagens que não possuem conceitos de 
- * sequências de comandos
- * atribuição
-* Linguagens Funcionais
- * ênfase em valores computados por funções
-
-* Linguagens Lógicas
- * ênfase em axiomas lógicos
-
-
-<!SLIDE>
-# Paradigmas Imperativos
+Linguagens expressam sequências de comandos que realizam transformações sobre dados.
 
 * Procedural
  * Programas são executados por chamadas sucessivas e procedimentos separados.
@@ -116,32 +101,24 @@ De acordo com a ACM, podem ser classificados em:
  * Exemplo: C++, Java, Python e Ruby.
 
 
+
 <!SLIDE>
-# Paradigmas Declarativos
+# Programação Declarativa
+
+Linguagens que não possuem conceitos de sequências de comandos nem de atribuição.
 
 * Funcional
  * Um programa especifíca uma relação ou uma função.
- * Não possuem atribuições ou dados mutáveis. Um programa é uma função, que é composto de outras funções.
+ * Não possuem atribuições ou dados mutáveis. 
+ *Um programa é uma função, que é composto de outras funções.
+ * ênfase em valores computados por funções
  * Exemplo: List e ML.
 
 * Programação Lógica
  * Um programa implementa uma relação.
+ * ênfase em axiomas lógicos
  * Exemplo: Prolog.
 
-
-<!SLIDE>
-# Índice TIOBE Fevereiro 2017
-
-Indicador da popularidade das linguagens de programação. 
-
-As classificações são baseadas no número de engenheiros qualificados em todo o mundo, cursos e fornecedores de terceiros. 
-
-Os motores de busca populares tais como Google, Bing, Yahoo !, Wikipedia, Amazon, YouTube e Baidu são usados para calcular as avaliações. 
-
-
-![.fancyborder](_images/tiobe_index.png)
-
-<p align=right><i><font size=3>Fonte: http://www.tiobe.com/tiobe-index/</font></i></p>
 
 
 
@@ -195,7 +172,8 @@ Símbolos são uma representação direta do código de máquina que será gerad
 
 Exemplo de Linguagens: Assembler
 
-Exemplo de Código Assembler
+Exemplo de Código Assembler.
+
     @@@armasm
     section .text
     global _start
@@ -212,3 +190,20 @@ Exemplo de Código Assembler
     len     equ $ - msg
 
 <p align=right><i><font size=3>Fonte: http://asm.sourceforge.net/intro/hello.html</font></i></p>
+
+
+<!SLIDE>
+# Índice TIOBE Fevereiro 2017
+
+Indicador da popularidade das linguagens de programação. 
+
+As classificações são baseadas no número de engenheiros qualificados em todo o mundo, cursos e fornecedores de terceiros. 
+
+Os motores de busca populares tais como Google, Bing, Yahoo !, Wikipedia, Amazon, YouTube e Baidu são usados para calcular as avaliações. 
+
+
+![.fancyborder](_images/tiobe_index.png)
+
+<p align=right><i><font size=3>Fonte: http://www.tiobe.com/tiobe-index/</font></i></p>
+
+

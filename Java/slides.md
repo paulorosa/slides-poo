@@ -284,7 +284,7 @@ https://en.wikipedia.org/wiki/Integrated_development_environment
 
 O método main é um método estático especial, usado como ponto de partida de um programa Java.
 
-    @@Java
+    @@@Java
     public static void main (String [] args) {
         // implementação
     }
@@ -299,17 +299,21 @@ O método main é um método estático especial, usado como ponto de partida de 
 ##
 
 Para imprimir textos na saída padrão em Java, chamamos o métodos:
-void System.out.println (String texto);
+
+    @@@Java
+    void System.out.println (String texto);
+
 Imprime um texto e pula uma linha.
-void System.out.print (String texto);
+
+    @@@Java
+    void System.out.print (String texto);
+
 Imprime um texto, mas não pula linha.
+
 Saída Padrão: Tela
 
 
-    @@Java
-    System.out.println (“Hello World!”);
-    
-    @@Java
+    @@@Java
     System.out.println (“Hello World!”);
 
 
@@ -318,7 +322,7 @@ Saída Padrão: Tela
 ## HelloWorld
 
 
-    @@Java
+    @@@Java
     public class HelloWorld {
 	    public static void main (String[ ] args) {
             System.out.println(“Hello World!”);
@@ -333,11 +337,13 @@ Saída Padrão: Tela
 Compilação do arquivo HelloWorld.java
 Programa para compilação: javac
 
-javac HelloWorld.java
+    @@@ Console
+    javac HelloWorld.java
 
 Faz com que seja compilado automaticamente.
 É gerado o arquivo
 
+    @@@ Console
 	HelloWorld.class
 
 
@@ -350,8 +356,11 @@ Faz com que seja compilado automaticamente.
 Execução do arquivo HelloWorld.class
 Programa para execução: java
 
-java HelloWorld
+    @@@ Console
+    java HelloWorld
 
 Faz com que o programa seja executado.
 O método main da classe é executado.
 
+    @@@ Console
+    Hello, World!

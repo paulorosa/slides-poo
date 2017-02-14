@@ -8,9 +8,9 @@
         {"section": "Estrutura do Curso"},
         {"section": "Compilador"},
         {"section": "Paradigmas de Programação"},
-        {"section": "Paradigma POO"},
         {"section": "Java"},
         {"section": "Nomenclatura"},
+        {"section": "Paradigma POO"},
         {
             "section": "***Acoplamento e Coesão"
         },
