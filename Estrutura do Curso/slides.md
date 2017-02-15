@@ -142,18 +142,14 @@ Qualquer Ferramenta de Modelagem UML pode ser utilizada durante o curso pelos al
 
 <!SLIDE form=questoes_estrutura_curso>
 # Pesquisa Simples
-##
-   
+
 linguagens -> Quais as linguagens que já programou? (Coloque as linguagens separadas por vírgulas) =___[50]
   
   
-
 ~~~SECTION:notes~~~
 
+Tell the class a little bit about yourself and your own background.
 
 ~~~FORM:questoes_estrutura_curso~~~
 
 ~~~ENDSECTION~~~
-
-
-
