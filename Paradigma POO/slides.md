@@ -94,10 +94,10 @@ Um programa OO possui objetos que colaboram entre si, executando tarefas especí
 # Pilares
 A POO está sedimentada sobre 4 Pilares.
 
-* **Polimorfismo**
 * **Herança**
-* **Abstração**
+* **Polimorfismo**
 * **Encapsulamento**
+* **Abstração**
 
 
 
@@ -105,11 +105,15 @@ A POO está sedimentada sobre 4 Pilares.
 <!SLIDE>
 # Herança
 
-Mecanismo pelo qual uma classe pode derivar de outra classe, aproveitando seus comportamentos e estados.
+_Mecanismo pelo qual uma classe pode derivar de outra classe, aproveitando seus comportamentos e estados._
+
+Podemos fazer uma comparação com a classificação do reino animal da área de biologia.
+
+Os animais são divididos em uma hierárquia de categorias, sendo que a mais inferior herda a classificação das categorias superiores.
 
 ![.fancyborder](_images/heranca.png)
 
-Os animais são divididos em uma hierárquia de categorias, sendo que a mais inferior herda a classificação das categorias superiores.
+
 
 
 
@@ -117,32 +121,40 @@ Os animais são divididos em uma hierárquia de categorias, sendo que a mais inf
 <!SLIDE>
 # Polimorfismo
 
-Princípio pelo qual classes derivadas de uma mesma superclasse podem invocar método que têm a mesma identificação mas comportamento distintos
+_Princípio pelo qual classes derivadas de uma mesma superclasse podem invocar método que têm a mesma identificação mas comportamento distintos._
+
+Podemos fazer uma comparação com comportamentos semelhantes dos animais.
+
+ Todos animais emitem algum som, mas cada animal possui sua forma de emitir som.
 
 ![.fancyborder](_images/polimorfismo.png)
 
-Todos animais emitem algum som, mas cada animal possui sua forma de emitir som.
 
 
 
 <!SLIDE>
 # Encapsulamento
 
-Consiste na separação de aspectos internos e externos de um objeto.
+_Consiste na separação de aspectos internos e externos de um objeto._
+
+Podemos fazer uma comparação como o papel do motor no carro.
+
+Não é necessário saber como funciona internamente um motor para utilizá-lo. É necessário apenas saber como utilizá-lo.
 
 ![.fancyborder](_images/encapsulamento.png)
 	
-Não é necessário saber como funciona internamente um motor para utilizá-lo.
 
 
 
 <!SLIDE>
 # Abstração
 
-É a habilidade de concentrar nos aspectos essenciais de um contexto qualquer, ignorando características menos importantes.
+_É a habilidade de concentrar nos aspectos essenciais de um contexto qualquer, ignorando características menos importantes._
 
 
-Quando um médico torna-se especialista em algum órgão do nosso corpo, ele abstrai sem desconsiderar as influências dos outros órgãos e foca apenas sua atenção nesse órgão.
+Podemos comparar a relação envolida em atividades especializadas. 
+
+Quando um médico, por exemplo, torna-se especialista em algum órgão do nosso corpo, ele abstrai sem desconsiderar as influências dos outros órgãos e foca apenas sua atenção nesse órgão.
 
 
 
@@ -160,7 +172,7 @@ Quando um médico torna-se especialista em algum órgão do nosso corpo, ele abs
 <!SLIDE>
 # Abstraindo
 
-Escrever um modelo para representar uma carro.
+Escrever um modelo para representar um carro.
 
 ![.fancyborder](_images/carro.png)
 
@@ -184,17 +196,28 @@ Escrever um modelo para representar um carro que será _utilizado em uma concess
 
 
 <!SLIDE>
-# Objetos
+# Conceito Importante
 
-São utilizados para representar entidades do mundo real ou computacional.
+Objeto é um conceito muito importante em um paradigma orientado a objetos.
 
-São usados para representar aqueles elementos e abstrações que fazem parte da solução do programa que está sendo desenvolvido.
+Objetos são utilizados para representar as entidades do mundo real ou computacional no programa de computador.
+
+
+
+
+<!SLIDE>
+# Comunicação entre Objetos
+
+Os objetos são usados para representar aqueles elementos e abstrações que fazem parte da solução do programa que está sendo desenvolvido.
+
+Em um programa orientado a objetos, além da representação dos objetos precisamos que estes objetos se comuniquem um com o outro.
 
 ![.fancyborder](_images/objetos.png)
 
 
+
 <!SLIDE>
-# Objetos
+# Exemplos de Representações 
 
 Muitas entidades ou abstrações podem ser representadas como objetos em um programa de computador.
 
@@ -206,10 +229,9 @@ Por exemplo, pessoas e carros podem ser vistos como objetos.
 
 
 <!SLIDE>
-# Objetos
-## Características
+# Características
 
-Objetos possuem características pelas quais os identificamos e finalidades para as quais os utilizamos.
+Objetos possuem _características pelas quais os identificamos_ e finalidades para as quais os utilizamos.
 
 .callout Características = Atributos
 
@@ -235,17 +257,30 @@ Objetos possuem características pelas quais os identificamos e finalidades para
 
 
 <!SLIDE>
-# Objetos
-## Comportamentos
+# Comportamentos
+
+Objetos possuem características pelas quais os identificamos e _finalidades para as quais os utilizamos_.
 
 Objetos possuem comportamentos associados.
 
 .callout Comportamentos = Métodos
 
 
+![.fancyborder](_images/pessoa_carro.png)
+
+<table border=0>
+<tr><td>Andar  </td><td>Ligar</td></tr>
+<tr><td>Falar    </td><td>Desligar</td></tr>
+<tr><td>Dirigir      </td><td>Acelerar</td></tr>
+<tr><td>       </td><td>Frear</td></tr>
+</table>
+
+
+
+
 
 <!SLIDE>
-# Objetos
+# Características e Comportamentos
 
 Objetos possuem:
 
@@ -259,6 +294,7 @@ Objetos possuem:
 # Classes
 
 De forma geral, pensamos e organizamos o mundo segundo a nossa visão das características e finalidades da coisas.
+
 Ou seja, pensamos Orientado a Objetos.
 
 É comum criar grupos de objetos com base nas suas características e comportamentos.
@@ -266,19 +302,17 @@ Ou seja, pensamos Orientado a Objetos.
 
 
 <!SLIDE>
-# Classes
+# Características e Comportamentos
 
-Universo de objetos Carro.
-Todos possuem mesmas características e compotamentos.
+No universo (contexto) de Carros, todos modelos e tipos possuem mesmas características e comportamentos.
 
-
-Características
+_Características_
 
 * tipo
 * cor
 * número de portas
 
-Comportamentos
+_Comportamentos_
 
 * acelerar
 * frear
@@ -290,17 +324,17 @@ Comportamentos
 <!SLIDE>
 # Classes
 
-A modelagem de um conjunto de objetos que possuem características e comportamentos em comum é realizada usando o conceito de Classe.
+A modelagem de um _conjunto de objetos que possuem características e comportamentos em comum_ é realizada usando o conceito de **Classe**.
 
-Cada Classe funciona como um molde para a criação de um Objeto.
+Cada Classe funciona como um _molde para a criação de um Objeto_.
 
-Os Objetos são vistos como representações concretas (instâncias) da Classe.
+Os Objetos são vistos como _representações concretas_ (instâncias) da Classe.
 
 
 
 
 <!SLIDE>
-#
+# Classes e Objetos
 
 ![.fancyborder](_images/classes_objetos_carros.png)
 
@@ -310,11 +344,18 @@ Os Objetos são vistos como representações concretas (instâncias) da Classe.
 # Classes
 
 
-Uma Classe define o comportamento de seus objetos através de métodos e os estados possíveis destes objetos através de atributos.
+Uma Classe define 
 
-Cada Classe contém dados, bem como o conjunto de métodos que manipulam seus dados.
+* o comportamento de seus objetos através de métodos 
+* e os estados possíveis destes objetos através de atributos.
 
-A instância de uma classe é chamada de objeto.
+Cada Classe contém 
+
+* dados
+
+* bem como o conjunto de métodos que manipulam seus dados.
+
+.callout.info A instância de uma classe é chamada de objeto.
 
 
 
@@ -349,7 +390,7 @@ A instância de uma classe é chamada de objeto.
 
 
 <!SLIDE>
-# Comparação Paradigmas
+# Comparação de Paradigmas
 ## Reutilização de Código
 
 * Estruturado
@@ -460,15 +501,43 @@ São referências para organização lógica de classes e interfaces.
 <!SLIDE>
 # Referências
 
-Dimensions of Object-Based Language Design 
-Peter Wegner 
-Department of Computer Science 
-Brown University 
+**Dimensions of Object-Based Language Design**
+
+Peter Wegner, Brown University 
+
 168 OOPSLA ‘87 Proceedings October 4-8,1987 S	
+
 http://www.cse.msu.edu/~stire/cse891/wegner.pdf
 
-Concepts and Paradigms of Object-Oriented Programming 
-Expansion of Oct 400PSLA-89 Keynote Talk 
+
+
+**Concepts and Paradigms of Object-Oriented Programming**
+
 Peter Wegner, Brown University 
+
+Expansion of Oct 400PSLA-89 Keynote Talk 
+
 http://www.cs.technion.ac.il/users/yechiel/Hassava/OOP-material/1990--p7-wegner.pdf
 
+
+
+
+
+
+
+<!SLIDE form=poo>
+# Questões
+
+
+Questões
+
+pooa -> q1? = () Sim (=) Não
+
+poob -> q2? = (=) Sim () Não
+
+
+~~~SECTION:notes~~~
+
+~~~FORM:poo~~~
+
+~~~ENDSECTION~~~

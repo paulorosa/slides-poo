@@ -1,25 +1,23 @@
 {
     "name": "POO - Senac",
     "author": "Paulo Rosa",
-      "highlight": "agate",
+    "highlight": "agate",
 
     "sections": [
-        {"section": "AULA 01"},
-        {"section": "Estrutura do Curso"},
-        {"section": "Compilador"},
-        {"section": "Paradigmas de Programação"},
-        {"section": "Java"},
-        {"section": "Nomenclatura"},
+    
+        {"section": "*AULA 01"},
+        {"section": "*Estrutura do Curso"},
+        {"section": "*Compilador"},
+        {"section": "*Paradigmas de Programação"},
+        {"section": "*Java"},
+        
+        {"section": "AULA 02"},
         {"section": "Paradigma POO"},
-        {
-            "section": "***Acoplamento e Coesão"
-        },
-        {
-            "section": "***Classes e Objetos"
-        },
-        {
-            "section": "***Herança"
-        },
+        {"section": "Classes e Objetos"},
+        {"section": "Nomenclatura"},
+        {"section": "Herança"},
+
+        {"section": "AULA 03"},
         {
             "section": "***Polimorfismo*** (X)"
         },
@@ -41,6 +39,7 @@
         {
             "section": "***Interface"
         },
+        {"section": "***Acoplamento e Coesão"},
         {
             "section": "***Vinculação Dinâmica"
         },
@@ -61,6 +60,8 @@
         },
         {
             "section": "***Provas*** (X)"
-        }
+        },
+        {"section": "Referências"}
+
     ]
 }
