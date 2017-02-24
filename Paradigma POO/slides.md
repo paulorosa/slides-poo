@@ -89,10 +89,13 @@ No Paradigma de Orientação a Objetos, um programa é visto como um **conjunto 
 
 Um programa OO possui objetos que colaboram entre si, executando tarefas específicas em busca de um objetivo comum.
 
+![.fancyborder](_images/objetos.png)
+
+
 
 <!SLIDE>
-# Pilares
-A POO está sedimentada sobre 4 Pilares.
+# Pilares da POO
+A Programação Orientada a Objetos está sedimentada sobre 4 Pilares.
 
 * **Herança**
 * **Polimorfismo**
@@ -520,24 +523,3 @@ Expansion of Oct 400PSLA-89 Keynote Talk
 http://www.cs.technion.ac.il/users/yechiel/Hassava/OOP-material/1990--p7-wegner.pdf
 
 
-
-
-
-
-
-<!SLIDE form=poo>
-# Questões
-
-
-Questões
-
-pooa -> q1? = () Sim (=) Não
-
-poob -> q2? = (=) Sim () Não
-
-
-~~~SECTION:notes~~~
-
-~~~FORM:poo~~~
-
-~~~ENDSECTION~~~

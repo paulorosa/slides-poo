@@ -6,16 +6,16 @@
     "sections": [
     
         {"section": "*AULA 01"},
-        {"section": "*Estrutura do Curso"},
-        {"section": "*Compilador"},
-        {"section": "*Paradigmas de Programação"},
-        {"section": "*Java"},
+        {"section": "Estrutura do Curso"},
+        {"section": "Compilador"},
+        {"section": "Paradigmas de Programação"},
+        {"section": "Java"},
         
-        {"section": "AULA 02"},
+        {"section": "*AULA 02"},
         {"section": "Paradigma POO"},
         {"section": "Classes e Objetos"},
         {"section": "Nomenclatura"},
-        {"section": "Herança"},
+        {"section": "*Herança"},
 
         {"section": "AULA 03"},
         {

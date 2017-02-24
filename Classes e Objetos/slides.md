@@ -138,20 +138,21 @@ O exemplo seria:
 
 
 
-<!SLIDE>
+<!SLIDE incremental>
 # Métodos
+
+* Determinan o comportamento dos objetos de uma classe.
+
 * Conjunto de instruções executadas por um objeto ao receber uma mensagem.
-* Determina o comportamento dos objetos de uma classe.
+
+* Permite ocultar as tarefas complexas realizadas.
+
 * O envio de mensagens (também chamado de métodos) pode alterar o estado de um objeto.
+
 * Podem ser executados por outros objetos ou pelo próprio objeto.
 
-
-<!SLIDE>
-# Métodos
-* Métodos representam tarefas de uma classe.
-* Oculta do usuário as tarefas complexas que o método realiza.
 * Uma chamada de método instrui o mesmo a realizar a sua tarefa
-* Métodos definem o comportamento do objeto em um determinado instante.
+
 
  
 <!SLIDE>
@@ -253,6 +254,17 @@ O exemplo seria:
 
 
 
+<!SLIDE>
+# Classe Professor em Java
+
+Criar uma classe em Java chamada Professor com  as **Caracteristicas**:
+
+* nome do tipo String
+
+* salario do tipo double
+
+
+.callout.info Criar a classe utilizando uma IDE.
 
 
 <!SLIDE>
@@ -260,34 +272,88 @@ O exemplo seria:
 
     @@@Java
     public class Professor {
-        String nome;
-        double salario
+    
+        public String nome;
+        
+        public double salario        
+        
+    }
+    
+
+
+<!SLIDE>
+# Classe Professor em Java
+
+Adicionar os **Comportamentos**: (obter nome do Professor) e (alterar nome do Professor)
+
+    @@@Java
+    public class Professor {
+        public String nome;
+        public double salario
+        
+        public String obterNomeDoProfessor () {
+            return nome;
+        }
+        
+        public void alterarNomeDoProfessor (String novoNome) {
+			nome = novoNome;
+        }        
+    }
+
+
+
+<!SLIDE>
+# Classe Professor em Java
+
+Adicionar os **Comportamentos**: (obter salário do Professor) e (alterar salário do Professor)
+
+    @@@Java
+    public class Professor {
+        public String nome;        
+        public double salario
+        
+        public String obterNomeDoProfessor () {
+            return nome;
+        }
+        
+        public void alterarNomeDoProfessor (String novoNome) {
+			nome = novoNome;
+        }        
+        
+        public String obterSalarioDoProfessor () {
+            return salario;
+        }
+        
+        public void alterarSalarioDoProfessor (String novoSalario) {
+			salario = novoSalario;
+        }        
+    }
+
+
+<!SLIDE>
+# Padrões de nomes de métodos
+
+    @@@Java
+    public class Professor {
+        public String nome;        
+        public double salario
         
         public String getNome () {
             return nome;
         }
-        public void setNome (String novo_nome) {
-			nome = novo_nome;
-        }
         
-        public double getSalario () {
+        public void setNome (String novoNome) {
+			nome = novoNome;
+        }        
+        
+        public String getNome () {
             return salario;
         }
-        public void setSalario (String novo_salario) {
-			salario = novo_salario;
-        }
+        
+        public void setNome (String novoSalario) {
+			salario = novoSalario;
+        }        
     }
-    
-<table border=1>
-  <tr><th>Classe</th><td>Funcionario</td></tr>
-  <tr><th>Atributos</th><td>nome, salario</td></tr>
-  <tr><th>Métodos</th><td>getNome, setNome, getSalario, setSalario</td></tr>
-</table>
-    
-    
-
-
-
 
 
 
@@ -315,10 +381,39 @@ Criação de um Objeto da Classe Funcionario
 
 
 <!SLIDE>
+# Utilização do Objeto
+
+    @@@Java
+    public class ProgramaPrincipal {
+    
+        public static void main (String[]  args) {
+        
+            Professor professor = new Professor ();
+            
+            double salario = professor.obterSalarioProfessor();
+            
+			System.out.println("Salário: "+salario);
+			
+			professor.alterarSalarioDoProfessor(1000);
+			
+			System.out.println("Salário: " + 
+			          professor.obterSalarioProfessor());
+        }
+        
+    }
+
+
+
+<!SLIDE>
 # Construtores
 
 * Método especial chamado quando o objeto é criado
+
 * Não possuem valores de retorno
+
+
+<!SLIDE>
+# Exemplo Construtor
 
     @@@Java
     public class Professor {
@@ -328,30 +423,34 @@ Criação de um Objeto da Classe Funcionario
         }
     }
 
-
 <!SLIDE>
 # Construtores
-## 
+
 * O construtor de uma classe é chamado de padrão quando não possui nenhum parâmetro.
+
 * Se nenhum construtor for definido explicitamente, o construtor padrão existe implicitamente.
+
 * Se um construtor diferente do padrão for declarado, o construtor padrão implícito deixa de existir.
+
 * Uma classe pode possuir vários construtores.
 
-<!SLIDE>
-# Destrutores
 
 
 <!SLIDE>
 # Referências para o próprio objeto
  
-* Para se referir ao próprio objeto, utiliza-se a palavra reservada this
+* Para se referir ao próprio objeto, utiliza-se a palavra reservada **this**
+
 * É opcional quando não há ambiguidade
+
+<!SLIDE>
+# Exemplo Referência para o próprio objeto
 
     @@@Java
     public class Professor {
         public String nome;
 
-        public Funcionario (String nome) {
+        public Professor (String nome) {
             this.nome = nome;
         }
     }
@@ -376,7 +475,9 @@ Criação de um Objeto da Classe Funcionario
 
 <!SLIDE>
 # Chamadas de Métodos em Java
+
 Com a classe instanciada, é possível fazer chamada para seus métodos.
+
 Utiliza-se o ponto ‘.’ para acessar um método.
 
     @@@Java
@@ -395,12 +496,12 @@ Utiliza-se o ponto ‘.’ para acessar um método.
 	Professor professor = new Professor();
     Double novoSalario = professor.aumentaSalario();
 
-.callout.warning Observe a ligação entre os dados e o Funcionário
+.callout.warning Observe a ligação entre os dados e o Professor
 
 
 <!SLIDE>
 # Método Sem Retorno
-## 
+
 Utiliza-se a palavra reservada void para indicar que o método não tem retorno.
 
     @@@Java
@@ -434,34 +535,22 @@ Utiliza-se a palavra reservada void para indicar que o método não tem retorno.
     }
 
 Variável Temporária
+
 Referência para o próprio objeto (opcional)
 
-
-
-
-<!SLIDE>
-# Implementar a classe Funcionario
-
-Cujas características são:
-* nome
-* salario
-
-e que possui os comportamentos
-* aumentar
-
-Com um construtor padrão e outro com as características
-* Definir métodos 
-* Acessores de nome e salario
-* Seletor do método nome
 
 
 
 
 <!SLIDE>
 # Atividade Classe 1
+
 Escreva uma classe em Java que represente um livro. 
+
 * Um livro tem como atributos o título, o nome do autor, nome da editora e a quantidade de páginas. 
+
 * Deve haver um único construtor que inicialize o título, nome do autor, nome da editora e a quantidade de páginas do livro. 
+
 * A classe deve possuir os métodos seletores e acessores de todos os atributos.
 
 
@@ -471,26 +560,22 @@ Escreva uma classe em Java que represente um livro.
 Implementar a classe Carro
 
 Cujas características são:
+
 * modelo
+
 * velocidadeAtual
 
 e que possui os comportamentos
+
 * acelerar (aumenta a velocidade em 1)
+
 * Frear (diminui a velocidade em 1)
 
 Com um construtor padrão e outro com as características, definir métodos 
+
 * Acessores de modelo e velocidadeAtual
+
 * Seletor do modelo
 
 
-
-
-<!SLIDE form=classes>
-# Questões sobre Classes e Objetos
-
-~~~SECTION:notes~~~
-
-~~~FORM:classes~~~
-
-~~~ENDSECTION~~~
 

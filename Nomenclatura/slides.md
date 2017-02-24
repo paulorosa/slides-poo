@@ -50,12 +50,13 @@ outros profissionais ao ver o seu código podem considerá-lo amador sem nem que
 <!SLIDE>
 # Padrões Documentados
 
-Até ...., o padrão era documentado pela Oracle
 
+Até 1999, o padrão era documentado pela Sun (antes do Oracle comprá-la):
 
-https
+**'Code Conventions'**
+http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html
 
-Despois foi desconsiderada, mas é possível encontrar alguns padrões
+Despois foi desconsiderada, mas é possível encontrar alguns padrões:
 
 Google Java Style Guide
 https://google.github.io/styleguide/javaguide.html
@@ -110,7 +111,9 @@ Arquivo: URL.java
 # Nome dos Pacotes
 
 * Os pacotes devem começar com uma letra minúscula e podem usar letras não ASCII. 
+
 * Não pode iniciar o nome do pacote com caracteres especiais ou números.
+
 * Caso o nome de um pacote seja composto por mais de uma palavra, a primeira letra de cada palavra deve ser em maiúscula.
 
 
@@ -122,14 +125,8 @@ Arquivo: URL.java
     @@@Java
     package br.com.senac.sp.poo;
 
-a
- 
-    @@@Java
     package tads.pi3;
 
-     
-
-    @@@Java
     package br.com.comercioEletronico;
 
 
@@ -139,8 +136,10 @@ a
 <!SLIDE>
 # Nome dos Atributos e Variáveis
 
-* Podem começar com qualquer letra e os caracteres $ e _
+* Podem começar com qualquer letra e os caracteres $ e \_
+
 * Não podem começar com números.
+
 * Caso o nome seja composto por mais de uma palavra, a primeira letra de cada palavra deve ser em maiúscula.
 
 
@@ -163,11 +162,9 @@ a
 
 <!SLIDE>
 # Atributos Constantes
-## Exemplos
-
-# Nome dos Atributos finais (Constantes)
 
 Os atributos finais (constantes) deve ser escritos em letras maiúsculas.
+
 Usamos underline ( _ ) para separar nomes compostos.
 
 
@@ -182,26 +179,3 @@ Usamos underline ( _ ) para separar nomes compostos.
     
     final String VERMELHO = "Vermelho";
     
-
-
-
-<!SLIDE form=nomenclatura>
-# Making Acquaintances
-## Let's get to know each other
-
-Tell me a little bit about yourself to help me better tailor the classroom
-experience towards your needs.
-
-b -> qb? = () Sim (=) Não
-
-c -> qc? = (=) Sim () Não
-
-
-~~~SECTION:notes~~~
-
-~~~FORM:nomenclatura~~~
-
-~~~ENDSECTION~~~
-
-
-
