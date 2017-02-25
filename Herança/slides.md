@@ -62,15 +62,145 @@ Classe especializada, derivada, subclase ou filha
 <!SLIDE>
 # Hierarquia de Classes
 
-Com a herança, é possível criar uma hierarquia de classes.
-Uma classe herda métodos e atributos de sua superclasse. Apesar disso, é possível reescrevê-los novamente para uma forma mais específica de representar o comportamento herdado.
+No Paradigma Orientado a Objetos, a **Herança** possibilita a criação de uma _Hierarquia de Classes_.
 
+Com esta Hierarquia, subclasses são capazes de _herdar_ **características** (atributos) e **comportamentos** (métodos) de uma superclasse.
 
 
 
 <!SLIDE>
 # Para que serve a Herança?
 
+Considere a criação de uma classe ClasseB (com métodos m1() e m2() na representação UML).
+Que métodos estão disponíveis através de uma referência para a classe B (isto é, um objeto)?
+
+
+<!SLIDE>
+# Para que serve a Herança?
+
+.callout Poderoso mecanismo para o reaproveitamento de código.
+
+.callout Facilita a manutenção do código.
+
+
+
+
+<!SLIDE>
+# Instâncias de classes distintas
+
+Considere as duas classes abaixo.
+
+ClasseA com o método metodoA()
+
+    @@@Java
+    public class ClasseA {
+        public metodoA () {
+            // corpo do método
+        }
+    }
+
+ClasseB com o método metodoB()
+
+    @@@Java
+    public class ClasseB {
+        public metodoB () {
+            // corpo do método
+        }
+    }
+
+
+<!SLIDE>
+# Métodos disponíveis pelas instâncias
+
+Cada instância tem acesso apenas aos métodos definidos na sua própria classe.
+
+    @@@Java
+    public static void main (String[] args) {
+    
+        ClasseA classeA = new ClasseA();
+        classeA.metodoA();
+        
+        ClasseB classeB = new ClasseB();
+        classeB.metodoB();   
+    }
+
+Não é possível uma instância acessar o método de outra instância.
+
+    @@@Java
+    public static void main (String[] args) {
+    
+        ClasseA classeA = new ClasseA();
+        classeA.metodoB(); // ERRO!!!!
+    }
+
+
+
+<!SLIDE>
+# Possibilidade para acesso
+
+.callout.question Como fazer para que uma instância da ClasseA tivesse acesso para o metodoB() da ClasseB?
+
+Uma possibilidade seria copiar o metodoB() na ClasseA.
+
+A ClasseA alterada ficaria da seguinte forma:
+
+    @@@Java
+    public class ClasseA {
+    
+        public metodoA () {
+            // corpo do método
+        }
+
+        public metodoB () {
+            // corpo do método
+        }
+        
+    }
+
+<!SLIDE>
+# Possibilidade para acesso
+
+Agora sim, uma instância da ClasseA pode chamar o metodoB(), pois ela está definida na ClasseA.
+
+    @@@Java
+    public static void main (String[] args) {
+    
+        ClasseA classeA = new ClasseA();
+        classeA.metodoB(); // Correto!!!!
+        
+    }
+
+
+<!SLIDE>
+# Problemas na abordagem de cópia
+
+Resolver o problema com o recurso de **Cópia de Código** não é uma abordagem boa 
+se considerarmos algumas das vantagens que o paradigma orientado a objetos 
+
+ * possibilita de reaproveitamento de código
+ 
+.callout.warn O código está sendo copiado.
+
+ * facilidade de manutenção do código
+ 
+.callout.warn Caso ocorra uma alteração no metodoB(), será necessário corrigir em dois lugares.
+
+.callout.question Qual a alternativa?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!SLIDE>
 Considere a criação de uma classe ClasseB (com métodos m1() e m2() na representação UML).
 Que métodos estão disponíveis através de uma referência para a classe B (isto é, um objeto)?
 
