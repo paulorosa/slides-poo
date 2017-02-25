@@ -1,6 +1,10 @@
 <!SLIDE section center>
 # Herança
 
+* incluir exercício/exemplo com a classe de sequencia númérica.
+
+
+
 <!SLIDE>
 # Pilares do Paradigma Orientação a Objetos
 * **Herança**
@@ -23,6 +27,93 @@ Capacidade de facilitar a Reutilização de Código
 # Mecanismos de Reutilização
 * Herança
 * Associação
+
+
+
+<!SLIDE>
+# O que é Herança?
+
+.callout É um princípio de Programação Orientada a Objetos que permite a _criação de novas classes_ a partir de outras _já existentes_. 
+
+<!SLIDE>
+# Sinônimos
+
+As classes pertencentes a um relacionamento de Herança podem ser chamadas de formas diferentes.
+
+* Classes novas
+ * superclasses
+ * classes base
+
+* Classes já existentes
+ * subclasses
+ * classes derivadas
+ 
+Classe genérica, classe base, superclasse ou pai.
+ - define variáveis de instância “genéricas” e métodos
+Classe especializada, derivada, subclase ou filha
+ - especializa, estend ou herda os métodos “genéricos” de uma superclasse
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!SLIDE>
+# Hierarquia de Classes
+
+Com a herança, é possível criar uma hierarquia de classes.
+Uma classe herda métodos e atributos de sua superclasse. Apesar disso, é possível reescrevê-los novamente para uma forma mais específica de representar o comportamento herdado.
+
+
+
+
+<!SLIDE>
+# Para que serve a Herança?
+
+Considere a criação de uma classe ClasseB (com métodos m1() e m2() na representação UML).
+Que métodos estão disponíveis através de uma referência para a classe B (isto é, um objeto)?
+
+Suponha, agora, que a classe ClasseB herda de ClasseA (métodos m3() e m4() na representação UML).
+Que métodos estão agora disponíveis para uma referência da ClasseB (um objeto)?
+
+Poderoso mecanismo para o reaproveitamento de código.
+O objeto da classe ClasseB tem agora disponíveis os métodos da classe ClasseA sem ser necessário reescrevê-los na classe ClasseB.
+Um objeto da classe ClasseB também é um objeto da classe ClasseA.
+
+Facilita a manuteção do código: Os métodos não são replicados. Se for necessário alterar o código do método m3(), basta alterá-lo na classe ClasseA.
+A classe ClasseB pode “recusar” parte da herança, reimplementando os métodos herdados, sobrescrevendo-os. (Exemplo na representação UML).
+
+
+
+
+<!SLIDE>
+# Possibilidades de Herança
+Herança Simples
+Herança Múltipla
+
+
+
+Herança Simples
+Várias subclasses podem herdar da mesma superclasse.
+(Exemplo na representação UML)
+Herança Múltipla
+Uma subclasse pode herdar de várias superclasses.
+Em Java, não é possível.
+(Exemplo na representação UML)
+
+A hierarquia de herança pode ter várias níveis.
+(Exemplo em UML - que métodos estão agora disponíveis para uma instância da classe ClasseC?)
+
+
+
+
+
+
+
+
+
+
 
 <!SLIDE center>
 Vamos criar um programa de computador utilizando o Paradigma Orientado a Objetos ...
@@ -72,230 +163,6 @@ Possíveis Características da Classe Coordenador
 * nome
 * cpf
 * salário
-
-
-<!SLIDE center>
-# Como comunicar a solução?
-
-
-
-<!SLIDE>
-# Unified Modeling Language (UML)
-## Linguagem de Modelagem Unificada
-
-UML é uma Linguagem Padrão para:
-
-* Visualização
-
-* Especificação
-
-* Construção
-
-* Documentação
-
-de Software Orientado a Objetos.
-
-![.fancyborder](_images/uml.png)
-
-
-
-<!SLIDE>
-# Bibliografia
-## UML Essencial: Um breve guia para a linguagem Padrão
-
-**Editora**: Bookman Companhia
-
-**Autor**: Martin Fowler
-
-http://martinfowler.com/books/uml.html
-
-![.fancyborder](_images/livro_uml_essencial.jpg)
-
-
-
-<!SLIDE>
-# Visualização
-
-* A existência de um modelo visual facilita a comunicação e faz com que os menbros de um grupo tenham a mesma ideia do sistema.
-
-* Cada símbolo gráfico tem uma semântica bem definida.
-
-<!SLIDE>
-# Especificação
-
-É uma ferramenta poderosa para a especificação de diferentes aspectos arquiteturais e de uso de um sistema.
-
-
-<!SLIDE>
-# Construção
-
-* Geração automática de código a partir do modelo visual.
-* Geração do modelo visual a partir do código.
-
-Ambientes de desenvolvimento permitem:
-
-* movimentação em ambos os sentiddos
-* manutenção da consistência entre as visões
-
-
-<!SLIDE>
-# Documentação
-
-Pode incluir artefatos como:
-* Especificação de requisitos do sistema
-* Especificações funcionais
-* Planos de teste
-* Materiais importantes para controlar, medir e refletir sobre um sistema durante o desenvolvimento e a implantação
-
-
-
-<!SLIDE>
-# Descrição da Arquitetura
-
-UML oferece uma forma padrão para desenhar a Arquitetura de um Sistema.
-
-* Processos de Negócio
-* Funcionalidades do Sistema
-* Classes
-* Esquemas de Banco de Dados
-* Componentes de Software
-* ...
-
-<!SLIDE>
-# Por que Modelar?
-
-* para comunicar a estrutura e o comportamento desejado de um sistema.
-* para visualizar e controlar a arquitetura de um sistema.
-* para melhorar o entendimento de um sistema expondo oportunidades para melhorias e reutilizações.
-* para administrar riscos e trade-offs.
-
-
-
-<!SLIDE>
-# Diagramas da UML
-
-Diagrama é uma representação gráfica de uma coleção de elementos de um modelo.
-
-São desenhados para permitir a visualização de um sistema sob diferentes perspectivas.
-
-Tipos de Diagramas
-
-* Diagramas estruturais
-* Diagramas Comportamentais
-
-
-
-<!SLIDE>
-# Diagramas Estruturais
-
-Usados para visualizar, especificar, construir e documentar aspectos Estáticos de um sistema.
-* Diagrama de Classes
-* Diagrama de Objetos
-* Diagrama de Pacotes
-* Diagrama de Componentes
-* Diagrama de Implantação
-
-
-
-
-<!SLIDE>
-# Diagrama de Classes
-
-* Oferece uma visão estática da estrutura do sistema.
-* Exibe classes e relacionamentos entre elas.
-
-![.fancyborder](_images/diagrama_de_classes.png)
-
-
-
-
-
-<!SLIDE>
-# Para que serve o Diagrama de Classes?
-
-Descreve os tipos de objetos no sistema e os vários tipos de relacionamentos estáticos que podem existir entre eles.
-
-
-<!SLIDE>
-# Diagramas Comportamentais
-
-Usados para visualizar, especificar, construir e documentar aspectos Dinâmicos de um sistema
-Diagrama de Casos de Uso
-Diagrama de Sequência
-Diagrama de Colaboração
-Diagrama de Estados
-Diagrama de Atividades
-
-
-<!SLIDE>
-# Diagrama de Casos de Uso
-
-
-
-<!SLIDE>
-# Diagrama de Casos de Uso
-
-Um caso de uso é uma interação típica entre um usuário e um sistema.
-Um caso de uso captura alguma função visível ao usuário.
-Especificam e documentam o comportamento do sistema.
-Importantes para as organizações e para a modelagem de comportamentos do sistema.
-Não descreve a organização interna do software.
-
-
-
-
-
-
-<!SLIDE>
-# Ferramentas CASE
-
-**C**omputer-**A**ided **S**oftware **E**ngineering
-Ferramentas computacionais que ajudam nas atividades de engenharia de software.
-
-Exemplos de Ferramentas
-
-* Ferramentas Livres
- * astah community (http://astah.net/editions/community)
- * argoUML (http://argouml.tigris.org/)
-
-* Ferramentas Pagas
- * Visual Paradigm (http://www.visual-paradigm.com/)
- * Enterprise Architect (http://www.sparxsystems.com/products/ea/)
-
-
-<!SLIDE>
-# 
-Validar a instalação da Ferramenta nos computadores.
-
-
-http://astah.net/editions/community
-
-
-
-<!SLIDE>
-# Para que serve o Diagrama de Classes?
-
-Descreve os tipos de objetos no sistema e os vários tipos de relacionamentos estáticos que podem existir entre eles.
-
-Tipos de relacionamento:
-
-* Subtipos (Herança)
-
-* Delegações (Associações)
-
-
-<!SLIDE>
-# Para que serve o Diagrama de Classes?
-
-Diagramas de classes mostram (comunicam):
-* atributos e métodos de uma classe 
-* restrições à maneira com que os objetos são conectados
-
-
-<!SLIDE>
-#  Notação UML para Classes
-
-colocar imagem
 
 
 <!SLIDE>
@@ -641,134 +508,6 @@ colocar imagem
 * reaproveitar atributos
 
 
-<!SLIDE>
-# Modificadores de Acesso
-
-São padrões de visibilidade de acesso às classes, atributos e métodos.
-
-Controlam como as classes e seus membros são visíveis por outras classes.
-
-
-
-<!SLIDE>
-# Níveis de Modificadores de Acesso 
-
-Java possui 4 níveis de controle de acesso, que são aplicados a classes, atributos e métodos.
-* private 
-* package (default)
-* protected
-* public
-
-
-<!SLIDE>
-# Modificador public
-
-Uma declaração com este modificador pode ser acessada de qualquer lugar e por qualquer entidade.
-Representação em UML - símbolo + (mais)
-
-
-    @@@Java
-    public class Funcionario {
-	public String nome;
-
-	public Funcionario (String nome) {
-		this.nome = nome;
-	}
-
-	public String getNome() {
-		return this.nome;
-	}
-}
-
-
-
-    @@@Java
-    public static void main (String[] args) {
-	Funcionario f = new Funcionario();
-	String nome = f.getNome();
-	nome = f.nome;
-}
-
-
- 
-<!SLIDE>
-# Modificador private
-
-Membros da classe (atributos ou métodos) não podem ser acessados nem utilizados por nenhuma outra classe. Não se aplica às classes.
-Representação em UML - símbolo - (menos)
-
-    @@@Java
-    public class Funcionario {
-	private String nome;
-
-	public Funcionario (String nome) {
-		this.nome = nome;
-	}
-
-	private String getNome() {
-		return this.nome;
-	}
-}
-
-
-    @@@Java
-    public static void main (String[] args) {
-	Funcionario f = new Funcionario();
-	String nome = f.getNome();
-	nome = f.nome;
-}
-
-
- 
-<!SLIDE>
-# Modificador de Acesso - protected
-
-Este modificador permite que os membros (atributos e métodos) da classe estejam acessíveis às classes do mesmo pacote ou através de herança.
-Representação em UML - símbolo # (cerquilha)
-
-
-colocar imagem
-
-
- 
-<!SLIDE>
-# Modificador default
-
-A classe e seus membros (atributos e métodos) são acessíveis somente por classes do mesmo pacote.
-Não há palavra-chave associada em Java e é utilizado quando o modificador não é especificado.
-Representação em UML - símbolo ~ (til)
-
-
-Veremos exemplos na aula de pacotes.
-
- 
-<!SLIDE>
-# Notação UML para Classes
-
-colocar imagem
-
-Os modificadores são representados no diagrama pelos símbolos ~, +, - e # que devem ser colocados antes dos atributos e métodos.
-
-default (ou package) - símbolo ~ (til)
-	Não há palavra-chave associada em Java e é utilizado quando o modificador não é especificado.
-
-
-<!SLIDE>
-# Notação UML para Classes
-
- 
-<!SLIDE>
-# Tabela de Modificadores de Acesso
-
-
-<!SLIDE>
-# Proteção de Atributos
-
-
-Em Orientação a Objetos, é comum proteger os atributos da classe com o modificador private.
-Uma classe é responsável pelo controle de acesso de seus atributos e métodos.
-O modificador private impede que outras classes acessem diretamente atributos da classe indevidamente.
-
 
 <!SLIDE>
 #
@@ -989,14 +728,143 @@ System.out.println (“Salário: “ +
 #
 
 <!SLIDE>
-#
+# Herança e Construtores
 
 
 
 
 
+Quando trabalhamos com herança e um construtor foi definido para a superclasse, devemos,
+ obrigatoriamente criar um construtor na subclasse que chame o construtor da superclasse.
+ 
+Caso isso não seja feito, o código apresentará erro.
+A chamada do método construtor da superclasse é feita através da palavra super e seguida dos argumentos específicos.
+A chamada do método construtor da superclasse deve ser sempre o primeiro comando a aparecer no construtor da subclasse.
+Mas o construtor da subclasse não precisa ter necessariamente os mesmos parâmetros do construtor da superclasse.
+Exemplo/Exercíco: Funcionario/Gerente, ClasseMae/ClasseFilha
 
-.download herança/herança.txt
+Exemplo 1: ClasseMae / ClasseFilha
+
+public class ClasseMae {
+
+}
+
+public class ClasseFilha extends ClasseMae {
+
+}
+
+O que deve ser mostrado no exemplo:
+Aaaaa
+
+Criar um programa principal para mostrar todos os casos.
+
+
+
+<!SLIDE>
+# Classes Sem Construtores definidos
+
+.callout Uma classe sem construtor, define implicitamente um construtor padrão com o corpo do método vazio.
+
+Exemplo de uma superclasse sem construtor.
+
+    @@@Java
+    public class SuperClasse {
+    
+    }
+
+Exemplo de uma subclasse sem construtor.
+
+    @@@Java
+    public class SubClasse extends SuperClasse {
+    
+    }
+
+Estes códigos estão corretos pois implicitamente o construtor da classe filha está chamando o construtor da classe mãe.
+
+<!SLIDE>
+# Classes Sem Construtores definidos
+
+Implicitamente, o código que está sendo executado é o seguinte.
+
+Exemplo de uma superclasse sem construtor.
+
+    @@@Java
+    public class SuperClasse {
+		public SuperClasse ( ) {
+		}
+    }
+
+Exemplo de uma subclasse sem construtor.
+
+    @@@Java
+    public class SubClasse extends SuperClasse {
+		public SubClasse ( ) {
+		    super ( );
+		}
+    }
+
+Estes códigos estão corretos pois implicitamente o construtor da classe filha está chamando o construtor da classe mãe.
+
+
+<!SLIDE>
+# Superclasse sem Construtor Padrão
+
+<!SLIDE>
+# Subclasse sem Construtor Padrão
+
+
+
+
+<!SLIDE>
+#Refatoração
+Herança também pode surgir a partir da refatoração de classes existentes de modo a eliminar a duplicação de código.
+(Exemplo em UML - Gerente e Programador, depois superclasse Funcionario)
+Motivação para Refatoração: Grande Quantidade de atributos e métodos duplicados.
+
+<!SLIDE>
+#Generalização / Especialização
+É a primeira abordagem a ser feita sobre herança e possibilita a vantagem mais direta e evidente que é a reutilização de código. A generalização é o agrupamento de características (atributos) e regras (métodos) comuns em um modelo de sistema. Já a especialização é o processo inverso, é a definição das particularidades de cada elemento de um modelo de sistemas, detalhando características e regras específicas de um o objeto.
+
+
+
+
+<!SLIDE>
+# UML
+
+<!SLIDE>
+# Vantagens
+
+Reaproveitamento de código
+Possibilita o Polimorfismo
+
+
+<!SLIDE>
+# Desvantagens / Recomendações
+Não usar Herança quando a relação não é claramente ‘é um’.
+Não use Herança apenas por reaproveitamento de código da classe mãe.
+Exemplo:
+Não use Herança apenas pelo Polimorfismo.
+Ao utilizar Herança com muitos filhos, podem gerar mais problemas:
+Você ganha mais coisa do que gostaria
+Sua relação com mãe é contubarda
+Quebra do encapsulamento
+	Exemplo: Pessoa, Pessoa Jurídica, Fornecedor Jurídico, Pessoa Física, Pessoa Jurídica.
+Quando um método na classe mãe muda pode quebrar o comportamento da classe filha.
+
+
+
+
+
+<!SLIDE>
+# Atividade 1
+Crie uma classe Pessoa contendo os atributos encapsulados, com seus respectivos seletores (getters) e modificadores (setters), e ainda o construtor padrão e pelo menos mais duas opções de construtores conforme sua percepção. Atributos: nome, endereço, telefone.
+
+<!SLIDE>
+# Atividade 2
+Crie a subclasse Fornecedor a partir da classe Pessoa (exercício anterior). A classe fornecedor tem além dos atributos que caracterizam a classe Pessoa, também os atributos valorCredito (correspondente ao crédito máximo atribuído ao fornecerodr), valorDivida (montante da dívida para com o fornecedor).
+Implemente a classe Fornecedor, para além dos usuais métodos seletores e modificares, um método obterSaldo que devolve a diferença entre os valores dos atributos valorCredito e valorDivida. Depois de implementada a classe Fornecedor, crie um programa de teste adequado que lhe permita verificar o funcionamento dos métodos implementados na classe Fornecedor e os herdados da classe Pessoa.
+
+
 
 
 

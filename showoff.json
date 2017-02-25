@@ -5,63 +5,38 @@
 
     "sections": [
     
-        {"section": "*AULA 01"},
-        {"section": "Estrutura do Curso"},
-        {"section": "Compilador"},
-        {"section": "Paradigmas de Programação"},
-        {"section": "Java"},
+        {"section": "AULA 01"},
+        {"section": "*Estrutura do Curso"},
+        {"section": "*Compilador"},
+        {"section": "*Paradigmas de Programação"},
+        {"section": "*Java"},
         
-        {"section": "*AULA 02"},
-        {"section": "Paradigma POO"},
-        {"section": "Classes e Objetos"},
-        {"section": "Nomenclatura"},
-        {"section": "*Herança"},
+        {"section": "AULA 02"},
+        {"section": "*Paradigma POO"},
+        {"section": "*Classes e Objetos"},
 
         {"section": "AULA 03"},
-        {
-            "section": "***Polimorfismo*** (X)"
-        },
-        {
-            "section": "***Abstração*** (X)"
-        },
-        {
-            "section": "***Associação"
-        },
-        {
-            "section": "***Modificadores"
-        },
-        {
-            "section": "***Pacotes"
-        },
-        {
-            "section": "***Inicialização_Objetos*** (X)"
-        },
-        {
-            "section": "***Interface"
-        },
-        {"section": "***Acoplamento e Coesão"},
-        {
-            "section": "***Vinculação Dinâmica"
-        },
-        {
-            "section": "***Estáticos"
-        },
-        {
-            "section": "**Coleções"
-        },
-        {
-            "section": "***Tratamento Exceção"
-        },
-        {
-            "section": "***Teste de Software"
-        },
-        {
-            "section": "***ADO*** (X)"
-        },
-        {
-            "section": "***Provas*** (X)"
-        },
-        {"section": "Referências"}
+        {"section": "*Nomenclatura"},
+        {"section": "Herança"},
+        {"section": "*UML"},
 
+        {"section": "AULA 04"},
+        {"section": "***Polimorfismo*** (X)"},
+        {"section": "***Abstração*** (X)"},
+        {"section": "***Associação"},
+        {"section": "***Modificadores"},
+        {"section": "***Pacotes"},
+        {"section": "***Inicialização_Objetos*** (X)"},
+        {"section": "***Interface"},
+        {"section": "***Acoplamento e Coesão"},
+        {"section": "***Vinculação Dinâmica"},
+        {"section": "***Estáticos"},
+        {"section": "**Coleções"},
+        {"section": "***Tratamento Exceção"},
+        {"section": "***Teste de Software"},
+        {"section": "***ADO*** (X)"},
+        {"section": "***Provas*** (X)"},
+        {"section": "*Referências"}
+        
     ]
 }
