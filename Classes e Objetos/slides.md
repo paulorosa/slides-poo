@@ -555,8 +555,10 @@ Escreva uma classe em Java que represente um livro.
 
 
 
+
 <!SLIDE>
 # Atividade Classe 2
+
 Implementar a classe Carro
 
 Cujas características são:
@@ -569,13 +571,55 @@ e que possui os comportamentos
 
 * acelerar (aumenta a velocidade em 1)
 
-* Frear (diminui a velocidade em 1)
+* frear (diminui a velocidade em 1)
 
 Com um construtor padrão e outro com as características, definir métodos 
 
 * Acessores de modelo e velocidadeAtual
 
 * Seletor do modelo
+
+
+<!SLIDE>
+# Atividade Classe 3
+
+Criar uma classe em Java representar uma progressão aritmética
+
+Para 
+
+
+Atributos
+* valor ataul
+
+
+Métodos
+* próximo valor
+* obtem valor ataul
+
+
+
+
+public class ProgressaoAritmetica {
+
+    private int valorAtual;
+    
+    public ProgressaoAritmetica (int valorInicial) {
+        this.valorAtual = valorInicial;
+    }
+
+    public int valorAtual () {
+        return this.valorAtual;
+    }
+    public void proximoValor () {
+        this.valorAtual = this.valorAtual + 1;
+    }
+}
+
+
+
+
+
+
 
 
 

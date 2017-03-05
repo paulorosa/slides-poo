@@ -1,32 +1,48 @@
 <!SLIDE section center>
 # Herança
 
-* incluir exercício/exemplo com a classe de sequencia númérica.
-
 
 
 <!SLIDE>
 # Pilares do Paradigma Orientação a Objetos
+
 * **Herança**
+
 * Polimorfismo
+
 * Abstração
+
 * Encapsulamento
+
+
 
 
 <!SLIDE>
 # Reutilização de Código
 
-Capacidade de facilitar a Reutilização de Código
+Uma das principais características do paradigma de programação orientado a objetos
+é a capacidade de **Reutilização de Código**.
+
+Alguns dos benefícios que a Reutilização de Código provê são:
 
 * Reduz a quantidade de código para escrever
+
 * Economiza o trabalho do programador
+
 * Diminui a possibilidade de erros
+
+
 
 
 <!SLIDE>
 # Mecanismos de Reutilização
-* Herança
+
+O paradigma de programação orientado a objetos possui alguns mecanismos para reutilizar código:
+
+* **Herança**
+
 * Associação
+
 
 
 
@@ -40,22 +56,28 @@ Capacidade de facilitar a Reutilização de Código
 
 As classes pertencentes a um relacionamento de Herança podem ser chamadas de formas diferentes.
 
-* Classes novas
- * superclasses
- * classes base
+* Classe nova
 
-* Classes já existentes
- * subclasses
- * classes derivadas
+ * superclasse
  
-Classe genérica, classe base, superclasse ou pai.
- - define variáveis de instância “genéricas” e métodos
-Classe especializada, derivada, subclase ou filha
- - especializa, estend ou herda os métodos “genéricos” de uma superclasse
+ * classe base
  
+ * classe genérica
  
+ * classe mãe
  
+
+* Classe já existente
+
+ * subclasse
+
+ * classe derivada
  
+ * classe especializada
+ 
+ * classe filha
+
+
  
  
  
@@ -68,19 +90,14 @@ Com esta Hierarquia, subclasses são capazes de _herdar_ **características** (a
 
 
 
-<!SLIDE>
-# Para que serve a Herança?
-
-Considere a criação de uma classe ClasseB (com métodos m1() e m2() na representação UML).
-Que métodos estão disponíveis através de uma referência para a classe B (isto é, um objeto)?
-
 
 <!SLIDE>
-# Para que serve a Herança?
+# Alguns dos Benefícios da Herança?
 
 .callout Poderoso mecanismo para o reaproveitamento de código.
 
 .callout Facilita a manutenção do código.
+
 
 
 
@@ -109,6 +126,8 @@ ClasseB com o método metodoB()
     }
 
 
+
+
 <!SLIDE>
 # Métodos disponíveis pelas instâncias
 
@@ -135,8 +154,9 @@ Não é possível uma instância acessar o método de outra instância.
 
 
 
+
 <!SLIDE>
-# Possibilidade para acesso
+# Possibilidade para acesso por Cópia
 
 .callout.question Como fazer para que uma instância da ClasseA tivesse acesso para o metodoB() da ClasseB?
 
@@ -157,8 +177,11 @@ A ClasseA alterada ficaria da seguinte forma:
         
     }
 
+
+
+
 <!SLIDE>
-# Possibilidade para acesso
+# Acessando por Cópia
 
 Agora sim, uma instância da ClasseA pode chamar o metodoB(), pois ela está definida na ClasseA.
 
@@ -169,6 +192,7 @@ Agora sim, uma instância da ClasseA pode chamar o metodoB(), pois ela está def
         classeA.metodoB(); // Correto!!!!
         
     }
+
 
 
 <!SLIDE>
@@ -190,50 +214,148 @@ se considerarmos algumas das vantagens que o paradigma orientado a objetos
 
 
 
+<!SLIDE>
+# Possibilidade para acesso por Herança
+
+Uma possibilidade aderente ao paradigma orientado a objetos é a utilização de Herança.
+
+Para aplicar Herança em Java, utiliza-se a palavra reservada **extends**.
 
 
 
+<!SLIDE>
+# Sintaxe Herança em Java
 
+Considere a classe chamada SuperClasse
 
+    @@@ Java
+    public class SuperClasse {
+    }
 
+E uma outra classe chamada SubClasse
+
+    @@@ Java
+    public class SubClasse {
+    }
+    
+Ao aplicar Herança na classe SubClasse com a classe SuperClasse, ela ficaria desta forma
+
+    @@@ Java
+    public class SubClasse extends SuperClasse {
+    }
 
 
 
 
 <!SLIDE>
-Considere a criação de uma classe ClasseB (com métodos m1() e m2() na representação UML).
-Que métodos estão disponíveis através de uma referência para a classe B (isto é, um objeto)?
+# Possibilidade para acesso por Herança
 
-Suponha, agora, que a classe ClasseB herda de ClasseA (métodos m3() e m4() na representação UML).
-Que métodos estão agora disponíveis para uma referência da ClasseB (um objeto)?
+Voltando ao exemplo, podemos aplicar Herança na classe ClasseB para que ela 
+tenha acesso ao método metodoA() da classe ClasseA.
 
-Poderoso mecanismo para o reaproveitamento de código.
-O objeto da classe ClasseB tem agora disponíveis os métodos da classe ClasseA sem ser necessário reescrevê-los na classe ClasseB.
-Um objeto da classe ClasseB também é um objeto da classe ClasseA.
+A classe ClasseB alterda fica da seguinte forma:
 
-Facilita a manuteção do código: Os métodos não são replicados. Se for necessário alterar o código do método m3(), basta alterá-lo na classe ClasseA.
-A classe ClasseB pode “recusar” parte da herança, reimplementando os métodos herdados, sobrescrevendo-os. (Exemplo na representação UML).
+    @@@ Java
+    public class ClasseB extends ClasseA {
+        public metodoB () {
+            // corpo do método
+        }
+    }
+
+
+
+<!SLIDE>
+# Acessando por Herança
+
+Desta forma, uma instância da ClasseA pode chamar o metodoB(), pois ela herda métodos e atributos da classe ClasseA.
+
+    @@@Java
+    public static void main (String[] args) {
+    
+        ClasseA classeA = new ClasseA();
+        classeA.metodoB(); // Correto!!!!
+        
+    }
+
+.callout O método foi reaproveitado sem a necessidade de cópia.
+
+
+
 
 
 
 
 <!SLIDE>
 # Possibilidades de Herança
-Herança Simples
-Herança Múltipla
+
+Há duas formas de Herança
+
+* Herança Simples
+
+* Herança Múltipla
 
 
 
-Herança Simples
+
+
+<!SLIDE>
+# Herança Simples
 Várias subclasses podem herdar da mesma superclasse.
 (Exemplo na representação UML)
-Herança Múltipla
+
+
+
+
+
+<!SLIDE>
+# Herança Múltipla
 Uma subclasse pode herdar de várias superclasses.
 Em Java, não é possível.
 (Exemplo na representação UML)
 
 A hierarquia de herança pode ter várias níveis.
 (Exemplo em UML - que métodos estão agora disponíveis para uma instância da classe ClasseC?)
+
+
+
+
+
+
+
+
+<!SLIDE>
+# Nomenclatura de Herança
+
+A classe A é superclasse da classe B
+A classe B é subclasse da classe A
+Todo B é um  A
+Classe A é classe Pai de Classe B
+Classe B é classe Filha de Classe A
+
+
+imagem
+
+<!SLIDE>
+# Herança
+
+Representa o relacionamento É UM
+
+imagem
+
+Exemplos:
+carro é um veículo
+livro é uma publicação
+
+
+
+<!SLIDE>
+# Herança
+
+* Generalização 
+
+* Especialização
+
+
 
 
 
@@ -428,62 +550,6 @@ Ciclano (567.890.123-44): 3000
 * repetição
 * manutenção
 
-
-<!SLIDE>
-# Herança
-
-Princípio de Orientação a Objetos que permite a criação de novas classes a partir de outras previamente criadas.
-Atributos e métodos podem ser reaproveitados.
-
-
-imagem
-
-A classe A é 
-classe genérica
-classe base
-superclasse
-classe mãe
-
-
-A classe B é
-classe especializada
-classe derivada
-subclasse
-classe filha
-
-
-<!SLIDE>
-# Nomenclatura de Herança
-
-A classe A é superclasse da classe B
-A classe B é subclasse da classe A
-Todo B é um  A
-Classe A é classe Pai de Classe B
-Classe B é classe Filha de Classe A
-
-
-imagem
-
-<!SLIDE>
-# Herança
-
-Representa o relacionamento É UM
-
-imagem
-
-Exemplos:
-carro é um veículo
-livro é uma publicação
-
-
-
-<!SLIDE>
-# Herança
-
-Generalização 
-
-
-Especialização
 
 
 
@@ -857,37 +923,97 @@ System.out.println (“Salário: “ +
 <!SLIDE>
 #
 
+
+
+
+
+
 <!SLIDE>
 # Herança e Construtores
 
+Como o relacionamento de Herança ocorre entre duas classes e ambas possuem construtores, 
+precisamos saber como ocorre a chamada dos construtores das classes.
+
+.callout O primeiro construtor a ser chamado é o construtor da classe sendo instanciada.
+
+.callout Contudo, a primeira tarefa a ser realizada DEVE ser chamar o construtor da classe mãe.
+
+
+<!SLIDE>
+# Herança e Construtores
+
+Considere as seguintes classes a seguir relacionadas por Herança.
+
+ClasseMae representando a super classe
+
+    @@@Java
+    public class ClasseMae {
+        public ClasseMae () {
+            System.out.println("Executando o construtor da ClasseMae");
+        }
+    }
+
+ClasseFilha representando a classe filha, herdada da ClasseMae
+
+    @@@Java
+    public class ClasseFilha extends ClasseMae {
+        public ClasseFilha () {
+            System.out.println("Executando o construtor da ClasseFilha");
+        }
+    }
+    
+
+<!SLIDE>
+# Herança e Construtores
+
+Ao instanciar a classe ClasseFilha
+
+    @@@Java
+    public static void main (String[] args) {
+        ClasseFilha classeFilha = new ClasseFilha();
+    }
+
+Temos o seguinte resultado
+
+    @@@ Console
+    Executando o construtor da ClasseMae
+    Executando o construtor da ClasseFilha
+
+
+Apesar do construtor da classe ClasseFilha ter sido chamado primeiro,
+o código da classe ClasseMae é executado primeiro.
+
+.callout A primeira tarefa a ser realizada DEVE ser chamar o construtor da classe mãe.
 
 
 
+<!SLIDE>
+# Chamada implícita do Construtor Padrão
 
-Quando trabalhamos com herança e um construtor foi definido para a superclasse, devemos,
- obrigatoriamente criar um construtor na subclasse que chame o construtor da superclasse.
- 
-Caso isso não seja feito, o código apresentará erro.
-A chamada do método construtor da superclasse é feita através da palavra super e seguida dos argumentos específicos.
-A chamada do método construtor da superclasse deve ser sempre o primeiro comando a aparecer no construtor da subclasse.
-Mas o construtor da subclasse não precisa ter necessariamente os mesmos parâmetros do construtor da superclasse.
-Exemplo/Exercíco: Funcionario/Gerente, ClasseMae/ClasseFilha
+No exemplo anterior, a chamada para o construtor da classe mãe foi realizada
+implicitamente da palavra reservada **super**.
 
-Exemplo 1: ClasseMae / ClasseFilha
+    @@@Java
+    public class ClasseFilha extends ClasseMae {
+        public ClasseFilha () {
+        
+            super ();
+        
+            System.out.println("Executando o construtor da ClasseFilha");
+        }
+    }
 
-public class ClasseMae {
+A palavra reservada **super** foi utilizada como referência para o método construtor
+da classe mãe. Neste caso, o construtor padrão, pois o método não possui nenhum
+parâmetro de entrada.
 
-}
+<!SLIDE>
+# Chamada implícita do Construtor Padrão
 
-public class ClasseFilha extends ClasseMae {
+A chamada para o construtor padrão da classe mãe é opcional caso a classe mãe
+tenha definido o construtor padrão.
 
-}
-
-O que deve ser mostrado no exemplo:
-Aaaaa
-
-Criar um programa principal para mostrar todos os casos.
-
+Por este motivo, o código sem a chamada explícita funciona no exemplo anterior.
 
 
 <!SLIDE>
@@ -939,8 +1065,163 @@ Estes códigos estão corretos pois implicitamente o construtor da classe filha 
 <!SLIDE>
 # Superclasse sem Construtor Padrão
 
+Caso o construtor padrão não esteja definido na classe mãe, uma chamada explícita DEVE ser realizada.
+
+.callout Um construtor padrão não está definido se algum outro construtor foi definido e ele não foi definido explicitamente.
+
 <!SLIDE>
-# Subclasse sem Construtor Padrão
+# Superclasse sem Construtor Padrão
+
+Neste exemplo, a classe SuperClasse não possui o construtor padrão definido.
+
+    @@@Java
+    public class SuperClasse {
+        private String parametro;
+        
+		public SuperClasse (String parametro) {
+		    this.parametro = parametro;
+		}
+    }
+
+<!SLIDE>
+# Superclasse sem Construtor Padrão
+
+Logo, uma classe a herde, deverá necessariamente chamá-la. A classe filha
+pode realizar este tratamento de duas formas:
+
+O construtor da subclasse passa algum valor explicitamente na chamada do construtor da classe mãe.
+
+    @@@Java
+    public class SubClasse extends SuperClasse {
+		public SubClasse () {
+		    super ("valor qualquer");
+		}
+    }
+
+O construtor da subclasse recebe como parâmetro de entrada e repassa para a classe mãe.
+
+    @@@Java
+    public class SubClasse extends SuperClasse {
+		public SubClasse (String parametro) {
+		    super (parametro);
+		}
+    }
+
+
+
+<!SLIDE>
+# SuperClasse com Construtores Adicionais
+
+No caso em que a super classe defina mais de um construtor, a classe filha pode escolher qual utilizar.
+
+
+
+<!SLIDE>
+# Construtores Adicionais com Construtor Padrão
+
+Neste caso, a super classe possui construtores adicionais e o construtor padrão deve ser explicitamente definido.
+
+    @@@Java
+    public class SuperClasse {
+        private String parametroA;
+
+		public SuperClasse () {
+		    this.parametroA = "qualquer valor";
+		}
+		
+		public SuperClasse (String parametroA) {
+		    this.parametroA = parametroA;
+		}
+		
+    }
+
+<!SLIDE>
+# Construtores Adicionais com Construtor Padrão
+
+Temos duas opções para realizar as chamadas.
+
+Pode ser utilizado o  construtor padrão
+
+    @@@Java
+    public class SubClasse extends SuperClasse {
+		public SubClasse () {
+		    super ();
+		}
+    }
+
+Ou, o segundo construtor    
+
+    @@@Java
+    public class SubClasse extends SuperClasse {
+		public SubClasse (String parametroA) {
+		    super (parametroA);
+		}
+    }
+
+
+
+
+<!SLIDE>
+# Construtores Adicionais sem Construtor Padrão
+
+Neste caso, a super classe possui construtores adicionais, contudo o construtor padrão não está definido.
+
+    @@@Java
+    public class SuperClasse {
+        private String parametroA;
+        private Integer parametroB;
+
+		public SuperClasse (String parametroA) {
+		    this.parametroA = parametroA;
+		}
+		
+		public SuperClasse (Integer parametroB) {
+		    this.parametroB = parametroB;
+		}
+    }
+
+
+<!SLIDE>
+# Construtores Adicionais sem Construtor Padrão
+
+Temos duas opções para realizar as chamadas.
+
+Pode ser utilizado o primeiro construtor
+
+    @@@Java
+    public class SubClasse extends SuperClasse {
+		public SubClasse (String parametroA) {
+		    super (parametroA);
+		}
+    }
+
+Ou o segundo construtor    
+
+    @@@Java
+    public class SubClasse extends SuperClasse {
+		public SubClasse (Integer parametroB) {
+		    super (parametroB);
+		}
+    }
+
+
+
+
+
+
+
+
+
+<!SLIDE>
+# Atividade: Herança e Construtores
+
+
+Exemplo/Exercíco: Funcionario/Gerente, ClasseMae/ClasseFilha
+
+
+
+
+
 
 
 
@@ -958,14 +1239,6 @@ Motivação para Refatoração: Grande Quantidade de atributos e métodos duplic
 
 
 
-<!SLIDE>
-# UML
-
-<!SLIDE>
-# Vantagens
-
-Reaproveitamento de código
-Possibilita o Polimorfismo
 
 
 <!SLIDE>
@@ -1015,6 +1288,22 @@ hb -> hb? = (=) Sim () Não
 
 ~~~SECTION:notes~~~
 
-~~~FORM:heranca~~~
 
 ~~~ENDSECTION~~~
+
+
+<!SLIDE>
+
+* incluir exercício/exemplo com a classe de sequencia númérica.
+
+
+
+<!SLIDE>
+# Para que serve a Herança?
+
+Considere a criação de uma classe ClasseB (com métodos m1() e m2() na representação UML).
+
+Que métodos estão disponíveis através de uma referência para a classe B (isto é, um objeto)?
+
+
+

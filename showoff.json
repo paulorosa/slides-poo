@@ -6,19 +6,19 @@
     "sections": [
     
         {"section": "AULA 01"},
-        {"section": "*Estrutura do Curso"},
-        {"section": "*Compilador"},
-        {"section": "*Paradigmas de Programação"},
-        {"section": "*Java"},
+        {"section": "Estrutura do Curso"},
+        {"section": "Compilador"},
+        {"section": "Paradigmas de Programação"},
+        {"section": "Java"},
         
         {"section": "AULA 02"},
-        {"section": "*Paradigma POO"},
-        {"section": "*Classes e Objetos"},
+        {"section": "Paradigma POO"},
+        {"section": "Classes e Objetos"},
 
         {"section": "AULA 03"},
-        {"section": "*Nomenclatura"},
+        {"section": "Nomenclatura"},
         {"section": "Herança"},
-        {"section": "*UML"},
+        {"section": "UML"},
 
         {"section": "AULA 04"},
         {"section": "***Polimorfismo*** (X)"},
