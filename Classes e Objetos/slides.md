@@ -404,12 +404,25 @@ Criação de um Objeto da Classe Funcionario
 
 
 
+
+
+
+
+
 <!SLIDE>
-# Construtores
+# Construtor
 
-* Método especial chamado quando o objeto é criado
+Um construtor é um método, como qualquer outro, com algumas características especiais:
 
-* Não possuem valores de retorno
+* o nome do método é igual ao nome da classe
+
+* o método não tem parâmetro de retorno
+
+* o método é chamado automaticamente quando no momento da criação do objeto.
+
+
+
+
 
 
 <!SLIDE>
@@ -417,34 +430,174 @@ Criação de um Objeto da Classe Funcionario
 
     @@@Java
     public class Professor {
-        public String nome;
+ 
         public Professor () {
-            nome = “Fulano”;
+        
+            System.out.println("Execução do Construtor");
+            
+        }
+        
+    }
+
+
+
+<!SLIDE>
+# Execução do Exemplo de Construtor
+
+    @@@ Java
+    public static void main (String[] args) {
+    
+        Professor professor = new Professor();
+        
+    }
+
+Ao executar o programa acima, a saída será:
+
+    @@@ Console
+    Execução do Construtor
+    
+    
+
+<!SLIDE>
+# Construtor Padrão
+
+O construtor de uma classe é chamado de padrão quando não possui nenhum parâmetro.
+
+.callout Se nenhum construtor for definido explicitamente, o construtor padrão existe implicitamente.
+
+Por exemplo, a classe abaixo, sem do construtor especificado
+
+    @@@Java
+    public class Professor {
+        
+    }
+
+é exatamente igual a classe com o construtor declarado, mas com nenhum código.
+
+    @@@Java
+    public class Professor {
+ 
+        public Professor () {
+        
+        }
+        
+    }
+
+
+
+
+<!SLIDE>
+# Construtor Diferente do Padrão
+
+Se um construtor diferente do padrão for declarado, o construtor padrão implícito deixa de existir.
+
+    @@@Java
+    public class Professor {
+        private String nome;
+         
+        public Professor (String nomeNovo) {
+            nome = nomeNovo;
         }
     }
 
+Neste caso, uma chamada para o construtor padrão não é possível.
+
+    @@@ Java
+    public static void main (String[] args) {
+        Professor professor = new Professor(); // ERRO!!!
+    }
+
+
+
 <!SLIDE>
-# Construtores
+# Vários Construtores
 
-* O construtor de uma classe é chamado de padrão quando não possui nenhum parâmetro.
+Uma classe pode possuir vários construtores.
 
-* Se nenhum construtor for definido explicitamente, o construtor padrão existe implicitamente.
+Por exemplo, a classe abaixo possuem dois construtores
 
-* Se um construtor diferente do padrão for declarado, o construtor padrão implícito deixa de existir.
+    @@@Java
+    public class Professor {
+        private String nome;
 
-* Uma classe pode possuir vários construtores.
+        public Professor () {
+            nome = "";
+        }
+         
+        public Professor (String nomeNovo) {
+            nome = nomeNovo;
+        }
+    }
+
+
+<!SLIDE>
+# Ambiguidade de Identificadores
+
+Em determinadas situações, para evitar a proliferação de identificadores na classe, 
+como, por exemplo, na classe abaixo em que foi necessário ter dois identificadores
+(nome e novoNome) no construtor para realizar uma atribuição.
+
+    @@@ Java
+    public class Professor {
+        private String nome;
+
+        public Professor (String nomeNovo) {
+            nome = nomeNovo;
+        }
+    }
+
+O código poderia ficar mais simples e legível se utilizássemos identificadores iguais.
+é necessário utilizarmos identificadores iguais.
+
+    @@@ Java
+    public class Professor {
+        private String nome;
+
+        public Professor (String nome) {
+            nome = nome;
+        }
+    }
+
+
+
+
+
+<!SLIDE>
+# Ambiguidade de Identificadores
+
+Contudo, este código gera uma ambuiguidade para o compilador que não sabe
+exatamente se é o atributo que está recebendo o valor do parâmetro de entrada
+do construtor, ou o contário.
+
+    @@@ Java
+    public class Professor {
+        private String nome;
+
+        public Professor (String nome) {
+            nome = nome; /// AMBIGUIDADE
+        }
+    }
+
+
 
 
 
 <!SLIDE>
 # Referências para o próprio objeto
  
-* Para se referir ao próprio objeto, utiliza-se a palavra reservada **this**
+Para resolver este problema, utiliza-se a palavra reservada **this**, que permite realizar referências ao próprio objeto.
 
-* É opcional quando não há ambiguidade
+É utilizado quando há a necessidade de eliminar a ambiguidade de identificadores utilizados na classe.
+
+
+
 
 <!SLIDE>
 # Exemplo Referência para o próprio objeto
+
+No exemplo, ao utililizar **this** no identificador **nome** faz com que o
+compilador compreenda que está sendo feita referência para o atributo e não para 
+o parâmetro de entrada do método.
 
     @@@Java
     public class Professor {
@@ -453,11 +606,22 @@ Criação de um Objeto da Classe Funcionario
         public Professor (String nome) {
             this.nome = nome;
         }
+        
+        public void setNome (String nome) {
+            this.nome = nome;
+        }
     }
 
 
+
+
 <!SLIDE>
-# Métodos Acessores e Seletores
+# Métodos Acessores
+
+Métodos acessores são aqueles métodos que retornam alguma informação 
+que represente o estado atual do objeto.
+
+O método getNome da classe Professor retorna o valor da característica nome.
 
     @@@Java
     public class Professor {
@@ -467,9 +631,30 @@ Criação de um Objeto da Classe Funcionario
             return this.nome;
         }
 
+		// ...
+		
+    }
+
+
+
+<!SLIDE>
+# Métodos Seletores
+
+Métodos seletores são aqueles que de alguma forma alteram o estado atual do objeto.
+
+O método setNome da classe Professor altera o valor da característica nome, que representa 
+o estado do objeto.
+
+    @@@Java
+    public class Professor {
+        public String nome;
+
         public void setNome (String nome) {
             this.nome = nome;
         }
+        
+		// ...
+		
     }
 
 
@@ -478,65 +663,107 @@ Criação de um Objeto da Classe Funcionario
 
 Com a classe instanciada, é possível fazer chamada para seus métodos.
 
-Utiliza-se o ponto ‘.’ para acessar um método.
+.callout Utiliza-se o ponto ‘.’ para acessar um método.
 
-    @@@Java
-	Professor professor = new Professor();
-    Double novoSalario = professor.aumentaSalario();
+No código abaixo, é realizada uma chamada para o método getNome da instância professor.
+
+    @@@ Java
+    public static void main (String[] args) {
+        Professor professor = new Professor("Fulano");
+	    System.out.println("Nome Professor: " + professor.getNome());
+    }
+
+Será impresso o valor da característica nome do ojeto professor.
+
+    @@@ Console
+    Nome Professor: Fulano
+
+
 
 
 <!SLIDE>
-# Chamadas de métodos em Java
+# Ligação entre os dados e o objeto
 
-Com a classe instanciada, é possível fazer chamada para seus métodos.
+Note que a ligação entre o dado e a instância da classe. 
 
-Utiliza-se o ponto ‘.’ para acessar um método.
+Neste caso, a característica nome está relacionada diretamente com a instância.
 
-    @@@Java
-	Professor professor = new Professor();
-    Double novoSalario = professor.aumentaSalario();
+    @@@ Java
+    Professor p1 = new Professor("Fulano");
+	System.out.println("Nome Professor p1: " + p1.getNome());
+	
+    Professor p2 = new Professor("Beltrano");
+	System.out.println("Nome Professor p2: " + p2.getNome());
 
-.callout.warning Observe a ligação entre os dados e o Professor
+Cada instância tem o valor específico da sua característica.
+
+
+
 
 
 <!SLIDE>
 # Método Sem Retorno
 
-Utiliza-se a palavra reservada void para indicar que o método não tem retorno.
+Métodos também podem não retornar nenhum valor.
 
-    @@@Java
-    void zeraSalario () {
-        salario = 0.0;
+.callout Utiliza-se a palavra reservada *void* para indicar que o método não retorna nenhum valor.
+
+No código abaixo, o método zeraSalario não retorna nenhum valor.
+
+    @@@ Java
+    public class Professor {
+    
+        // ...
+        
+        public void zeraSalario () {
+            salario = 0.0;
+        }
     }
+
+.callout Nestes casos, é opcional o uso da palavra reservada return. Caso queira utilizá-la, deverá apenas escrever "return;"
+
+
 
 
 
 <!SLIDE>
 # Métodos com Parâmetros
-## Exemplo
 
-    @@@Java
-    double aumentaSalario (double valor) {
-	    double novoSalario = salario + valor;
-        this.salario = novoSalario;
-        return salario;
+Métodos podem possuir quantos parâmetros forem necessários. Quando houver
+mais de um parâmetro, eles devem ser separados por ','.
+
+No exemplo abaixo, o método possui apenas um único parâmetro.
+
+    @@@ Java
+    public void metodo (String param1) {
+        // ...
+    }
+    
+O método abaixo possui dois parâmetros separados por vírgula.
+
+    @@@ Java
+    public void metodo (String param1, String param2) {
+        // ...
     }
 
 
 <!SLIDE>
-# Variáveis nos métodos
-## 
+# Variável Temporária nos métodos
 
-    @@@Java
+Variáveis criadas dentro do método são chamadas de temporárias,
+pois o seu tempo de vida (escopo) é apenas durante a execução do método.
+
+    @@@ Java
     public double aumentaSalario (double valor) {
+    
 	    double novoSalario = salario + valor;
+	    
         this.salario = novoSalario;
+        
         return salario;
     }
 
-Variável Temporária
 
-Referência para o próprio objeto (opcional)
 
 
 
@@ -545,13 +772,14 @@ Referência para o próprio objeto (opcional)
 <!SLIDE>
 # Atividade Classe 1
 
-Escreva uma classe em Java que represente um livro. 
+Escreva uma classe em Java que represente um livro, de acordo com as informações:
 
-* Um livro tem como atributos o título, o nome do autor, nome da editora e a quantidade de páginas. 
+* Um livro tem como atributos o título, o nome do autor e a quantidade de páginas. 
 
-* Deve haver um único construtor que inicialize o título, nome do autor, nome da editora e a quantidade de páginas do livro. 
+* Deve haver um único construtor que inicialize o título, nome do autor e a quantidade de páginas do livro. 
 
 * A classe deve possuir os métodos seletores e acessores de todos os atributos.
+
 
 
 
@@ -559,65 +787,70 @@ Escreva uma classe em Java que represente um livro.
 <!SLIDE>
 # Atividade Classe 2
 
-Implementar a classe Carro
+Implementar a classe Carro de acordo com as seguintes informações:
 
-Cujas características são:
+* Com as características:
+ * modelo
+ * velocidadeAtual
 
-* modelo
+* Com um construtor padrão 
 
-* velocidadeAtual
+* Com outro construtor que recebe informações para preencher todas as características
 
-e que possui os comportamentos
+* Com os comportamentos:
+ * acelerar (aumenta a velocidade em 1)
+ * frear (diminui a velocidade em 1)
+ * Acessores de modelo e velocidadeAtual
+ 
 
-* acelerar (aumenta a velocidade em 1)
-
-* frear (diminui a velocidade em 1)
-
-Com um construtor padrão e outro com as características, definir métodos 
-
-* Acessores de modelo e velocidadeAtual
-
-* Seletor do modelo
 
 
 <!SLIDE>
 # Atividade Classe 3
 
-Criar uma classe em Java representar uma progressão aritmética
+Criar uma classe em Java representar uma progressão aritmética conforme as seguintes informações:
 
-Para 
+A classe deve possuir dois atributos para representar
+* valor inicial da progressão
+* razão da progressão
 
+A Classe deve possuir um único construtor que recebe o valor inicial e a razão.
 
-Atributos
-* valor ataul
+Implementar o método seletor para mudar para o próximo valor da sequencia.
 
-
-Métodos
-* próximo valor
-* obtem valor ataul
-
-
-
-
-public class ProgressaoAritmetica {
-
-    private int valorAtual;
-    
-    public ProgressaoAritmetica (int valorInicial) {
-        this.valorAtual = valorInicial;
-    }
-
-    public int valorAtual () {
-        return this.valorAtual;
-    }
+    @@@ Java
     public void proximoValor () {
-        this.valorAtual = this.valorAtual + 1;
+        // implementar o código
     }
-}
+
+Implementar o método acessor para retornar o valor atual da progressão.
+
+    @@@ Java
+    public int valorAtual () {
+        // implementar o código
+    }
 
 
+<!SLIDE>
+# Atividade Classe 3
 
 
+    @@@ Java
+    public class ProgramaPrincipal {
+
+        public static void main (String[] args) {
+	    	int valorInicial = 5;
+		    int razao = 3;
+		
+            ProgressaoAritmetica pa = 
+                new ProgressaoAritmetica(valorInicial, razao);
+         
+            for (int i=0; i<10; i++) {
+                System.out.print (pa.valorAtual() + " ");
+                pa.proximoValor();
+            }
+        }        
+    }
 
 
 

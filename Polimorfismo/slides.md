@@ -1,6 +1,16 @@
 <!SLIDE section center>
 # Polimorfimo
 
+
+<!SLIDE>
+# Objetivos
+
+* compreender os conceitos herança e polimorfismo
+* saber quando utilizar
+* reutilizar código
+* criar classes filhas e reescrever métodos
+
+
 <!SLIDE>
 # Pilares do Paradigma Orientação a Objetos
 
@@ -8,6 +18,136 @@
 * **Polimorfismo**
 * Abstração
 * Encapsulamento
+
+
+
+
+<!SLIDE>
+# Herança
+
+O mecanismo de herança permite a criação de classes a partir de outras já existentes com relações é-um-tipo-de, de forma que a partir de uma mesma classe genérica, classes mais especializadas possam ser criadas.
+
+<!SLIDE>
+# 
+Exemplos:
+Funcionario é-uma Pessoa
+AutomovelDeLuxo é-um Automovel
+
+A relação é-um entre classes permite a existência de outra característica fundamenal de linguagens de programação orientada a objetos: o polimorfismo.
+
+Polimorfismo permite a manipulação de instâncias de classes que herdam de uma mesma classe ancestral de forma unificada: 
+
+
+
+
+
+
+
+<!SLIDE>
+# Definição Polimorfismo
+
+Polimorfismo é o princípio pelo qual duas ou mais classes derivadas de uma mesma superclasse 
+podem invocar métodos que têm a mesma identificação (assinatura) mas comportamentos distintos, 
+especializados para cada classe derivada.
+
+
+
+
+
+
+
+<!SLIDE>
+# Resumo das Características do Polimorfismo
+
+* As classes fazem a mesma operação (método), mas de forma diferente.
+* Ocorre quando um método definido no ancestral é redefinido no descendente com um comportamento diferente.
+* Todo método definido em um ancestral pode ser acessado através dos descendentes.
+* As classes fazem a mesma operação (método), mas de forma diferente.
+
+
+
+
+Polimorfismo = “várias coisas”
+Linguagem de Programação: pode haver várias formas de se fazer “alguma coisa”.
+Habilidade de um mesmo tipo de objeto poder realizar ações diferentes ao receber uma mesma mensagem
+Criação de múltiplas classes com os mesmos métodos e propriedades, mas com funcionalidades e implementações diferentes.
+
+
+Polimorfismo é a capacidade de um objeto poder ser referenciado de várias formas.
+
+O polimorfismo permite programar no geral em vez de programaar no específico.
+
+É a capacidade de tipos mais abstratos repesentarem comportamentos de tipos mais específicos.
+
+Com o polimorfismo, podemos projetar e implementar sistemas que são facilmente extensíveis - novas classes podem ser adicionadas a partes gerais do programa com pouca ou nenhma modificação, contanto que as novas classes façam parte da hierarquia de herança ue o programa processa genericamente.
+
+Polimorfismo esta intimamente ligado a herança de classes.
+Exemplo para compreender os dois conceitos.
+Classe 1 possui 2 métodos: metodoA() e metodoB()
+Classe 2 herda a classe 1
+Classe2 rescreve todo o métodoA()
+
+Colocar slide de quando usar herança - relação é um
+
+
+
+
+
+
+
+<!SLIDE>
+# Exemplos de polimorfismo
+
+
+
+<!SLIDE>
+# Vantagens do polimorfismo
+
+
+<!SLIDE>
+# Tipos de polimorfismo
+
+* Sobrecarga (overloading)
+ocorre na mesma classe ou entre classe-mãe e classe-filha
+os métodos diferem pela assinatura (ordem e número de parâmetros)
+a escolha do método ocorre em tempo de compilação
+
+* Sobreposição (overriding)
+métodos na clase-filha que redefinem ou sobrepõem o comportamento do mesmo método da classe-mãe.
+Apresenta a  mesma lista de parâmetros.
+Existe também a sobreposição (ou implementação) de métodos concretos (classe-filha) em métodos abstratos (classe-mãe ou interface)
+A escolha do método é feita em tempo de execução.
+
+
+
+
+<!SLIDE>
+# Vantagens do Polimorfismo
+
+Simplicidade
+quando necessário escrever um código que manipula uma família de tipos, o código pode ignorar detalhes específicos de cada tipo.
+mesmo que o código aparente estar manipulando um objeto do tipo da classe-mãe, o objeto na verdade pode ser do tipo da classe-mãe, mas também do tipo das classes-filhas
+isso torna o código mais fácil de se escrever e de se entender.
+
+Escalabilidade
+num momento futuro, outras classes poderão ser adicionadas à família de tipos, sendo que os seus objetos executarão seu código específico.
+
+<!SLIDE>
+# Benefícios do Polimorfismo
+
+* clareza
+* manutenção de códigos
+* aplicações flexíveis
+
+
+
+
+
+
+
+
+
+
 
 <!SLIDE>
 # Modelando ...

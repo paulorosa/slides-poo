@@ -78,6 +78,20 @@ As classes pertencentes a um relacionamento de Herança podem ser chamadas de fo
  * classe filha
 
 
+
+<!SLIDE>
+# Nomenclatura de Herança
+
+A classe A é superclasse da classe B
+
+A classe B é subclasse da classe A
+
+Todo B é um  A
+
+Classe A é classe Pai de Classe B
+
+Classe B é classe Filha de Classe A
+
  
  
  
@@ -301,7 +315,6 @@ Há duas formas de Herança
 <!SLIDE>
 # Herança Simples
 Várias subclasses podem herdar da mesma superclasse.
-(Exemplo na representação UML)
 
 
 
@@ -310,30 +323,21 @@ Várias subclasses podem herdar da mesma superclasse.
 <!SLIDE>
 # Herança Múltipla
 Uma subclasse pode herdar de várias superclasses.
+
 Em Java, não é possível.
-(Exemplo na representação UML)
-
-A hierarquia de herança pode ter várias níveis.
-(Exemplo em UML - que métodos estão agora disponíveis para uma instância da classe ClasseC?)
-
-
-
-
-
-
 
 
 <!SLIDE>
-# Nomenclatura de Herança
+# Hierarquia de Classes
 
-A classe A é superclasse da classe B
-A classe B é subclasse da classe A
-Todo B é um  A
-Classe A é classe Pai de Classe B
-Classe B é classe Filha de Classe A
+A hierarquia de herança pode ter várias níveis.
 
 
-imagem
+
+
+
+
+
 
 <!SLIDE>
 # Herança
@@ -354,6 +358,37 @@ livro é uma publicação
 * Generalização 
 
 * Especialização
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!SLIDE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

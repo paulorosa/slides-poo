@@ -56,7 +56,7 @@ Até 1999, o padrão era documentado pela Sun (antes do Oracle comprá-la):
 **'Code Conventions'**
 http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html
 
-Despois foi desconsiderada, mas é possível encontrar alguns padrões:
+Depois foi desconsiderada, mas é possível encontrar alguns padrões:
 
 Google Java Style Guide
 https://google.github.io/styleguide/javaguide.html
@@ -152,10 +152,8 @@ Arquivo: URL.java
     @@@Java
     String nome;
     
-    @@@Java
     String _email;
 
-    @@@Java
     String salarioMensal;
     
 
