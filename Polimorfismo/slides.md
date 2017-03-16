@@ -2,7 +2,7 @@
 # Polimorfimo
 
 
-<!SLIDE>
+~~~SECTION:notes~~~
 # Objetivos do Módulo
 
 Os objetivos para este módulo sobre Poliformismo são
@@ -23,6 +23,7 @@ Pendências:
 * criar lista de exercícios sobre polimorfismo
 * criar avaliação nos slides
 
+~~~ENDSECTION~~~
 
 
 <!SLIDE>
@@ -73,10 +74,10 @@ fundamental no paradigma programação orientada a objetos: o **Polimorfismo**
 
 
 <!SLIDE>
-# Definição Polimorfismo
+# O que é Polimorfismo?
 
-Polimorfismo é o princípio pelo qual duas ou mais classes derivadas de uma mesma superclasse 
-podem invocar métodos que têm a *mesma identificação* (assinatura) mas *comportamentos distintos*, 
+.callout Polimorfismo é o princípio pelo qual duas ou mais classes derivadas de uma mesma superclasse 
+podem invocar métodos que têm a _mesma identificação_ (assinatura) mas _comportamentos distintos_, 
 especializados para cada classe derivada.
 
 
@@ -95,6 +96,7 @@ Na Língua Portuguesa
 No Paradigma Orientado a Objetos
 
 .callout Várias formas de se fazer “alguma coisa”.
+
 
 
 

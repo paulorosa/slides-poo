@@ -6,6 +6,8 @@
 <!SLIDE>
 # Pilares do Paradigma Orientação a Objetos
 
+Este módulo refere-se a um dos quatro pilares do paradigma orientado a objetos.
+
 * **Herança**
 
 * Polimorfismo
@@ -82,15 +84,16 @@ As classes pertencentes a um relacionamento de Herança podem ser chamadas de fo
 <!SLIDE>
 # Nomenclatura de Herança
 
-A classe A é superclasse da classe B
+Alguns exemplos de expressões utilizadas para referenciar Herança:
 
-A classe B é subclasse da classe A
+* A classe A é superclasse da classe B
+* A classe B é subclasse da classe A
+* Classe A é classe Mãe de Classe B
+* Classe B é classe Filha de Classe A
 
-Todo B é um  A
+Uma das mais importantes é a expressão 
 
-Classe A é classe Pai de Classe B
-
-Classe B é classe Filha de Classe A
+* Toda classe B **É UMA** classe A
 
  
  
@@ -296,6 +299,16 @@ Desta forma, uma instância da ClasseA pode chamar o metodoB(), pois ela herda m
 
 
 
+<!SLIDE>
+# Representação Visual
+
+Para melhor comunicar sobre as possibilidades de relacionamento das classes,
+utilizamos diagramas para visualização.
+
+Esta comunicação é realizada pela linguagem de modelagem chamada **UML**.
+
+O módulo **UML** explica com mais detalhes.
+
 
 
 
@@ -317,14 +330,69 @@ Há duas formas de Herança
 Várias subclasses podem herdar da mesma superclasse.
 
 
+<!SLIDE>
+# Exemplo Herança Simples
 
+    @@@ Java
+    public class SuperClasse {
+    }
+    public class SubClasse1 extends SuperClasse {
+    }
+    public class SubClasse2 extends SuperClasse {
+    }
 
 
 <!SLIDE>
 # Herança Múltipla
 Uma subclasse pode herdar de várias superclasses.
 
-Em Java, não é possível.
+.callout.warning A linguagem Java não suporta Herança Múltipla.
+
+
+
+
+<!SLIDE>
+# Exemplo Herança Múltipla
+
+    @@@ Java
+    public class Carro {
+        public void puxarFreioDeMao() {
+        }
+    }
+    public class Barco {
+        public void jogarAncora() {
+        }
+    }
+    public class CarroAnfibio extends Carro, Barco {
+    }
+
+
+.callout ATENÇÂO: Em Java não funciona! Veremos mais adiante como resolver o problema.
+
+~~~SECTION:notes~~~
+public interface Carro {
+    public void puxarFreioDeMao();
+}
+public interface Barco {
+    public void jogarAncora();
+}
+public class CarroAnfibio implements Carro, Barco {
+    private Carro carro;
+    private Barco barco;
+    public void CarroAnfibio( Carro carro, Barco barco ) {
+        this.carro = carro;
+        this.barco = barco;
+    }
+    public void puxarFreioDeMao() {
+        carro.puxarFreioDeMao();
+    }
+    public void jogarAncora() {
+        barco.jogarAncora();
+    }
+}
+~~~ENDSECTION~~~
+
+
 
 
 <!SLIDE>
@@ -351,13 +419,16 @@ carro é um veículo
 livro é uma publicação
 
 
-
 <!SLIDE>
-# Herança
+#Generalização / Especialização
 
-* Generalização 
+É a primeira abordagem a ser feita sobre herança e possibilita a vantagem mais direta e evidente que é a reutilização de código. 
 
-* Especialização
+A **generalização** é o agrupamento de características (atributos) e regras (métodos) comuns em um modelo de sistema. 
+
+A **especialização** é o processo inverso, é a definição das particularidades de cada elemento de um modelo de sistemas, 
+detalhando características e regras específicas de um o objeto.
+
 
 
 
@@ -1262,14 +1333,12 @@ Exemplo/Exercíco: Funcionario/Gerente, ClasseMae/ClasseFilha
 
 
 <!SLIDE>
-#Refatoração
+# Refatoração
 Herança também pode surgir a partir da refatoração de classes existentes de modo a eliminar a duplicação de código.
+
 (Exemplo em UML - Gerente e Programador, depois superclasse Funcionario)
-Motivação para Refatoração: Grande Quantidade de atributos e métodos duplicados.
 
-<!SLIDE>
-#Generalização / Especialização
-É a primeira abordagem a ser feita sobre herança e possibilita a vantagem mais direta e evidente que é a reutilização de código. A generalização é o agrupamento de características (atributos) e regras (métodos) comuns em um modelo de sistema. Já a especialização é o processo inverso, é a definição das particularidades de cada elemento de um modelo de sistemas, detalhando características e regras específicas de um o objeto.
+_Motivação para Refatoração_: Grande Quantidade de atributos e métodos duplicados.
 
 
 
@@ -1277,17 +1346,15 @@ Motivação para Refatoração: Grande Quantidade de atributos e métodos duplic
 
 
 <!SLIDE>
-# Desvantagens / Recomendações
-Não usar Herança quando a relação não é claramente ‘é um’.
-Não use Herança apenas por reaproveitamento de código da classe mãe.
-Exemplo:
-Não use Herança apenas pelo Polimorfismo.
-Ao utilizar Herança com muitos filhos, podem gerar mais problemas:
-Você ganha mais coisa do que gostaria
-Sua relação com mãe é contubarda
-Quebra do encapsulamento
-	Exemplo: Pessoa, Pessoa Jurídica, Fornecedor Jurídico, Pessoa Física, Pessoa Jurídica.
-Quando um método na classe mãe muda pode quebrar o comportamento da classe filha.
+# Recomendações
+
+* Não usar Herança quando a relação não é claramente ‘é um’.
+
+* Não use Herança apenas por reaproveitamento de código da classe mãe.
+
+* Ao utilizar Herança com muitos filhos, pode gerar mais problemas.
+
+* Quebra do encapsulamento. Quando um método na classe mãe muda pode quebrar o comportamento da classe filha.
 
 
 
@@ -1295,50 +1362,17 @@ Quando um método na classe mãe muda pode quebrar o comportamento da classe fil
 
 <!SLIDE>
 # Atividade 1
-Crie uma classe Pessoa contendo os atributos encapsulados, com seus respectivos seletores (getters) e modificadores (setters), e ainda o construtor padrão e pelo menos mais duas opções de construtores conforme sua percepção. Atributos: nome, endereço, telefone.
+Crie uma classe Pessoa contendo os atributos encapsulados, com seus respectivos seletores (getters) e modificadores (setters), 
+e ainda o construtor padrão e pelo menos mais duas opções de construtores conforme sua percepção. 
+
+Atributos: nome, endereço, telefone.
+
 
 <!SLIDE>
 # Atividade 2
-Crie a subclasse Fornecedor a partir da classe Pessoa (exercício anterior). A classe fornecedor tem além dos atributos que caracterizam a classe Pessoa, também os atributos valorCredito (correspondente ao crédito máximo atribuído ao fornecerodr), valorDivida (montante da dívida para com o fornecedor).
+Crie a subclasse Fornecedor a partir da classe Pessoa (exercício anterior). 
+
+A classe fornecedor tem além dos atributos que caracterizam a classe Pessoa, também os atributos valorCredito (correspondente ao crédito máximo atribuído ao fornecerodr), valorDivida (montante da dívida para com o fornecedor).
+
 Implemente a classe Fornecedor, para além dos usuais métodos seletores e modificares, um método obterSaldo que devolve a diferença entre os valores dos atributos valorCredito e valorDivida. Depois de implementada a classe Fornecedor, crie um programa de teste adequado que lhe permita verificar o funcionamento dos métodos implementados na classe Fornecedor e os herdados da classe Pessoa.
-
-
-
-
-
-
-
-
-<!SLIDE form=heranca>
-# Making Acquaintances
-## Let's get to know each other
-
-Tell me a little bit about yourself to help me better tailor the classroom
-experience towards your needs.
-
-ha -> ha? = () Sim (=) Não
-
-hb -> hb? = (=) Sim () Não
-
-
-~~~SECTION:notes~~~
-
-
-~~~ENDSECTION~~~
-
-
-<!SLIDE>
-
-* incluir exercício/exemplo com a classe de sequencia númérica.
-
-
-
-<!SLIDE>
-# Para que serve a Herança?
-
-Considere a criação de uma classe ClasseB (com métodos m1() e m2() na representação UML).
-
-Que métodos estão disponíveis através de uma referência para a classe B (isto é, um objeto)?
-
-
 

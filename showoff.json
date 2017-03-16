@@ -19,12 +19,12 @@
         {"section": "Nomenclatura"},
         {"section": "Herança"},
 
-        {"section": "AULA 04"},
+        {"section": "*AULA 04"},
         {"section": "Modificadores"},
         {"section": "UML"},
 
-        {"section": "AULA 05"},
-        {"section": "Polimorfismo"},
+        {"section": "*AULA 05"},
+        {"section": "*Polimorfismo"},
         {"section": "***Abstração*** (X)"},
         {"section": "***Associação"},
         {"section": "***Pacotes"},
@@ -40,7 +40,11 @@
         {"section": "***Provas*** (X)"},
         {"section": "*Referências"},
         
-        {"section": "ADO/ado2.md"}
+        {"section": "ADO/slides.md"},
+        {"section": "ADO/ado1.md"},
+        {"section": "*ADOado2.md"},
+        {"section": "*ADOado3.md"},
+        {"section": "*ADOado4.md"}
         
     ]
 }

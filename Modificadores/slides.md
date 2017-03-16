@@ -9,6 +9,7 @@ São padrões de visibilidade de acesso às classes, atributos e métodos.
 
 Controlam como as classes e seus membros são visíveis por outras classes.
 
+O Modificador de Acesso também pode ser referenciado como Restrição de Acesso.
 
 
 <!SLIDE>
@@ -22,13 +23,23 @@ Java possui 4 níveis de controle de acesso, que são aplicados a classes, atrib
 * public
 
 
+
+
 <!SLIDE>
-# Modificador public
-## Uma declaração com este modificador pode ser acessada de qualquer lugar e por qualquer entidade.
+# Aplicação dos Modificadores de Acesso
 
-Representação em UML - símbolo + (mais)
+Os modificadores de acesso podem ser aplicados em diversos lugares:
 
-    @@@Java
+* classe
+
+* atributo
+
+* método
+
+
+O exemplo a seguir possui o modificar público para todos os lugares.
+	
+    @@@ Java
     public class Funcionario {
     	public String nome;
 
@@ -41,7 +52,27 @@ Representação em UML - símbolo + (mais)
 	    }
     }
 
-xxx
+
+
+<!SLIDE>
+# Modificador Público
+
+Uma declaração com este modificador pode ser acessada de qualquer lugar e por qualquer objeto.
+
+Em Java, o modificador público é realizado pela palavra reservada **public**.
+
+
+<!SLIDE>
+# Modificador Público na Classe
+
+<!SLIDE>
+# Modificador Público no Atributo
+
+<!SLIDE>
+# Modificador Público no Método
+
+
+
 
     @@@Java
     public static void main (String[] args) {
@@ -178,7 +209,7 @@ Classe Funcionario com atributo salário e método aplicarBonus.
 Alterando salário do Funcionário...
 
     @@@Java
-public class Funcionario {
+    public class Funcionario {
   public double salario;
   
   public Funcionario (double salario) {
@@ -198,8 +229,8 @@ public class Funcionario {
 
 Salário: 2.000
 
-
-public static void main (String[] args) {
+    @@@ Java
+    public static void main (String[] args) {
   Funcionario f = new Funcionario(1.000);
   f.salario = 2.0 * f.salario;
   System.out.println (“Salário: “ + f.getSalario());
@@ -293,3 +324,11 @@ Classe B (classe filha de A no mesmo pacote)
  
  Classe C (classe filha de A em pacote diferente)
 
+
+
+
+
+<!SLIDE>
+# Representações na UML
+
+Representação em UML - símbolo + (mais)

@@ -2,8 +2,17 @@
 # UML
 
 
-<!SLIDE center>
-# Como comunicar a solução?
+<!SLIDE>
+# Como comunicar uma solução?
+
+Independente do tamanho do seu problema é importante que exista alguma
+forma de comunicar sua solução sem a necessidade de construir o código.
+
+Também é importante que, dado um software já construído, exista alguma
+forma de representá-lo sem a necessidade de mostrar o código.
+
+.callout A solução de um problema utilizando o _Paradigma Orientado a Objetos_
+pode ser comunicado por meio de uma Linguagem de Modelagem.
 
 
 
@@ -24,20 +33,6 @@ UML é uma Linguagem Padrão para:
 de Software Orientado a Objetos.
 
 ![.fancyborder](_images/uml.png)
-
-
-
-<!SLIDE>
-# Bibliografia
-## UML Essencial: Um breve guia para a linguagem Padrão
-
-**Editora**: Bookman Companhia
-
-**Autor**: Martin Fowler
-
-http://martinfowler.com/books/uml.html
-
-![.fancyborder](_images/livro_uml_essencial.jpg)
 
 
 
@@ -239,7 +234,7 @@ Exemplos de Ferramentas
 
 
 <!SLIDE>
-# Para que serve o Diagrama de Classes?
+# Relacionamento entre Classes no Diagrama
 
 Descreve os tipos de objetos no sistema e os vários tipos de relacionamentos estáticos que podem existir entre eles.
 
@@ -251,7 +246,7 @@ Tipos de relacionamento:
 
 
 <!SLIDE>
-# Para que serve o Diagrama de Classes?
+# Classes no Diagrama
 
 Diagramas de classes mostram (comunicam):
 
@@ -263,5 +258,32 @@ Diagramas de classes mostram (comunicam):
 <!SLIDE>
 #  Notação UML para Classes
 
-colocar imagem
+![.fancyborder](_images/notacao_uml_classes.png)
+
+
+
+
+<!SLIDE>
+#  Exemplo Diagrama de Classes
+
+![.fancyborder](_images/diagrama_classe_funcionario.png)
+
+
+
+
+
+
+
+<!SLIDE>
+# Bibliografia
+## UML Essencial: Um breve guia para a linguagem Padrão
+
+**Editora**: Bookman Companhia
+
+**Autor**: Martin Fowler
+
+http://martinfowler.com/books/uml.html
+
+![.fancyborder](_images/livro_uml_essencial.jpg)
+
 

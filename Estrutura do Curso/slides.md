@@ -2,14 +2,6 @@
 # Programação Orientada a Objetos
 ## Prof. Paulo Rosa
 
-<P>
-<P>
-<P>
-<P>
-<P>
-<P>
-## http://10.135.143.42:9090/
-
 
 <!SLIDE>
 # Objetivo

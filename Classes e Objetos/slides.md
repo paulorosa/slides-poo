@@ -811,6 +811,7 @@ Implementar a classe Carro de acordo com as seguintes informações:
 Criar uma classe em Java representar uma progressão aritmética conforme as seguintes informações:
 
 A classe deve possuir dois atributos para representar
+
 * valor inicial da progressão
 * razão da progressão
 
@@ -852,7 +853,10 @@ Implementar o método acessor para retornar o valor atual da progressão.
         }        
     }
 
+Resultado Desejado:
 
+    @@@ Console
+    5 8 11 14 17 20 23 26 29 32
 
 
 
