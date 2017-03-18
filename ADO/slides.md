@@ -8,7 +8,7 @@
   <tr><th>ADO</th><th>Tema</th><th>Divulgação</th><th>Entrega</th><th>Correção</th><th>Notas</th></tr>
   <tr>
     <td>1</td>
-    <td>[Hierarquia de Empregados](/supplemental/ado1)</td>
+    <td>[Hierarquia de Sequências](/supplemental/ado1)</td>
     <td>Aula 4</td>
     <td>Aula 6</td>
     <td>Aula 6</td>
