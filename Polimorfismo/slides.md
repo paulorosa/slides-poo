@@ -1,31 +1,6 @@
 <!SLIDE section center>
 # Polimorfimo
 
-
-~~~SECTION:notes~~~
-# Objetivos do Módulo
-
-Os objetivos para este módulo sobre Poliformismo são
-
-* compreender os conceitos herança e polimorfismo
-
-* saber quando utilizar
-
-* reutilizar código
-
-* criar classes filhas e reescrever métodos
-
-.callout.error Terminar este slide após finalizar tudo sobre poliformfismo.
-
-Pendências:
-
-* criar ADO sobre polimorfismo
-* criar lista de exercícios sobre polimorfismo
-* criar avaliação nos slides
-
-~~~ENDSECTION~~~
-
-
 <!SLIDE>
 # Pilares do Paradigma Orientação a Objetos
 
@@ -36,12 +11,6 @@ Este módulo refere-se a um dos quatro pilares do paradigma orientado a objetos.
 * Abstração
 * Encapsulamento
 
-
-
-
-
-
-
 <!SLIDE>
 # Relação É-UM na Herança
 
@@ -51,27 +20,21 @@ O relacionamento entre estas classes é do tipo **É-UM**.
 
 A partir de uma mesma classe genérica, classes mais especializadas podem ser criadas.
 
-
-
+![.fancyborder](_images/automovel-carro-moto.png)
 
 <!SLIDE>
 # Especialização de Classes
 
-
-
-Exemplos:
-Funcionario é-uma Pessoa
-AutomovelDeLuxo é-um Automovel
-
 .callout A relação **É-UM** entre classes permite a existência de outra característica 
 fundamental no paradigma programação orientada a objetos: o **Polimorfismo**
 
+Por exemplo, no diagrama de classes abaixo, as classes _Carro_ e _Moto_ são 
+classes especializadas da classe _Automovel_, cujo relacionamento **É-UM** é válido.
 
+![.fancyborder](_images/automovel-carro-moto-eum.png)
 
-
-
-
-
+* _Carro_ é um _Automovel_
+* _Moto_ é um _Automovel_
 
 <!SLIDE>
 # O que é Polimorfismo?
@@ -80,66 +43,38 @@ fundamental no paradigma programação orientada a objetos: o **Polimorfismo**
 podem invocar métodos que têm a _mesma identificação_ (assinatura) mas _comportamentos distintos_, 
 especializados para cada classe derivada.
 
-
-
-
-
-
 <!SLIDE>
 # Significado 
 
-Na Língua Portuguesa
+Na _Língua Portuguesa_:
 
-.callout Palavra de origem grega que significa "várias formas"
-(poli = muitas; morphos = formas)
+* Palavra de origem grega que significa "várias formas"
+* (poli = muitas; morphos = formas)
 
-No Paradigma Orientado a Objetos
+No _Paradigma Orientado a Objetos_:
 
-.callout Várias formas de se fazer “alguma coisa”.
-
-
-
-
-
-
-
+* Várias formas de se executar um determinado comportamento.
 
 <!SLIDE>
 # Herança e Polimorfismo
 
-.callout **Polimorfismo** esta diretamente ligado a **Herança** de classes.
+.callout **Polimorfismo** está diretamente ligado a **Herança** de classes.
 
-A ligação está é porque os comportamentos diferentes são implementados nas classes filhas.
-
-
-
-
-
-<!SLIDE>
-# Mais explicações sobre Polimorfismo
-
-Permite que métodos produzam resultados diferentes, dependendo do objeto ao qual é aplicado.
-
-A mesma chamada de método (ou envio de mensagem para um objeto) pode produzir “muitas formas” de resultados.
-
-Capacidade de uma referência de variável mudar seu comportamento de acordo com o objeto a que ela está conectada.
-
-
-
-
-
-
-
+A ligação ocorre porque os comportamentos diferentes são implementados nas classes filhas.
 
 <!SLIDE>
 # Exemplo Polimorfismo
 
-Para compreender como os conceitos estão relacionados, considere o seguinte diagrama de classes.
+Considere o seguinte diagrama de classes.
 
 ![.fancyborder](_images/ClasseMae_ClasseFilha_MetodoA.png)
 
 * as classes ClasseFilha1 e ClasseFilha2 herdam da classe ClasseMae.
 * as classes ClasseFilha1 e ClasseFilha2 possuem o mesmo método metodoA()
+
+
+
+
 
 <!SLIDE>
 # Implementação do Diagrama de Classes
@@ -157,6 +92,9 @@ Para compreender como os conceitos estão relacionados, considere o seguinte dia
             System.out.println("metodoA executado na ClasseFilha2");
         }
     }
+
+
+
 
 
 <!SLIDE>
@@ -188,10 +126,236 @@ da mesma classe.
 
     
 <!SLIDE>
-# Exemplo Polimorfismo
+# Formas de Execução Diferentes
+
+O Polimorfismo permite que métodos com a mesma assinatura produzam resultados diferentes, dependendo do objeto ao qual é aplicado.
+
+A mesma chamada de método (ou envio de mensagem para um objeto) pode produzir “muitas formas” de resultados.
+
+Conforme mostrado anteriormente, podemos ter dois objetos realizando chamada para um mesmo método.
+
+    @@@ Java
+    cf1.metodoA();
+    cf2.metodoA();
+    
+Contudo, o resultado pode ser diferente.
+
+    @@@ Console
+    metodoA executado na ClasseFilha1
+    metodoA executado na ClasseFilha2
 
 
 
+
+<!SLIDE>
+# Programação Genérica vs Específica
+
+.callout O **Polimorfismo** permite programar de forma genérica em vez de programar de forma específica.
+
+Para compreender melhor o que é programar de forma genérica e o que é programar de 
+forma específica, vamos continuar com o exemplo das classes filhas da classe Automovel.
+
+
+![.fancyborder](_images/automovel-carro-moto.png)
+
+
+
+<!SLIDE>
+# Coleções de Objetos
+
+Para mostrar os benefícios de programar de forma genérica, 
+trabalharemos com coleções de objetos.
+
+A linguagem Java possui uma classe responsável por armazenar coleções de objetos. 
+
+_Observação_: Entraremos em maiores detalhes sobre coleções mais adiante.
+
+
+
+
+<!SLIDE>
+# Declaração da Classe ArrayList 
+
+Em Java, a classe **ArrayList** é uma opção representar uma coleção de objetos. 
+
+Como a linguagem Java é fortemente tipada e a classe ArrayList aceita apenas
+um único tipo de objeto, é necessário indicar do que a coleção será composta.
+
+No nosso exemplo, temos instâncias de Carro e de Moto. Portanto, precisamos de 
+duas coleções, uma coleção de instâncias da classe Carro e outra da classe Moto.
+
+A declaração fica da seguinte forma
+
+    @@@ Java
+    ArrayList<Carro> carros = new ArrayList<Carro>();
+    ArrayList<Moto> motos = new ArrayList<Moto>();
+
+Coloca-se Carro ou Moto entre os caracteres '<' e '>' para indicar sobre 
+o que é a coleção.
+
+
+
+
+<!SLIDE>
+# Adição de objetos na Coleção
+
+Para adicionar instâncias da classe Carro, 
+utiliza-se o método **add** da classe **ArrayList**.
+
+    @@@ Java
+    Carro carro1 = new Carro();
+    Carro carro2 = new Carro();
+    
+    ArrayList<Carro> carros = new ArrayList<Carro>();
+
+	carros.add(carro1);
+	carros.add(carro2);
+	
+
+
+
+
+<!SLIDE>
+# Programar de Forma Específica
+
+Suponha que em uma determinada parte do código foram criadas instâncias da Classe Carro da Classe Moto.
+
+    @@@ Java
+    Carro carro1 = new Carro();
+    Carro carro2 = new Carro();
+
+    Moto moto1 = new Moto();
+    Moto moto2 = new Moto();
+
+Se desejarmos criar uma coleção dos automóveis, precisaremos criar duas coleções da seguinte forma:
+
+    @@@ Java
+    ArrayList<Carro> carros = new ArrayList<Carro>();
+	carros.add(carro1);
+	carros.add(carro2);
+    
+    ArrayList<Moto> motos = new ArrayList<Moto>();
+	motos.add(moto1);
+	carros.add(moto2);
+
+
+<!SLIDE>
+# Programar de Forma Específica
+
+Se for necessário criar uma nova classe filha de automóvel, por exemplo, a classe **QuadriCiclo**.
+
+    @@@ Java
+    public class Quadriciclo extends Automovel {
+      
+    }
+    
+também será necessário criar outra coleção para armazenar instâncias desta classe.
+
+    @@@ Java
+    Quadriciclo quadriciclo1 = new Quadriciclo();
+    Quadriciclo quadriciclo2 = new Quadriciclo();
+
+    ArrayList<Quadriciclo> quadriciclos = new ArrayList<Quadriciclo>();
+	quadriciclos.add(quadriciclo1);
+	quadriciclos.add(quadriciclo2);
+
+
+
+<!SLIDE>
+# Acessando elementos de uma coleção
+
+
+<!SLIDE>
+# ...
+
+
+Mostrar os elementos da coleção exige que se crie uma estrtura para cada tipo.
+
+    @@@ Java
+    
+e para quando uma nova classe é adicionada, também é necesário criar uma nova estrutura.
+
+    @@@ Java
+
+
+
+
+
+
+
+
+<!SLIDE>
+# Programar de Forma Específica
+
+O programar de forma específica é utilizar as classes específicas de 
+uma hierarquia de classes para programar.
+
+No exemplo apresentado, queríamos representar a coleção dos automóveis.
+
+Não conseguimos, foi necessário criar uma nova coleção.
+
+Um dos problemas de programar de forma específica é a necessidade de 
+fazer o tratamento específico para cada classe específica que surgir, 
+gerando um aumento da quantidade de código para escrever.
+
+.callout A manutenção neste caso é muito grande. Incluir novos tipos de 
+automóveis exige um certo trabalho e criação de estruturas adicionais.
+
+
+
+<!SLIDE>
+# Programar de Forma Genérica
+
+.callout.question Como resolver este problema?
+
+Se queremos uma coleção de automóveis, podemos utilizar o conceito da 
+Herança e adicionar um carro na coleção de automóveis, dado que um 
+carro é um automóvel.
+
+Para isto, precisamos criar uma coleção de automóveis:
+
+    @@@ Java
+    ArrayList<Automovel> autos = new ArrayList<Automovel>();
+
+E adicionar o carro na lista
+
+    @@@ Java
+    Carro carro = new Carro();
+    
+    autos.add(carro);
+    
+
+
+
+
+
+
+    
+<!SLIDE>
+# Mais explicações sobre Polimorfismo
+
+Desta forma, o Polimorfismo também pode ser visto com a capacidade de tipos mais abstratos 
+repesentarem comportamentos de tipos mais específicos.
+
+Polimorfismo é a capacidade de um objeto poder ser referenciado de várias formas.
+
+
+
+
+<!SLIDE>
+# Mais explicações sobre Polimorfismo
+
+Com o polimorfismo, podemos projetar e implementar sistemas que são facilmente extensíveis
+ 
+novas classes podem ser adicionadas a partes gerais do programa com pouca ou nenhma modificação, contanto que as novas classes façam parte da hierarquia de herança ue o programa processa genericamente.
+
+
+
+
+<!SLIDE>
+# Mais explicações sobre Polimorfismo
+
+Capacidade de uma referência de variável mudar seu comportamento de acordo com o objeto a que ela está conectada.
 
 
 
@@ -202,8 +366,11 @@ da mesma classe.
 # Resumo das Características do Polimorfismo
 
 * As classes fazem a mesma operação (método), mas de forma diferente.
+
 * Ocorre quando um método definido no ancestral é redefinido no descendente com um comportamento diferente.
+
 * Todo método definido em um ancestral pode ser acessado através dos descendentes.
+
 * As classes fazem a mesma operação (método), mas de forma diferente.
 
 
@@ -215,24 +382,83 @@ Polimorfismo permite a manipulação de instâncias de classes que herdam de uma
 
 
 
-Polimorfismo é a capacidade de um objeto poder ser referenciado de várias formas.
-
-O polimorfismo permite programar no geral em vez de programaar no específico.
-
-É a capacidade de tipos mais abstratos repesentarem comportamentos de tipos mais específicos.
-
-Com o polimorfismo, podemos projetar e implementar sistemas que são facilmente extensíveis - novas classes podem ser adicionadas a partes gerais do programa com pouca ou nenhma modificação, contanto que as novas classes façam parte da hierarquia de herança ue o programa processa genericamente.
 
 
-Colocar slide de quando usar herança - relação é um
+<!SLIDE>
+# Tipos de Polimorfismo
+
+* **Sobreposição** ou **Sobrescrita** (_overriding_)
+
+* **Sobrecarga** (_overloading_)
+
+
+<!SLIDE>
+# Sobreposição (Overriding)
+
+* A implementação do método na Classe Filha redefine (ou sobrepõe) a implementação
+do mesmo método (mesma assinatura) definido na Classe Mãe.
+
+* A escolha de qual classe o método será executado é realizada em tempo de execução.
+
+* Mesma assinatura significa ter o mesmo nome do do método com a mesma lista de tipos de parâmetros.
+* O tipo do retorno não importa na assinatura do método. Não é possível ter dois métodos com 
+nomes iguais e mesma lista de tipos de parâmetros de entrada e mesmo tipo de retorno.
 
 
 
 
+<!SLIDE>
+# Exemplo Sobreposição (Overriding)
 
+Considerando a hierarquia de classes de automóveis, o trecho de código
+abaixo apresenta o método _quantidadeRodas()_ implementado na classe mãe 
+e na classe filha.
 
+    @@@ Java
+    public class Automovel {
+        //...
+        public int quantidadeRodas () {
+            return 0;
+        }
+    }    
+    public class Carro extends Automovel {
+        // ...
+        public int quantidadeRodas () {
+            return 4; // método sobreescrito
+        }
+    }
+            
 
+<!SLIDE>
+# Exemplo Sobreposição (Overriding)
 
+Uma chamada para o método na instância de Automovel
+
+    @@@ Java
+    Automovel auto = new Automovel ();
+    System.out.println ("Quantidade: "+auto.quantidadeRodas);            
+
+Teria como resultado:
+
+    @@@ Console
+    Quantidade: 0;
+       
+
+<!SLIDE>
+# Exemplo Sobreposição (Overriding)
+            
+Uma chamada para o método na instância de Carro
+
+    @@@ Java
+    Carro auto = new Carro ();
+    System.out.println ("Quantidade: "+auto.quantidadeRodas);
+
+Teria como resultado:
+
+    @@@ Console
+    Quantidade: 4;
+       
+    
 
 
 <!SLIDE>
@@ -251,12 +477,6 @@ A escolha do método é feita em tempo de execução.
 
 
 
-<!SLIDE>
-# Tipos de Polimorfismo
-
-Sobreposição ou Sobrescrita (overriding)
-
-Sobrecarga (overloading)
 
 
 
@@ -272,37 +492,15 @@ Sobrecarga (overloading)
 
 
 
-<!SLIDE>
-# Sobrescrita de Método
-
-Uma subclasse redefine um comportamento de sua superclasse
-pessoa.getNome()
-	return “Sr. “ + this.nome;
-empregado.getNome()
-	return “Funcionário “ + this.nome;
-gerente.getNome()
-	return “Gerente “ + this.nome;
-
-
 
 <!SLIDE>
 # Sobrecarga (overloading)
 
-Os métodos diferem pela assinatura 
-(ordem e número de parâmetros)
+* Os métodos diferem pela assinatura (ordem e número de parâmetros).
 
-Ocorre na mesma classe ou entre classe mãe e filha
+* Ocorre na mesma classe ou entre classe mãe e filha
 
-A escolha do método ocorre em tempo de compilação
-
-
-
-<!SLIDE>
-# Sobrecarga de Método
-
-Mesmo nome, parâmetros diferentes.
-setData (int dia, int mes, int ano);
-setData (int dia, int mes, int ano, int hora, int minuto);
+* A escolha do método ocorre em tempo de compilação
 
 
 
@@ -319,7 +517,7 @@ setData (int dia, int mes, int ano, int hora, int minuto);
 <!SLIDE>
 # Aplicando Polimorfismo
 
-**Problema**: Gerar um Rrelatório com as bonificações dos Funcionários de uma Faculdade. 
+**Problema**: Gerar um Relatório com as bonificações dos Funcionários de uma Faculdade. 
 
 Algumas informações adicionais:
 
@@ -329,11 +527,9 @@ Algumas informações adicionais:
 
 * A bonificação de todos os funcionários é 10% do salário.
 
-
 A saída do relatório deve ser parecida com esta:
 
     @@@ Console
-    Relatório de Bonificações
     Nome             Salário           Bonificação
     P1               1000              100
     D1               2000              200
@@ -361,40 +557,40 @@ colocar imagem
 <!SLIDE>
 # Classe Funcionario
 
-    @@@Java
+    @@@ Java
     public class Funcionario {
-	private String nome;
-	private long salario;
-	public Funcionario (String nome, long salario) {
+	  private String nome;
+	  private long salario;
+	  
+	  public Funcionario (String nome, long salario) {
 		this.nome = nome;
 		this.salario = salario;
-	}
-	public String getNome() {
+	  }
+  	  public String getNome () {
 		return this.nome;
-	}
-	public long getSalario() {
+	  }
+	  public long getSalario () {
 		return this.salario;
-	}
-	public long getBonus() {
+	  }
+	  public long bonificacao () {
 		return this.salario * 0.1;
-	}
-}
+	  }
+    }
 
 <!SLIDE>
 # Classes Professor e Diretor
 
-    @@@Java
+    @@@ Java
     public class Diretor extends Funcionario {
-	    public Diretor (String nome,long salario) {
-		    super (nome, salario);
-		}
+	  public Diretor (String nome,long salario) {
+        super (nome, salario);
+	  }
     }
 
-    @@@Java
     public class Professor extends Funcionario {
-	    public Professor (String nome,long salario) {
-	 	    super (nome, salario);
-        }
+	  public Professor (String nome,long salario) {
+        super (nome, salario);
+      }
     }
 
 <!SLIDE>
@@ -402,12 +598,11 @@ colocar imagem
 
     @@@Java
     public class Coordenador extends Professor {
-        public Coordenador  (String nome,long salario) {
-		    super (nome, salario);
-        }
+      public Coordenador  (String nome,long salario) {
+	    super (nome, salario);
+      }
     }
     
-
     
 
 <!SLIDE>
@@ -420,7 +615,6 @@ colocar imagem
         Diretor d = new Diretor (“D1”, 3000);
         Coordenador c = new Coordenador (“C1”, 1000);
 
-        System.out.println(“Relatório de Bonificações"
         System.out.println(“Nome \t Salário \t Bonificação");
         
         System.out.println(p.getNome()+" \t "+p.getSalario()+" \t "+p.getBonus()+" \t ");
@@ -428,9 +622,9 @@ colocar imagem
         System.out.println(p.getNome()+" \t "+p.getSalario()+" \t "+p.getBonus()+" \t ");
     }
 
+O resultado:
 
     @@@ Console
-    Relatório de Bonificações
     Nome             Salário           Bonificação
     P1               1000              100
     D1               2000              200
@@ -444,10 +638,29 @@ colocar imagem
 <!SLIDE>
 # Requisito Adicional
 
+Depois qeu...
 Bonificações de Funcionários variam em função do Bônus
-Professor e Segurança: 10% do salário
-Coordenador: 20% do salário
-Diretor: 30% do salário
+
+
+
+**Problema**: Bonificações de Funcionários variam em função do Bônus.
+
+* _Professor_: 10% do salário
+* _Coordenador_: 20% do salário
+* _Diretor_: 30% do salário
+
+A saída do relatório deve ser parecida com esta:
+
+    @@@ Console
+    Nome             Salário           Bonificação
+    P1               1000              100
+    D1               2000              400
+    C1               3000              900 
+
+
+
+
+
 
 
 <!SLIDE>
@@ -466,7 +679,6 @@ Da forma como foi modelado, os tipos de funcionários sempre retornarão os mesm
 <!SLIDE>
 # Implementação de Comportamentos Diferentes
 
-Sobreposição d
 
 Funcionários possuem bonifcacões diferentes
 Professor Segurança:  10% do salário
@@ -525,13 +737,16 @@ Diretor:  30% do salário
 
     @@@Java
     Professor p = new Professor (“P1”, 1000);
-Diretor d = new Diretor (“D1”, 3000);
+    Diretor d = new Diretor (“D1”, 3000);
 
-System.out.println(“Bonificação: “+p.getBonificacao());
-System.out.println(“Bonificação: “+d.getBonificacao());
+    System.out.println(“Bonificação: “+p.getBonificacao());
+    System.out.println(“Bonificação: “+d.getBonificacao());
 
-Bonificação: 100
-Bonificação: 900
+Resultado:
+
+    @@@ Console
+    Bonificação: 100
+    Bonificação: 900
 
 
 
@@ -542,20 +757,24 @@ Bonificação: 900
 
 
 Gerar um relatório de bonificações dos Funcionários de uma Faculdade. 
+
 Podem ser Professores, Coordenadores ou Diretores. O Relatório deve mostrar o nome, o cpf e a bonificação de cada Funcionário.
 
 
-Funcionários possuem bonifcações diferentes
-Professor e Segurança:  10% do salário
-Coordenador:  20% do salário
-Diretor:  30% do salário + Adicional
+**Funcionários** possuem bonificações diferentes
+
+* _Professor_:  10% do salário
+
+* _Coordenador_:  20% do salário
+
+* _Diretor_:  30% do salário + Adicional
 
 
 
 <!SLIDE>
 # Sobrecarga (overloading)
 
-colocar imagem
+
 
 
 <!SLIDE>
@@ -584,29 +803,22 @@ colocar imagem
 <!SLIDE>
 # Relatório
 
-Professor p = new Professor (“P1”, 1000);
-Diretor d = new Diretor (“D1”, 3000);
+    @@@ Java
+    Professor p = new Professor (“P1”, 1000);
+    Diretor d = new Diretor (“D1”, 3000);
 
-System.out.println(“Bonificação: “+p.getBonus());
-System.out.println(“Bonificação: “+d.getBonus());
-System.out.println(“Bonificação: “+d.getBonus(200));
+    System.out.println(“Bonificação: “+p.getBonus());
+    System.out.println(“Bonificação: “+d.getBonus());
+    System.out.println(“Bonificação: “+d.getBonus(200));
 
-Bonificação: 100
-Bonificação: 900
-Bonificação: 1100
+Resultado: 
 
-
-
-
-
+    @@@ Console
+    Bonificação: 100
+    Bonificação: 900
+    Bonificação: 1100
 
 
-<!SLIDE>
-# Benefícios do Polimorfismo
-
-* clareza
-* manutenção de códigos
-* aplicações flexíveis
 
 
 
@@ -624,4 +836,58 @@ isso torna o código mais fácil de se escrever e de se entender.
 **Escalabilidade**
 
 Em um momento posterior, outras classes poderão ser adicionadas na hierarquia de classes, sendo que os seus objetos executarão seu código específico.
+
+
+
+
+<!SLIDE>
+# Atividade Sala de Aula
+
+criar um exercício para aplicar 
+
+ContaBancaria para representar apenas: saldo, deposito e retirada
+- uma instância nasce sempre com saldo zero
+
+
+Fundos de Ações
+São fundos que têm, no mínimo, 67% dos seus recursos aplicados em ações negociadas em Bolsa de Valores. Esses fundos contam com alíquota única de Imposto de Renda, independentemente do prazo do investimento. O imposto será cobrado sobre o rendimento bruto do fundo quando você resgatar a aplicação.
+
+<table>
+<tr><th>Prazo da Aplicação</th><th>Alíquota do IR</th></tr>
+<tr><td>-</td><td>-</td></tr>
+</table>
+
+
+
+
+
+~~~SECTION:notes~~~
+
+exercício na sala de aula com hierarquia de funcionários.
+
+~~~ENDSECTION~~~
+
+
+~~~SECTION:notes~~~
+# Objetivos do Módulo
+
+Os objetivos para este módulo sobre Poliformismo são
+
+* compreender os conceitos herança e polimorfismo
+
+* saber quando utilizar
+
+* reutilizar código
+
+* criar classes filhas e reescrever métodos
+
+.callout.error Terminar este slide após finalizar tudo sobre poliformfismo.
+
+Pendências:
+
+* criar ADO sobre polimorfismo
+* criar lista de exercícios sobre polimorfismo
+* criar avaliação nos slides
+
+~~~ENDSECTION~~~
 

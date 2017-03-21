@@ -124,11 +124,8 @@ A saída deve ser:
 
 ### Sequência Polinomial de Segundo Grau
 
-A sequência definida pela lei de formação *an = 3n² + 4n - 3*, onde: 
-
-* n = 1, 2, 3, 4, 5, ... 
-
-* an é o termo que ocupa a n-ésima posição na sequência. 
+A sequência definida pela lei de formação *an = 3n² + 4n - 3*, onde: n = 1, 2, 3, 4, 5, ...  
+e an é o termo que ocupa a n-ésima posição na sequência. 
 
 
     @@@ Java

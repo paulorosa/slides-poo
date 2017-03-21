@@ -19,12 +19,14 @@
         {"section": "Nomenclatura"},
         {"section": "Herança"},
 
-        {"section": "*AULA 04"},
+        {"section": "AULA 04"},
         {"section": "Modificadores"},
         {"section": "UML"},
 
+        {"section": "AULA 05"},
+        {"section": "Polimorfismo"},
+        
         {"section": "*AULA 05"},
-        {"section": "*Polimorfismo"},
         {"section": "***Abstração*** (X)"},
         {"section": "***Associação"},
         {"section": "***Pacotes"},
