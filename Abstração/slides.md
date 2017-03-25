@@ -1,52 +1,106 @@
 <!SLIDE section center>
 # Classes e Métodos Abstratos
 
+<!SLIDE>
+# Pilares do Paradigma Orientação a Objetos
+
+Este módulo refere-se a um dos quatro pilares do paradigma orientado a objetos.
+
+* Herança
+* Polimorfismo
+* **Abstração**
+* Encapsulamento
 
 <!SLIDE>
-# Definição
-“ Classes Abstratas organizam elementos comuns a várias classes.”
-James Rumbaugh
+# Hierarquia de Automóveis
 
+Vamos voltar ao exemplo da hierarquia de automóveis apresentado no módulo de Herança.
+
+![.fancyborder](_images/abstracao-automovel-carro-moto.png)
+
+Nesta hierarquia, a classe Automovel foi criada como forma de abstrair um
+conceito geral representado em ambas as classes.
+
+
+
+
+
+<!SLIDE>
+# Classes Abstratas
+
+A forma de representar estes conceitos abstratos é realizado no Paradigma
+Orientado a Objetos com *Classes Abstratas*.
+
+.callout *Classes Abstratas* organizam elementos comuns a várias classes. - **James Rumbaugh**
+
+No exemplo, a classe Automovel está fazendo o papel de uma classe abstrata, pois está representando
+um conceito abstrato.
+
+
+
+<!SLIDE>
+# Características e Comportamentos em Comum
+Usamos classes abstratas para representar grupos que têm características em comum, mas que diferem em detalhes específicos.
+
+
+
+
+
+<!SLIDE>
+# 
 Classes Abstratas são classes que servem de modelo para classes concretas, portanto não podem ser instanciadas.
 
 
 <!SLIDE>
-# 
-Usamos classes abstratas para representar grupos que têm características em comum, mas que diferem em detalhes específicos.
+# Representação em Java
+
+Em Java, utilizamos a palavra-chave *abstract* para declarar uma classe abstrata.
+
+No exemplo, a classe Automovel transformada em classe abstrata fica da seguinte forma:
+
+
+
+    @@@ Java
+    public abstract class Automovel {
+    
+      private String marca;
+      
+      public Automovel (String marca) {
+	    this.marca = marca;
+	  }  
+    }
 
 
 <!SLIDE>
-# 
+# Representação em UML
+
+
+
+
+<!SLIDE>
+# Comportamentos abstratos.
 A classe abstrata implementa as características gerais 
 e seus métodos abstratos são implementados nas subclasses com seus detalhes.
 
 
-<!SLIDE>
-# 
-
-colocar imagem
-
-Animal poderia ser uma classe abstrata, pois serve de base para as classes concretas Gato e Cachorro.
-
 
 <!SLIDE>
-# 
+# Classes Abstratas vs Classes Concretas
 
-Em Java, utilizamos a palavra-chave abstract para declarar uma classe abstrata.
+classe abstrata
+    @@@ Java
+    public abstract class Automovel {
+    
+      private String marca;
+      
+      public Automovel (String marca) {
+	    this.marca = marca;
+	  }  
+    }
 
-    @@@Java
-    	public abstract class Animal {
-		public void andar () {
-			System.out.print (“Estou andando!”);
-	}
-}
 
+classe concreta
 
-
-
-
-<!SLIDE>
-# Classes Concretas
 
     @@@Java
     	public class Gato extends Animal {
@@ -81,6 +135,9 @@ gato.emitirSom (); // “Miau!”
 Cachorro cachorro = new Cachorro ();
 cachorro.andar (); // “Estou andando!”
 cachorro.emitirSom (); // “Au!”
+
+
+
 
 
 <!SLIDE>

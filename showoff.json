@@ -26,27 +26,41 @@
         {"section": "AULA 05"},
         {"section": "Polimorfismo"},
         
-        {"section": "*AULA 05"},
-        {"section": "***Abstração*** (X)"},
+        {"section": "*AULA 06"},
+        {"section": "Abstração"},
+        {"section": "Pacotes"},
+        {"section": "Inicialização_Objetos"},
+        {"section": "***Exercícios*** (X)"},
+
+        {"section": "*AULA 07"},
+        {"section": "***Exercícios*** (X)"},
+        
+        {"section": "*AULA 08"},
+        {"section": "***Prova P1*** (X)"},
+        
+        {"section": "*AULA 09"},
         {"section": "***Associação"},
-        {"section": "***Pacotes"},
-        {"section": "***Inicialização_Objetos*** (X)"},
+        {"section": "**Coleções"},
+
+        {"section": "*AULA 10"},
         {"section": "***Interface"},
         {"section": "***Acoplamento e Coesão"},
         {"section": "***Vinculação Dinâmica"},
+
+        {"section": "*AULA 08"},
         {"section": "***Estáticos"},
-        {"section": "**Coleções"},
         {"section": "***Tratamento Exceção"},
         {"section": "***Teste de Software"},
         {"section": "***ADO*** (X)"},
+ 
+        {"section": "*AULA 08"},
+        {"section": "***Prova P1*** (X)"},
         {"section": "***Provas*** (X)"},
+ 
         {"section": "*Referências"},
         
         {"section": "ADO/slides.md"},
-        {"section": "ADO/ado1.md"},
-        {"section": "*ADOado2.md"},
-        {"section": "*ADOado3.md"},
-        {"section": "*ADOado4.md"}
+        {"section": "ADO/ado1.md"}
         
     ]
 }

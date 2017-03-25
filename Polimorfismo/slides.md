@@ -81,12 +81,17 @@ Considere o seguinte diagrama de classes.
 
     @@@ Java
     public class ClasseMae {
+        public void metodoA() {
+            System.out.println("metodoA executado na ClasseMae");
+        }
     }
+    
     public class ClasseFilha1 extends ClasseMae {
         public void metodoA() {
             System.out.println("metodoA executado na ClasseFilha1");
         }
     }
+    
     public class ClasseFilha2 extends ClasseMae {
         public void metodoA() {
             System.out.println("metodoA executado na ClasseFilha2");
@@ -263,6 +268,28 @@ também será necessário criar outra coleção para armazenar instâncias desta
 
 <!SLIDE>
 # Acessando elementos de uma coleção
+
+Para iterar em uma coleção, precisamos saber a quantidade de elementos. O método
+**size()** da classe **ArrayList** é responsável por esta informação
+
+    @@@ Java
+    int size = quadriciclos.size();
+    
+A cada iteração precisamos pegar um elemento da coleção com o método **get(i)**, 
+onde _i_ é a posição do elemento na coleção.
+
+    @@@ Java
+    int i = 0;
+    Quadriciclo quadriciclo = quadriciclos.get(i);
+
+Uma estrutura **for** fica desta forma:
+
+    @@@ Java    
+    for (int i=0; i<quadriciclos.size(); i++) {
+      Quadriciclo quadriciclo = quadriciclos.get(i);
+    }
+
+
 
 
 <!SLIDE>
@@ -638,16 +665,23 @@ O resultado:
 <!SLIDE>
 # Requisito Adicional
 
-Depois qeu...
-Bonificações de Funcionários variam em função do Bônus
+**Problema**: Gerar um Relatório com as bonificações dos Funcionários de uma Faculdade. 
 
+Algumas informações adicionais:
 
+* Os Funcionários da Faculdade podem ser Professores, Coordenadores ou Diretores. 
+* Os Coordenadores da Faculdade são sempre Professores. 
+* Bonificações de Funcionários variam em função do Bônus
 
 **Problema**: Bonificações de Funcionários variam em função do Bônus.
 
 * _Professor_: 10% do salário
 * _Coordenador_: 20% do salário
 * _Diretor_: 30% do salário
+
+
+<!SLIDE>
+# Requisito Adicional
 
 A saída do relatório deve ser parecida com esta:
 
@@ -889,5 +923,6 @@ Pendências:
 * criar lista de exercícios sobre polimorfismo
 * criar avaliação nos slides
 
+The Way of St. James (Camino de Santiago). Compostela | Documentary Part 1
 ~~~ENDSECTION~~~
 
