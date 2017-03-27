@@ -1,6 +1,5 @@
 <!SLIDE section center>
 # Inicialização de Objetos
-## Todos Slides copiados
 
 <!SLIDE>
 # Importância

@@ -29,8 +29,7 @@
         {"section": "*AULA 06"},
         {"section": "Abstração"},
         {"section": "Pacotes"},
-        {"section": "Inicialização_Objetos"},
-        {"section": "***Exercícios*** (X)"},
+        {"section": "Exercícios"},
 
         {"section": "*AULA 07"},
         {"section": "***Exercícios*** (X)"},
@@ -50,6 +49,7 @@
         {"section": "*AULA 08"},
         {"section": "***Estáticos"},
         {"section": "***Tratamento Exceção"},
+        {"section": "***Inicialização"},
         {"section": "***Teste de Software"},
         {"section": "***ADO*** (X)"},
  

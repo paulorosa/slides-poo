@@ -1,13 +1,13 @@
 <!SLIDE section center>
 # Papel do Compilador em relação do Computador
 
-<!SLIDE incremental>
+<!SLIDE>
 # Computador
 
 .callout.question O que o computador é capaz de fazer?
 
 
-<!SLIDE incremental>
+<!SLIDE>
 # Computador
 
 .callout.question O que o computador é capaz de fazer?
@@ -32,7 +32,7 @@ Algumas das possíveis capacidades de umm computador são:
 .callout.question Como o computador realiza estas tarefas?
 
 
-<!SLIDE incremental>
+<!SLIDE>
 # Programa de Computador (Software)
 
 .callout.question Como o computador realiza estas tarefas?

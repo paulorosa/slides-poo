@@ -1,5 +1,6 @@
 <!SLIDE section center>
-# Classes e Métodos Abstratos
+# Abstração
+
 
 <!SLIDE>
 # Pilares do Paradigma Orientação a Objetos
@@ -10,6 +11,7 @@ Este módulo refere-se a um dos quatro pilares do paradigma orientado a objetos.
 * Polimorfismo
 * **Abstração**
 * Encapsulamento
+
 
 <!SLIDE>
 # Hierarquia de Automóveis
@@ -29,9 +31,9 @@ conceito geral representado em ambas as classes.
 # Classes Abstratas
 
 A forma de representar estes conceitos abstratos é realizado no Paradigma
-Orientado a Objetos com *Classes Abstratas*.
+Orientado a Objetos com **Classes Abstratas**.
 
-.callout *Classes Abstratas* organizam elementos comuns a várias classes. - **James Rumbaugh**
+.callout **Classes Abstratas** organizam elementos comuns a várias classes. - *James Rumbaugh*
 
 No exemplo, a classe Automovel está fazendo o papel de uma classe abstrata, pois está representando
 um conceito abstrato.
@@ -40,16 +42,38 @@ um conceito abstrato.
 
 <!SLIDE>
 # Características e Comportamentos em Comum
+
 Usamos classes abstratas para representar grupos que têm características em comum, mas que diferem em detalhes específicos.
 
+
+
+<!SLIDE>
+# Classes Abstratas vs Classes Concretas
+
+**Classes Concretas** são as classes que representam, de fato, as entidades modeladas do mundo real.
+
+**Classes Abstratas**, por outro lado, agrupam diversas classes concretas que compartilhem o mesmo conceito
+(características e comportamentos).
 
 
 
 
 <!SLIDE>
-# 
-Classes Abstratas são classes que servem de modelo para classes concretas, portanto não podem ser instanciadas.
+# Intâncias de Classes
 
+Como Classes Abstratas são classes que servem de modelo para classes concretas ou agrupam 
+características e comportamentos em comum, não faz sentido ter instâncias de classes abstratas.
+
+Portanto, classes abstratas não devem e não podem ser instanciadas.
+
+
+    @@@ Java
+    Automovel automovel = new Automovel (); // ERRO DE COMPILAÇÃO
+    
+    Carro carro = new Carro (); // OK
+    Moto moto = new Moto (); // OK
+    
+    
 
 <!SLIDE>
 # Representação em Java
@@ -58,8 +82,6 @@ Em Java, utilizamos a palavra-chave *abstract* para declarar uma classe abstrata
 
 No exemplo, a classe Automovel transformada em classe abstrata fica da seguinte forma:
 
-
-
     @@@ Java
     public abstract class Automovel {
     
@@ -70,15 +92,14 @@ No exemplo, a classe Automovel transformada em classe abstrata fica da seguinte 
 	  }  
     }
 
-
-<!SLIDE>
-# Representação em UML
+Desta forma, a classe Automovel não pode ser instanciada.
 
 
 
 
 <!SLIDE>
-# Comportamentos abstratos.
+# Comportamentos abstratos
+
 A classe abstrata implementa as características gerais 
 e seus métodos abstratos são implementados nas subclasses com seus detalhes.
 
@@ -87,7 +108,8 @@ e seus métodos abstratos são implementados nas subclasses com seus detalhes.
 <!SLIDE>
 # Classes Abstratas vs Classes Concretas
 
-classe abstrata
+A classe abstrata Automovel
+
     @@@ Java
     public abstract class Automovel {
     
@@ -99,58 +121,53 @@ classe abstrata
     }
 
 
-classe concreta
-
+A classe concreta Carro
 
     @@@Java
-    	public class Gato extends Animal {
-		public void emitirSom () {
-			System.out.print (“Miau!”);
+    public class Carro extends Automovel {
+	  // corpo do código
 	}
-}
 
+A classe concreta Moto
 
     @@@Java
-    	public class Cachorro extends Animal {
-		public void emitirSom () {
-			System.out.print (“Au!”);
+    public class Moto extends Automovel {
+	  // corpo do código
 	}
-}
-
-
-
-
-
-<!SLIDE>
-# Classes Abstratas
-
-Classes Abstratas não podem ser instanciadas.
-Animal animal = new Animal ();  -- ERRADO
-
-    @@@Java
-    Gato gato = new Gato ();
-gato.andar (); // “Estou andando!”
-gato.emitirSom (); // “Miau!”
-
-Cachorro cachorro = new Cachorro ();
-cachorro.andar (); // “Estou andando!”
-cachorro.emitirSom (); // “Au!”
-
 
 
 
 
 <!SLIDE>
 # Métodos Abstratos
+
 Se uma classe abstrata definir um método abstrato, as classes concretas devem implementar o método.
 
-    @@@Java
-    	public abstract class Animal {
-		public abstract void emitirSom ();
-		public void andar () {
-			System.out.print (“Estou andando!”);
-	}
-}
+    @@@ Java
+    public abstract class Automovel {
+    
+	  private String marca;
+	  
+	  public Automovel (String marca) {
+	    this.marca = marca;
+      }
+    
+	  public abstract int quantidadeRodas ();
+    }
+
+
+<!SLIDE>
+# Representação em UML
+
+Nome da classe e nome do método escrito em itálico indica que a classe é abstrata ou o método é abstrato.
+
+
+![.fancyborder](_images/classe-metodo-abstrato-automovel.png)
+
+
+
+
+
 
 
 
@@ -167,32 +184,18 @@ A decisão de transformar ou não uma classe em abstrata depende do seu domínio
 <!SLIDE>
 # Classes Abstratas
 
-Uma classe abstrata é um recurso que podemos utilizar quando queremos compartilhar funcionalidades em comum entre clases, mas não queremos permitir que sejam instanciadas.
-
-
-
-
-<!SLIDE>
-# Classes Abstratas
-Classes com um ou mais métodos abstratos.
-
-    @@@Java
-    	public abstract class Veiculo {
-		private String marca;
-		public Veiculo (String marca) {
-			this.marca = marca;
-	}
-	public abstract int quantidadeRodas ();
-}
-
+Uma classe abstrata é um recurso que podemos utilizar quando queremos compartilhar funcionalidades em comum entre clases, 
+mas não queremos permitir que sejam instanciadas.
 
 
 
 <!SLIDE>
 # Métodos Abstratos
-Métodos declarados sem implementação.
 
-    @@@Java
+Métodos abstratos são métodos pertencentes a classes abstratas 
+que devem ser declarados sem implementação.
+
+    @@@ Java
    	public abstract String quantidadeRodas ();
 
 
@@ -200,12 +203,31 @@ Métodos declarados sem implementação.
 <!SLIDE>
 # Classes Abstratas
 
+Classes abstratas podem ter zero, um ou mais métodos abstratos.
+
+    @@@ Java
+    public abstract class Automovel {
+    
+	  private String marca;
+	  
+	  public Automovel (String marca) {
+	    this.marca = marca;
+      }
+    
+	  public abstract int quantidadeRodas ();
+    }
+
+
+
+
+
+
 * Uma classe abstrata declara atributos e comportamentos comuns das várias classes em uma hierarquia.
 
+<!SLIDE>
+# Classes Abstratas
+
 * As subclasses devem sobrescrever os métodos abstratos para se tornarem concretas.
-
-* As classes abstratas não podem ser instanciadas.
-
 
 
 <!SLIDE>
@@ -238,74 +260,77 @@ Métodos declarados sem implementação.
 
 
 <!SLIDE>
-# 
+# Usando Classes abstratas
 
-    @@@Java
-    public class VeiculoTeste {
-	public static void main (String[] args) {
-		Veiculo veiculo;
-		Carro carro = new Carro (“Ford”);
-		Moto moto = new Moto (“Honda”);
+Uma classe Abstrata não pode ser instanciada
 
-		veiculo = carro;
-		System.out.println (“Rodas: “ + veiculo.quantidadeRodas());
-		veiculo = moto;
-		System.out.println (“Rodas: “ + veiculo.quantidadeRodas());
-}
+    @@@ Java
+	Automovel automovel =  new Automovel (); // ERRO de Compilação!!!!
+
+A instanciação de uma classe concreta pode ser atribuida para uma variável
+do mesmo tipo da classe concreta.
+
+    @@@ Java
+	Carro carro = new Carro (“Ford”);
+
+E também pode ser atribuída para qualquer classe herdada na hierarquia,
+inclusive para a classe abstrata, que no exemplo é a super classe.
+
+    @@@ Java
+	Automovel automovel = new Carro (“Ford”);
 
 
 
-<!SLIDE>
-# Representação UML
-
-Nome da classe e nome do método escrito em itálico indica que a classe é abstrata ou o método é abstrato.
-
-incluir imagem
 
 
 
 <!SLIDE>
-# Representação UML
-
-Nome da classe e nome do método escrito em itálico indica que a classe é abstrata ou o método é abstrato.
-
-incluir imagem
-
-
-<!SLIDE>
-# Métodos final
+# Método final
 
 * Não podem ser sobrescritos em uma subclasse
 
 * Métodos final são resolvidos em tempo de compilação, isto é conhecido como vinculação estática.
 
-    @@@Java
-    public class Veiculo {
-….
-public final String getMarca() {
-	return this.marca;
-}
-}
+
+<!SLIDE>
+# Método final
+
+    @@@ Java
+    public class Automovel {
+    
+      // restante do código não apresentado.
+      
+      public final String getMarca() {
+	    return marca;
+      }
+    }
 
 
 Errado
 
-    @@@Java
-    public class Moto extends Veiculo {
-….
-public String getMarca() {
-	return this.marca;
-}
-}
+    @@@ Java
+    public class Moto extends Automovel {
+    
+      public String getMarca() {
+	    return this.marca;
+      }
+      
+    }
 
 
 
 <!SLIDE>
 # Classes final
 
+
+
 * Não podem ser estendidas por uma subclasse
 
 * Todos os métodos em um classe final são implicitamente final.
+
+
+<!SLIDE>
+# Classes final
 
     @@@Java
     public final class Moto extends Veiculo {
@@ -323,22 +348,45 @@ Errado
 
 
 
-<!SLIDE>
-# Referência ao método Herdado
-
-Para se fazer referência ao método que foi herdado, será necessário utilizar a palavra-chave super.
-
-Duas formas para acessar métodos e atributos de classes ancestrais que não foram declarados como private:
-
-* se não está declarado na classe filha, o acesso é direto
-
-* caso contrário, utilizar a palavra-chave super
-
-
 
 <!SLIDE>
 # Classe Base em Java
 
-Em Java, todas as classes herdam da classe Object
+Em Java, todas as classes herdam da classe **Object**.
+Class Object is the root of the class hierarchy. Every class has Object as a superclass. All objects, including arrays, implement the methods of this class.
 
-colocar imagem.
+
+https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
+
+
+<!SLIDE>
+# Métodos da Classe Object
+
+* possui apenas o construtor padrão
+
+Métodos Importantes
+* boolean	equals(Object obj)
+Indicates whether some other object is "equal to" this one.
+
+
+int	hashCode()
+Returns a hash code value for the object.
+
+
+String	toString()
+Returns a string representation of the object.
+
+
+Class<?>	getClass()
+Returns the runtime class of this Object.
+
+
+
+
+
+<!SLIDE>
+# Sobreescrita dos Métodos da Classe Object
+
+...
+
+

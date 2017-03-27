@@ -59,7 +59,7 @@ pela multiplicação do elemento anterior pelo valor de uma razao.
             ProgressaoGeometrica pg = 
                 new ProgressaoGeometrica(valorInicial, razao);
          
-            for (int i=0; i<quantidadeElementos; i++) {
+            for (int i=0; i<quantidade; i++) {
                 System.out.print (pg.valorAtual() + " ");
                 pg.proximoValor();
             }
@@ -102,11 +102,11 @@ Uma Progressão Fatorial determina o próximo número através de multiplicaçõ
         public static void main (String[] args) {
 	    	int quantidade = Integer.parseInt(args[0]);
 		
-            Fatorial pg =  new Fatorial();
+            Fatorial fatorial =  new Fatorial();
          
-            for (int i=0; i<quantidadeElementos; i++) {
-                System.out.print (pg.valorAtual() + " ");
-                pg.proximoValor();
+            for (int i=0; i<quantidade; i++) {
+                System.out.print (fatorial.valorAtual() + " ");
+                fatorial.proximoValor();
             }
         }        
     }
@@ -143,8 +143,33 @@ e an é o termo que ocupa a n-ésima posição na sequência.
         public int valorAtual () {
             // implementar o código
         }
+        
+        public static void main (String[] args) {
+	      int quantidade = Integer.parseInt(args[0]);
+
+	      int coeficienteGrauDois = Integer.parseInt(args[1]);
+		  int coeficienteGrauUm = Integer.parseInt(args[2]);
+		  int coeficienteGrauZero = Integer.parseInt(args[3]);
+
+		  PolinomioSegundoGrau polinomio =  
+		    new PolinomioSegundoGrau(coeficienteGrauDois,coeficienteGrauUm,coeficienteGrauZero);
+
+	      for (int i=0; i<quantidade; i++) {
+	        System.out.print (polinomio.valorAtual() + " ");
+	        polinomio.proximoValor();
+	      }
+	    }    
     }
 
+Como exemplo, para a chamada abaixo:
+
+    @@@ Console
+    java PolinomioSegundoGrau 10 3 4 -3
+
+A saída deve ser:
+
+    @@@ Console
+    -3 4 17 36 61 92 129 172 221 276  
 
 
     
@@ -168,8 +193,33 @@ e an é o termo que ocupa a n-ésima posição na sequência.
         public int valorAtual () {
             // implementar o código
         }
+
+ 	    public static void main (String[] args) {
+	      int quantidade = Integer.parseInt(args[0]);
+			
+		  int[] coeficientes = new int[args.length-1];
+	      for (int i=0; i<coeficientes.length; i++) {
+		    coeficientes[i] = Integer.parseInt(args[args.length-1-i]);
+		  }
+
+		  PolinomioGeral polinomio =  new PolinomioGeral(coeficientes);
+
+	      for (int i=0; i<quantidade; i++) {
+	        System.out.print (polinomio.valorAtual() + " ");
+	        polinomio.proximoValor();
+	      }
+        }    
     }
     
+Como exemplo, para a chamada abaixo:
+
+    @@@ Console
+    java PolinomioSegundoGrau 10 3 4 -3
+
+A saída deve ser:
+
+    @@@ Console
+    -3 4 17 36 61 92 129 172 221 276  
 
 
 

@@ -13,7 +13,7 @@ desenvolvimento de software orientado a objetos com UML.
 
 
 
-<!SLIDE incremental>
+<!SLIDE>
 # Formato das Aulas
 
 * Aula Teórica
@@ -25,7 +25,7 @@ desenvolvimento de software orientado a objetos com UML.
 * Divulgação ADOs
 
 
-<!SLIDE incremental>
+<!SLIDE>
 # Conteúdo das Aulas
 
 * slides sincronizados no computador do aluno
@@ -35,7 +35,7 @@ desenvolvimento de software orientado a objetos com UML.
 * arquivo atualizado toda aula
 
 
-<!SLIDE incremental>
+<!SLIDE>
 # Exercícios Sala de Aula
 
 * Aplicação da Teoria
@@ -47,7 +47,7 @@ desenvolvimento de software orientado a objetos com UML.
 * Caso o aluno deseje uma correção, o exercício deverá ser entregue até o final da aula, via email.
 
 
-<!SLIDE incremental>
+<!SLIDE>
 # Exercícios Extra Classes
 
 * Conjunto de exercícios relacionados com a aula para praticar
@@ -56,7 +56,7 @@ desenvolvimento de software orientado a objetos com UML.
 * Caso o aluno deseje que seus exercícios sejam corrigidos, deverá entregar por email para o professor.
 
 
-<!SLIDE incremental>
+<!SLIDE>
 # ADO
 
 * 4 atividades durante o curso
@@ -65,7 +65,7 @@ desenvolvimento de software orientado a objetos com UML.
 * Entrega Atrasada: Nota Zero
 
 
-<!SLIDE incremental>
+<!SLIDE>
 # Provas
 
 * Provas Escritas (Sem Computador)
