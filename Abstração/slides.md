@@ -353,40 +353,33 @@ Errado
 # Classe Base em Java
 
 Em Java, todas as classes herdam da classe **Object**.
-Class Object is the root of the class hierarchy. Every class has Object as a superclass. All objects, including arrays, implement the methods of this class.
 
+A classe **Object** é a raiz da hierarquia de classes.
 
-https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
+Toda classe tem **Object** como uma superclasse.
+
+Documentação: https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 
 
 <!SLIDE>
 # Métodos da Classe Object
 
-* possui apenas o construtor padrão
+Possui apenas o construtor padrão e uma lista pequena de métodos.
 
-Métodos Importantes
-* boolean	equals(Object obj)
-Indicates whether some other object is "equal to" this one.
+Alguns dos métodos são:
 
+    @@@ Java
+    // indica se algum outro objeto é igual a um outro
+    boolean	equals(Object obj)
 
-int	hashCode()
-Returns a hash code value for the object.
+    // Retorna o valor do hash code para o objeto
+    int	hashCode()
 
+    // Retorna a representação do objeto em uma String
+    String	toString()
 
-String	toString()
-Returns a string representation of the object.
+    // Retorna a classe do objeto em execução
+    Class<?> getClass()
 
-
-Class<?>	getClass()
-Returns the runtime class of this Object.
-
-
-
-
-
-<!SLIDE>
-# Sobreescrita dos Métodos da Classe Object
-
-...
 
 
