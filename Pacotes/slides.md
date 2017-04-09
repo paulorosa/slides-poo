@@ -136,6 +136,7 @@ memória para ser utilizada assim que necessário.
 
     @@@ Java
     import instrumentos.Teclado;
+    import java.lang.String;
     
     public class Teste {
     

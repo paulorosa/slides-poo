@@ -30,7 +30,7 @@
         {"section": "Abstração"},
 
         {"section": "*AULA 07 glebson ado com atraso"},
-        {"section": "*Pacotes"},
+        {"section": "Pacotes"},
         {"section": "*Exercícios"},
         
         {"section": "*AULA 08"},
@@ -57,6 +57,10 @@
         {"section": "***Provas*** (X)"},
  
         {"section": "*Referências"},
+
+        {"section": "Atividades/hierarquia_produtos.md"},
+        {"section": "Atividades/hierarquia_produtos_solucao.md"},
+        {"section": "Atividades/heranca_pessoa_fisica_juridica.md"},
         
         {"section": "ADO/slides.md"},
         {"section": "ADO/ado1.md"}
