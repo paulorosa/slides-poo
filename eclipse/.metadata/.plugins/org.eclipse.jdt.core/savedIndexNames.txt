@@ -1,0 +1,3 @@
+INDEX VERSION 1.129+/home/paulo/slides-poo/eclipse/.metadata/.plugins/org.eclipse.jdt.core
+224975225.index
+4294778141.index

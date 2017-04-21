@@ -34,11 +34,11 @@
         {"section": "*Exercícios"},
         
         {"section": "*AULA 08"},
-        {"section": "***Prova P1*** (X)"},
+        {"section": "***Prova P1"},
         
         {"section": "*AULA 09"},
-        {"section": "***Associação"},
-        {"section": "**Coleções"},
+        {"section": "Associação"},
+        {"section": "Coleções"},
 
         {"section": "*AULA 10"},
         {"section": "***Interface"},

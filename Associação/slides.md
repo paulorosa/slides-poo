@@ -1,56 +1,23 @@
 <!SLIDE section center>
 # Associação
 
-<!SLIDE>
-# Característica Orientação a Objetos
-
-Capacidade de facilitar a Reutilização de Código
-* diminui a quantidade de código escrita
-* economiza o trabalho do programador
-* diminui a possibilidade de erros
-
-Mecanismos de Reuso
-* Herança (Generalização)
-* Delegação
-
-
 
 <!SLIDE>
 # Relacionamento entre Classes
 
 Classes podem estar conectados por algum tipo de relacionamento:
-* Generalização (Herança)
-* Associação (Agregação e Composição)
+
+* Herança (Generalização)
+* Associação (Delegação)
 
 Os relacionamentos entre as classes representam a interação entre seus objetos.
-
 
 ![.fancyborder](_images/relacionamento_objetos.png)
 
 
 <!SLIDE>
-# Herança
-Princípio de Orientação a Objetos que permite a criação de novas classes a partir de outras previamente criadas.
-
-A classe A é superclasse da classe B
-A classe B é subclasse da classe A
-Todo B é um  A
-Classe A é classe Pai de Classe B
-Classe B é classe Filha de Classe A
-
-
-![.fancyborder](_images/herança.png)
-
-
-<!SLIDE>
-# Polimorfismo
-
-![.fancyborder](_images/polimorfismo.png)
-
-
-
-<!SLIDE>
 # Associação
+
 Uma associação representa uma conexão que existe entre dois elementos de uma classe, de tal forma que um deve manter alguma referência para o outro.
 
 Uma ligação significa por exemplo que:
@@ -70,14 +37,39 @@ Embora as associações sejam representadas entre classes do diagrama, tais asso
 
 
 <!SLIDE>
-# Relacionamento entre Classes em Java
+# Classes Empresa e Funcionario
+
+Suponhamos que temos duas classes definidas da seguinte forma:
+
+* Classe: *Empresa* 
+ * Características: razão social, cnpj
+ * Comportamentos: acessos às características
 
 
-Criar as classes Empresa e Funcionário para representar que uma Empresa possui um Funcionário.
+* Classe: *Funcionario*
+ * Características: nome e cpf
+ * Comportamentos: acessos às características
 
-* Funcionário possui nome e CPF.
-* Empresa possui Razão Social, CNPJ e um Funcionario.
-* Empresa possui responsabilidade de conhecer o funcionario contratado.
+
+<!SLIDE>
+# Relacionamento entre Empresa e Funcionario
+
+Gostaríamos de representar o relacionamento entre Empresa e Funcionário.
+
+Neste exemplo, podemos ter o seguinte relacionamento:
+
+.callout Uma Empresa possui um Funcionario.
+
+Podemos também ver este relacionamento sob a ótica de _responsabilidades_.
+
+Neste caso a classe Empresa tem a _responsabilidade_ de saber quem são seus funcionários.
+
+
+<!SLIDE>
+# Representação do Relacionamento
+
+Para representar este tipo de relaciomento, utilizamos a **Associação**.
+
 
 
 
@@ -108,13 +100,6 @@ Cada um dos participantes da associação pode ter um Papel relativo a outra cla
 ![.fancyborder](_images/associacao_papeis.png)
 
 
-<!SLIDE>
-#
-##
-
-    @@@Java
-
-![.fancyborder](_images/.png)
 
 
 <!SLIDE>
@@ -157,7 +142,7 @@ Cada associação em um diagrama de classes possui duas multiplicidades, uma em 
 <!SLIDE>
 # Tipos de Multiplicidade
 
-![.fancyborder](_images/associacao_tipos_multiplicidade.png)
+![.fancyborder](_images/tipos_de_multiplicidade.png)
 
 
 <!SLIDE>
@@ -192,8 +177,8 @@ Alterar as classes Empresa e Funcionário para permitir contratação de Funcion
 
 <!SLIDE>
 # Relacionamento entre Classes em Java
-## Alterar as classes para que a Empresa possa ter mais de 0 Funcionários.
 
+Alterar as classes para que a Empresa possa ter mais de 0 Funcionários.
 
 ![.fancyborder](_images/associacao_empresa_funcionario.png)
 
@@ -208,7 +193,205 @@ Uma pessoa, caracterizada pelo seu nome e cpf, lê um livro, que possui título 
 Criar um programa principal que instancie as classes, realize as associações e imprima qual a editora do livro da pessoa.
 
 
+<!SLIDE>
+# Diagrama apenas com as Classes
 
+![.fancyborder](_images/Classes_Pessoa_Livro_Editora.png)
+
+<!SLIDE>
+# Diagrama com Associações
+
+![.fancyborder](_images/Associacao_Pessoa_Livro_Editora.png)
+
+
+<!SLIDE>
+# Classe Funcionario
+
+    @@@ Java
+    public class Funcionario {
+      private String nome;
+      private String cpf;
+
+      public Funcionario(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+      }
+
+      public String getNome() {
+        return nome;
+      }
+
+      public String getCpf() {
+        return cpf;
+      }
+    }
+
+
+<!SLIDE>
+# Classe Empresa Multiplicidade 0..*
+
+    @@@ Java
+    import java.util.ArrayList;
+
+    public class Empresa {
+      private String razaoSocial;
+      private String cnpj;
+
+      private ArrayList<Funcionario> funcionarios;
+
+      public Empresa(String razaoSocial, String cnpj) {
+        this.razaoSocial = razaoSocial;
+        this.cnpj = cnpj;
+
+        this.funcionarios = new ArrayList<Funcionario>();
+      }
+
+      // ...  
+    }
+
+<!SLIDE>
+# Classe Empresa Multiplicidade 1..*
+
+    @@@ Java
+    import java.util.ArrayList;
+
+    public class Empresa {
+      private String razaoSocial;
+      private String cnpj;
+
+      private ArrayList<Funcionario> funcionarios;
+
+      public Empresa(String razaoSocial, String cnpj, 
+                     Funcionario funcionario) {
+        this.razaoSocial = razaoSocial;
+        this.cnpj = cnpj;
+		
+        this.funcionarios = new ArrayList<Funcionario>();
+        contratar(funcionario);
+      }
+      
+      // ...
+    }
+
+
+<!SLIDE>
+# Método Contratar
+
+    @@@ Java
+    public class Empresa {
+      private String razaoSocial;
+      private String cnpj;
+
+      private ArrayList<Funcionario> funcionarios;
+
+      public Empresa(String razaoSocial, String cnpj) {
+        this.razaoSocial = razaoSocial;
+        this.cnpj = cnpj;
+		
+        this.funcionarios = new ArrayList<Funcionario>();
+      }
+
+      public void contratar (Funcionario funcionario) {
+        funcionarios.add(funcionario);
+      }
+
+      // ...
+    }
+
+
+
+<!SLIDE>
+# Método Contratar
+
+    @@@ Java
+    public class Empresa {
+      private String razaoSocial;
+      private String cnpj;
+
+      private ArrayList<Funcionario> funcionarios;
+
+      public Empresa(String razaoSocial, String cnpj, Funcionario funcionario) {
+        this.razaoSocial = razaoSocial;
+        this.cnpj = cnpj;
+		
+        this.funcionarios = new ArrayList<Funcionario>();
+        funcionarios.add(funcionario);
+      }
+
+      public void contratar (Funcionario funcionario) {
+        funcionarios.add(funcionario);
+      }
+
+      // ...
+    }
+
+
+
+<!SLIDE>
+# Método Contratar
+
+    @@@ Java
+    public class Empresa {
+      private String razaoSocial;
+      private String cnpj;
+
+      private ArrayList<Funcionario> funcionarios;
+
+      public Empresa(String razaoSocial, String cnpj, Funcionario funcionario) {
+        this.razaoSocial = razaoSocial;
+        this.cnpj = cnpj;
+		
+        this.funcionarios = new ArrayList<Funcionario>();
+        contratar(funcionario);
+      }
+
+      public void contratar (Funcionario funcionario) {
+        funcionarios.add(funcionario);
+      }
+
+      // ...
+    }
+
+
+
+
+<!SLIDE>
+# Classe Empresa Multiplicidade 1..*
+
+    @@@ Java
+    import java.util.ArrayList;
+
+    public class Empresa {
+      private String razaoSocial;
+      private String cnpj;
+
+      private ArrayList<Funcionario> funcionarios;
+
+      public Empresa(String razaoSocial, String cnpj, 
+                     Funcionario funcionario) {
+        this.razaoSocial = razaoSocial;
+        this.cnpj = cnpj;
+		
+        this.funcionarios = new ArrayList<Funcionario>();
+        contratar(funcionario);
+      }
+
+      public void contratar (Funcionario funcionario) {
+        funcionarios.add(funcionario);
+      }
+
+      public String getRazaoSocial() {
+        return razaoSocial;
+      }
+
+      public String getCnpj() {
+        return cnpj;
+      }
+
+      public ArrayList<Funcionario> getFuncionarios () {
+        return funcionarios;
+      }
+    }
 
 
 
@@ -226,6 +409,7 @@ Uma das classes:
 
 <!SLIDE>
 # Agregação e Composição
+
 Mecanismo de reaproveitamento (reutilização) de classes utilizado pela Programação Orientada a Objetos para aumentar a produtividade e a qualidade no desenvolvimento de software.
 
 
@@ -234,10 +418,17 @@ Mecanismo de reaproveitamento (reutilização) de classes utilizado pela Program
 	
 É possível criar um objeto a partir de vários outros objetos.
 
+Um carro é formado por:
 
-![.fancyborder](_images/carro.png)
-![.fancyborder](_images/motor.png)
-![.fancyborder](_images/rodas.png)
+* motor
+* rodas
+* porta
+* direção
+* ...
+
+O carro pode ser considerado o TODO
+
+e motor, rodas, porta, direção como PARTES do TODO.
 
 
 <!SLIDE>
