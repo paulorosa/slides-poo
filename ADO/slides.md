@@ -12,30 +12,30 @@
     <td>Aula 4</td>
     <td>Aula 6</td>
     <td>Aula 6</td>
-    <td>Aula 7</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>[Hierarquia de Empregados](/supplemental/ado2)</td>
+    <td>Aula 10</td>
+    <td>Aula 12</td>
+    <td>Aula 12</td>
     <td>-</td>
   </tr>
   <tr>
     <td>3</td>
     <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>Aula 12</td>
+    <td>Aula 14</td>
+    <td>Aula 14</td>
     <td>-</td>
   </tr>
   <tr>
     <td>4</td>
     <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>Aula 14</td>
+    <td>Aula 16</td>
+    <td>Aula 16</td>
     <td>-</td>
   </tr>
 <table>

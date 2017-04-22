@@ -41,20 +41,30 @@
         {"section": "Coleções"},
 
         {"section": "*AULA 10"},
+        {"section": "Atividades/relatorio_notas"},
         {"section": "***Interface"},
         {"section": "***Acoplamento e Coesão"},
         {"section": "***Vinculação Dinâmica"},
 
-        {"section": "*AULA 08"},
+        {"section": "*AULA 11"},
         {"section": "***Estáticos"},
         {"section": "***Tratamento Exceção"},
         {"section": "***Inicialização"},
         {"section": "***Teste de Software"},
-        {"section": "***ADO*** (X)"},
  
-        {"section": "*AULA 08"},
-        {"section": "***Prova P1*** (X)"},
-        {"section": "***Provas*** (X)"},
+        {"section": "*AULA 12"},
+        {"section": "*AULA 13"},
+        {"section": "*AULA 14"},
+        {"section": "*AULA 15"},
+        {"section": "*AULA 16"},
+        
+        {"section": "*AULA 17"},
+        {"section": "***Prova P2***"},
+
+        {"section": "*AULA 18"},
+        {"section": "***Prova Substitutiva*** (X)"},
+        
+
  
         {"section": "*Referências"},
 
@@ -63,7 +73,8 @@
         {"section": "Atividades/heranca_pessoa_fisica_juridica.md"},
         
         {"section": "ADO/slides.md"},
-        {"section": "ADO/ado1.md"}
+        {"section": "ADO/ado1.md"},
+        {"section": "ADO/ado2.md"}
         
     ]
 }
