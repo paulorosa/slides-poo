@@ -58,7 +58,9 @@ O nome e a nota estão separados por tabulação.
 Exemplo:
 
 joão  4
+
 maria 7
+
 paulo 6
 
 

@@ -393,6 +393,8 @@ Criar um programa principal que instancie as classes, realize as associações e
       }
     }
 
+<!SLIDE section center>
+# Agregação e Composição
 
 
 <!SLIDE>
@@ -408,17 +410,26 @@ Uma das classes:
 
 
 <!SLIDE>
-# Agregação e Composição
+# Reaproveitamento de código
 
-Mecanismo de reaproveitamento (reutilização) de classes utilizado pela Programação Orientada a Objetos para aumentar a produtividade e a qualidade no desenvolvimento de software.
+Como são casos particulares de **Associação**, a **Composição** e a **Agregação** também são _mecanismos de reaproveitamento de classes_
+(reutilização de código).
+
+Conforme já visto, o reaproveitamento de código permite aumentar a _produtividade_ e a _qualidade_ no desenvolvimento de software.
+
+A _produtividade_ é aumentada pois não é necessário reescrever a classe associada, caso ela exista.
+
+A _qualidade_ é obtida pois a classe associada, se existente, já deve ter sido utilizada em outra oportunidade e, portanto, já validada.
+
+
 
 
 <!SLIDE>
-# Relação TODO - PARTE
+# Exemplo Relação TODO - PARTE
 	
 É possível criar um objeto a partir de vários outros objetos.
 
-Um carro é formado por:
+Por exemplo, um carro é formado por:
 
 * motor
 * rodas
@@ -426,13 +437,12 @@ Um carro é formado por:
 * direção
 * ...
 
-O carro pode ser considerado o TODO
+O carro pode ser considerado o **TODO** e motor, rodas, porta, direção como **PARTES** do TODO.
 
-e motor, rodas, porta, direção como PARTES do TODO.
 
 
 <!SLIDE>
-# Herança X Composição de Classes
+# Herança X Agregação / Composição
 
 _Herança_
 
@@ -440,22 +450,33 @@ _Herança_
 
 _Composição / Agregação_
 
-* a classe ‘D’ contém a classe ‘C’
-* a classe ‘D’ usa a classe ‘C’
-* a classe ‘C’ é parte da classe ‘D’
+* a classe ‘A’ contém a classe ‘B’
+* a classe ‘A’ usa a classe ‘B’
+* a classe ‘B’ é parte da classe ‘A’
+
+
 
 
 <!SLIDE>
-# Característica Agregação e Composição
+# Característica da Relação Agregação e Composição
 
-São assimétricas:
-Se um objeto A é parte de um objeto B, B não pode ser parte de A.
+**Assimétrica**: Se um objeto A é parte de um objeto B, B não pode ser parte de A.
+
+Por exemplo:
+
+Um _carro_ (**TODO**) possui _rodas_ (**PARTE**), mas a roda não possui carro.
+
 
 
 <!SLIDE>
-# Característica Agregação e Composição
+# Adição e Remoção de Partes
 
-As partes são criadas e destruídas pelo todo, na classe do objeto todo, existem operações para remover e adicionar as partes.
+As partes são _criadas_ e _destruídas_ pelo todo, na classe do objeto todo, existem operações para _adicionar_ e _remover_ as partes.
+
+Por exemplo:
+
+Para _incluir_ ou _tirar_ uma _roda_ (**PARTE**) do carro (**TODO**), é necessário operações de adição e remoção na lista de rodas do carro.
+
 
 
 <!SLIDE>
@@ -508,104 +529,8 @@ Notação: Losango com preenchimento
 ![.fancyborder](_images/capitulo_secao.png)
 
 
-<!SLIDE>
-# Agregação e Composição
-
-Reaproveitamento (Reutilização)
-
-* Você pode usar uma ou várias classes para compor outro classe.
-
-Aumento de Produtividade
-
-* Está relacionado com a possibilidade de não ser necessário reescrever código de determinadas classes, se alguma já existe com estado (atributos) e comportamento similar.
-
-Aumento de Qualidade
-
-* Há a possibilidade clara de reutilizar classes que já foram usadas em outros sistemas e, portanto, já foram testadas e têm chances de conter menos erros.
 
 
-
-<!SLIDE>
-# Modelagem Livro
-
-Em um sistema foram identificadas as classes:
-
-* Livro
-* Capítulo
-* Página
-
-
-* Um Capítulo deve obrigatoriamente pertencer a um único Livro.
-* Um Capítulo contém uma (no mínimo) ou mais Páginas.
-* Uma Página não necessariamente precisa pertencer a um capítulo, mas se pertencer, pode ser a mais de um.
-
-
-
-<!SLIDE>
-# Identificação Classes
-
-![.fancyborder](_images/livro_capitulo_pagina.png)
-
-
-
-<!SLIDE>
-#
-Um Capítulo deve obrigatoriamente pertencer a um único Livro.
-
-![.fancyborder](_images/livro_captitulo.png)
-
-
-
-<!SLIDE>
-# 
-
-Um Capítulo contém uma (no mínimo) ou mais Páginas.
-
-
-![.fancyborder](_images/capitulo_pagina.png)
-
-
-
-<!SLIDE>
-#
-
-Uma Página não necessariamente precisa pertencer a um capítulo, mas se pertencer, pode ser a mais de um.
-
-
-![.fancyborder](_images/capitulo_pagina2.png)
-
-
-
-<!SLIDE>
-# Diagrama de Classes
-
-![.fancyborder](_images/diagrama_livro_capitulo_pagina.png)
-
-
-
-<!SLIDE>
-#
-
-* Criar Capítulo
-* Listar Capítulos
-* Obter Capítulo
-
-Alterar aplicação teste...
-
-![.fancyborder](_images/livro_capitulo2.png)
-
-
-
-<!SLIDE>
-#
-
-* Adicionar uma Página
-* Listar Páginas do Capítulo
-
-
-![.fancyborder](_images/capitulo_pagina3.png)
-
-Alterar aplicação teste...
 
 
 <!SLIDE>
@@ -615,4 +540,115 @@ A diferença básica entre uma agregação e uma composição é que, na agrega�
 Na composição, não faz sentido pensarmos o objeto da classe principal sem os objetos que a compoem. 
 O todo existe enquanto as partes também existem.
 Quando o objeto da classe principal for destruído, os objetos que o compoem necessariamente também  serão.
+
+
+
+
+
+
+
+
+
+
+
+composição - forte
+agregação - fraco
+
+livro - capitulo - pagina
+
+
+Campeonato - time - jogador
+
+Usuário - Carrinho de Compras - Produto
+carrinho de compras é só do usuário
+produto do carrinho pode ser reaproveitado
+
+
+
+<!SLIDE>
+# Exemplo Programa
+
+**Sistema**: Carrinho de Compras de Produtos de Usuário.
+
+**Descrição**: Criar classes para modelar um sistema em que usuários adicionam
+produtos em um carrinho para realizar uma compra ao final.
+
+
+<!SLIDE>
+# Identificação de Classes e Relacionamentos
+
+A partir da descrição do problema, podemos identificar algumas classes.
+
+"... em que **usuários** adicionam **produtos** em um **carrinho** para realizar uma compra ao final."
+
+Identificação de Classes:
+
+* **Usuário**
+* **Produto**
+* **Carrinho**
+
+E também podemos identificar os relacionamentos.
+
+* Um **Usuário** possui um **Carrinho de Compras**
+* Um **Carrinho de Compras** contém produtos
+
+
+<!SLIDE>
+# Maiores Detalhes
+
+Alguns detalhes adicionais sobre o problema são:
+
+* Um usuário pode ter um único carrinho de compras.
+* Um carrinho de compras pode ter zero ou mais produtos.
+* O carrinho de compras pertence apenas a um usuário e não pode ser reaproveitado.
+* O produto adicionado em um carrinho pode ser utilizado posteriormente em outro carrinho.
+
+
+
+
+
+
+<!SLIDE>
+# Modelagem UML
+
+A partir das informações obtidas anteriormente, podemos montar um _diagrama de clases UML_.
+
+
+
+<!SLIDE>
+# Modelagem Classes
+
+Podemos iniciar modelando o diagrama apenas com as classes.
+
+![.fancyborder](_images/.png)
+
+
+
+
+
+<!SLIDE>
+# Modelagem Usuário x Carrinho de Compras
+
+![.fancyborder](_images/.png)
+
+
+
+<!SLIDE>
+# Modelagem Carinho de Compras x Produto
+
+
+![.fancyborder](_images/.png)
+
+
+* adicionar operações do relacionamento
+
+
+
+
+<!SLIDE>
+# Modelagem Completa
+
+![.fancyborder](_images/.png)
+
+
 
