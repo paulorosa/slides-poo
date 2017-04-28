@@ -64,6 +64,26 @@ maria 7
 paulo 6
 
 
+
+
+<!SLIDE>
+# Classe Principal
+
+    @@@ Java
+    public class RelatorioNotas {
+    
+	  public static void main(String[] args) {
+	  
+		String filename = args[0];
+		
+		// Instanciar Classe
+		// Chamar método para calcular média
+
+      }
+    }
+    
+
+
 <!SLIDE>
 # Leitura do Arquivo em Java
 
@@ -71,6 +91,36 @@ http://blog.caelum.com.br/lendo-arquivos-texto-em-java/
 
 
 
+
+
+<!SLIDE printonly>
+# Parte 1 - Possível Solução
+
+**Objetivo**: calcular a média das notas de alunos a partir da leitura de arquivo.
+
+
+**calcular a média das notas de alunos**
+
+* A partir de informações de Alunos (nome e nota)
+
+* Aluno (nome e nota)
+A
+
+* calcular média
+ * a partir de uma lista de alunos eu posso obter a média aritmética
+
+* leitura de arquivo
+ * a partir de um nome de arquivo, eu posso ler as informações e armazenar em uma coleção de alunos.
+
+
+Classe: GeradorRelatorioNotas
+   GeradorRelatorioNotas(String filename);
+método: double calcularMedia()
+
+
+Identificação de classes: 
+
+* 
     
 
 <!SLIDE printonly>
@@ -80,12 +130,10 @@ Nesta primeira etapa o programa deve apenas mostrar a média aritmética de toda
 
 
 
-neste exercício apenas p
 
 
 
-
-<!SLIDE>
+<!SLIDE printonly>
 # Solução
 Identificação do objetivo: mostrar a média das notas
 Identificação de Tarefas: Leitura do Arquivo e Cálculo da Média
@@ -104,6 +152,9 @@ Leitura de Arquivo - classe para ler informações de notas de alunos em aqruivo
 Nesta etapa vamos imprimir as médias por tipos de alunos
 
 Agora o arquivo tem uma coluna adicional contendo o tipo do aluno
+
+
+
 
 ~~~SECTION:notes~~~
 Solução:
@@ -125,7 +176,7 @@ Solução:
 <!SLIDE printonly>
 # Faculdade com vários professores
 
-<!SLIDE>
+<!SLIDE printonly>
 # Parte 8 - 
 
 ~~~SECTION:notes~~~

@@ -79,7 +79,7 @@ ArrayList - array redimensionável de elementos
 HashSet - Não garante a ordem dos elementos. 
 
     @@@ Java
-    Set <String> nomes = new HashSet<String>();
+    HashSet <String> nomes = new HashSet<String>();
     nomes.add(“nome 1”);
     nomes.add(“nome 2”);
     nomes.add(“nome 3”);
@@ -113,7 +113,7 @@ Não permite elementos nulos
     Funcionario f1 = new Funcionario(1, “nome1”);
     Funcionario f2 = new Funcionario(2, “nome2”);
 
-    Map<Funcionario> funcionarios = new HashMap<Funcionario>();
+    HashMap<Funcionario> funcionarios = new HashMap<Funcionario>();
     funcionarios.put (1, f1);
     funcionarios.put (2, f2);
 

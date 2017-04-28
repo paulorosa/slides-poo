@@ -1,0 +1,20 @@
+package parte1;
+
+public class RelatorioNotas {
+
+	public void calcularMedia(String filename) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+	
+	public static void main(String[] args) {
+		String filename = args[0];
+		
+		RelatorioNotas relatorioNotas = new RelatorioNotas();
+		relatorioNotas.calcularMedia(filename);
+	}
+
+}

@@ -458,9 +458,9 @@ _Composição / Agregação_
 
 
 <!SLIDE>
-# Característica da Relação Agregação e Composição
+# Propriedade Assimétrica
 
-**Assimétrica**: Se um objeto A é parte de um objeto B, B não pode ser parte de A.
+.callout Se um objeto A é parte de um objeto B, B não pode ser parte de A.
 
 Por exemplo:
 
@@ -494,35 +494,33 @@ Palavras chaves: consiste em, contém, é parte de, tem, possui, é composta de,
 
 
 <!SLIDE>
-# Agregação
-
-Tipo especial de associação onde o elemento associado corresponde a uma parte do elemento principal.
-
-
-<!SLIDE>
 # Características Agregação
 
-* A destruição de um objeto Todo não implica necessariamente a destruição de suas Partes.
-* Um objeto pode pertencer a mais de um composto, ou estar contido nele várias vezes.
+* A destruição de um objeto TODO não implica necessariamente a destruição de suas PARTES.
+
+* Um objeto representando a PARTE pode pertencer a mais de um objeto representando o TODO, ou estar contido nele várias vezes.
+
+* O número de partes associadas à classe representando o TODO é variável e pouco importa.
+
 
 Notação: Losango sem preenchimento
 
+
+Exemplo: 
+
 ![.fancyborder](_images/time_jogador.png)
-
-
-<!SLIDE>
-# Composição
-
-Tipo especial de associação onde a parte indicada deve necessariamente existir.
 
 
 
 <!SLIDE>
 # Características Composição
 
-* A destruição de um objeto Todo implica necessariamente a destruição de suas partes.
+* A destruição de um objeto TODO implica necessariamente a destruição de suas PARTES.
+* Quando o objeto da classe representando o TODO for destruído, os objetos que os compõem necessariamente também serão.
+* Um objeto representando a PARTE pertence a um único objeto representando o TODO.
+* Não faz sentido pensarmos no objeto da classe representando o TODO sem os objetos que os compõem. 
+* O TODO existe enquanto as PARTES também existem.
 
-* Uma classe pertence a um único composto 
 
 Notação: Losango com preenchimento
 
@@ -533,35 +531,10 @@ Notação: Losango com preenchimento
 
 
 
-<!SLIDE>
-# Composição
-
-A diferença básica entre uma agregação e uma composição é que, na agregação, o número de partes associadas à classe principal é variável e pouco importa.
-Na composição, não faz sentido pensarmos o objeto da classe principal sem os objetos que a compoem. 
-O todo existe enquanto as partes também existem.
-Quando o objeto da classe principal for destruído, os objetos que o compoem necessariamente também  serão.
 
 
 
 
-
-
-
-
-
-
-
-composição - forte
-agregação - fraco
-
-livro - capitulo - pagina
-
-
-Campeonato - time - jogador
-
-Usuário - Carrinho de Compras - Produto
-carrinho de compras é só do usuário
-produto do carrinho pode ser reaproveitado
 
 
 
@@ -589,8 +562,8 @@ Identificação de Classes:
 
 E também podemos identificar os relacionamentos.
 
-* Um **Usuário** possui um **Carrinho de Compras**
-* Um **Carrinho de Compras** contém produtos
+* Um Usuário **possui** um Carrinho de Compras
+* Um Carrinho de Compras **contém** produtos
 
 
 <!SLIDE>
@@ -618,9 +591,7 @@ A partir das informações obtidas anteriormente, podemos montar um _diagrama de
 <!SLIDE>
 # Modelagem Classes
 
-Podemos iniciar modelando o diagrama apenas com as classes.
-
-![.fancyborder](_images/.png)
+Podemos iniciar modelando o diagrama apenas com as classes considerando suas características
 
 
 
@@ -629,7 +600,8 @@ Podemos iniciar modelando o diagrama apenas com as classes.
 <!SLIDE>
 # Modelagem Usuário x Carrinho de Compras
 
-![.fancyborder](_images/.png)
+Agora podemos iniciar adicionar os relacionamento considerando as informações.
+
 
 
 
@@ -637,10 +609,7 @@ Podemos iniciar modelando o diagrama apenas com as classes.
 # Modelagem Carinho de Compras x Produto
 
 
-![.fancyborder](_images/.png)
-
-
-* adicionar operações do relacionamento
+Em seguida, podemos adicionar as operações relacionadas aos relacionamentos.
 
 
 
@@ -648,7 +617,12 @@ Podemos iniciar modelando o diagrama apenas com as classes.
 <!SLIDE>
 # Modelagem Completa
 
-![.fancyborder](_images/.png)
+A modelagem final poderia ficar da seguinte forma.
 
 
+<!SLIDE>
+# Implementação do Modelo
+
+A partir da modelagem do problema no diagrama de classes UML, podemos
+criar as classes em Java
 
