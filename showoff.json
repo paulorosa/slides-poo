@@ -29,7 +29,7 @@
         {"section": "*AULA 06"},
         {"section": "Abstração"},
 
-        {"section": "*AULA 07 glebson ado com atraso"},
+        {"section": "*AULA 07"},
         {"section": "Pacotes"},
         {"section": "*Exercícios"},
         
@@ -42,30 +42,36 @@
 
         {"section": "*AULA 10"},
         {"section": "Atividades/relatorio_notas"},
-        {"section": "***Interface"},
-        {"section": "***Acoplamento e Coesão"},
-        {"section": "***Vinculação Dinâmica"},
 
         {"section": "*AULA 11"},
-        {"section": "***Estáticos"},
-        {"section": "***Tratamento Exceção"},
-        {"section": "***Inicialização"},
-        {"section": "***Teste de Software"},
- 
+        {"section": "*FERIADO*"},
+
         {"section": "*AULA 12"},
+        {"section": "*Exercícios*"},
+        {"section": "Inicialização"},
+        {"section": "Vinculação Dinâmica"},
+        
         {"section": "*AULA 13"},
+        {"section": "***Interface"},
+        {"section": "***Acoplamento e Coesão"},
+
         {"section": "*AULA 14"},
+        {"section": "***Tratamento Exceção"},
+
         {"section": "*AULA 15"},
+        {"section": "***Estáticos"},
+        {"section": "***Teste de Software"},
+
         {"section": "*AULA 16"},
+        {"section": "*Revisão*"},
+        {"section": "*Exercícios*"},
         
         {"section": "*AULA 17"},
         {"section": "***Prova P2***"},
 
         {"section": "*AULA 18"},
         {"section": "***Prova Substitutiva*** (X)"},
-        
-
- 
+         
         {"section": "*Referências"},
 
         {"section": "Atividades/hierarquia_produtos.md"},
