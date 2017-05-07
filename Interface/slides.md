@@ -1,30 +1,35 @@
 <!SLIDE section center>
 # Interface
-## Todos slides copiados
 
 <!SLIDE>
-# Slide Inicial (de apresentação)
+# Exemplo - Hierarquia de Funcionários
 
+![.fancyborder](/_images/hierarquia_funcionarios.png)
 
-<!SLIDE>
-# Exemplo
+Cada uma das classes possui o método autentica. O método recebe um texto que representa uma senha e utiliza para validar
+se é a mesma do funcionário. O método retorna *true* se a senha é a mesma
+e *false*, caso contrário.
 
-colocar imagem
-    
-.callout Método ->   boolean autentica (String senha)
-
-
-
+    @@@ Java 
+    public boolean autentica (String senha) {
+      // ...
+    }
 
 <!SLIDE>
 # Sistema para autenticação de Funcionários
 
 
-    @@Java
-    class Sistema {
-        public boolean login (Funcionario funcionario, String senha) {
-            return funcionario.autentica ( senha );
+    @@@ Java
+    public class Sistema {
+    
+        public void executaOperacao (Funcionario funcionario, String senha) {
+          if ( funcionario.autentica ( senha ) ) {
+            System.out.println ("Executando Operação");
+          } else {
+            System.out.println ("Operação não executada");
+          }          
         }
+        
     }
 
 
@@ -33,14 +38,14 @@ colocar imagem
 # Controle de Acesso: Somente Diretor e Gerente
 
 
-    @@Java
+    @@@ Java
     class Diretor extends Funcionario {
 	    public boolean autentica (String senha) {
 		    return senha.equals(“diretor”);
 	    }
     }
 
-    @@Java
+    @@@ Java
     class Gerente extends Funcionario {
 	    public boolean autentica (String senha) {
 		    return senha.equals(“gerente”);
@@ -54,7 +59,7 @@ colocar imagem
 
 .callout PROBLEMA!!!
 
-    @@Java
+    @@@ Java
     class Sistema {
         public boolean login (Funcionario funcionario, String senha) {
             return funcionario.autentica ( senha );
@@ -69,15 +74,15 @@ Nem todo funcionário possui o método autenticação.
 # Possível Solução
 ## Criação de dois métodos login no Sistema.
 
-    @@Java
-class Sistema {
-	public boolean login (Diretor diretor, String senha) {
+    @@@ Java
+    public class Sistema {
+	  public boolean login (Diretor diretor, String senha) {
 		return diretor.autentica ( senha );
-	}
-	public boolean login (Gerente gerente, String senha) {
+	  }
+	  public boolean login (Gerente gerente, String senha) {
 		return gerente.autentica ( senha );
-}
-}
+      }
+    }
 
 .callout Não é uma boa solução!!!
 
@@ -96,7 +101,7 @@ colocar imagem
 <!SLIDE>
 # Outra Solução - Criar uma Classe FuncionarioAutenticavel
 
-    @@Java
+    @@@ Java
     class Sistema {
 	    public boolean login (FuncionarioAutenticavel fa, String senha) {
 		    return fa.autentica ( senha );
@@ -158,7 +163,7 @@ Podemos utilizar Interface.
 
 Em Java, temos:
 
-    @@Java
+    @@@ Java
     interface Autenticavel {
 	    boolean autentica (String senha);
     }
@@ -183,7 +188,7 @@ O Como ele faz será definido em uma implementação desta interface.
 # Interface em Java
 ## Sintaxe
 
-    @@Java
+    @@@ Java
     interface <nome> {
 	    tipo <nome_constante> = valor_constante;
 	    // …
@@ -196,7 +201,7 @@ O Como ele faz será definido em uma implementação desta interface.
 # Implementação de Interface na Classe
 
 
-    @@Java
+    @@@ Java
     class <nome_classe> [extends <super_classe>] [implements interface1, interface2, …] {
 	    // corpo da classe
     }
@@ -205,12 +210,12 @@ O Como ele faz será definido em uma implementação desta interface.
 <!SLIDE>
 # x
 
-    @@Java
+    @@@ Java
     interface Autenticavel {
 	    boolean autentica (String senha);
     }
 
-    @@Java
+    @@@ Java
     class Gerente extends Funcionario implements Autenticavel {
 	    public boolean autentica (String senha) {
             return senha.equals(“gerente”);
@@ -226,10 +231,10 @@ colocar imagem
 <!SLIDE>
 # x
 
-    @@Java
+    @@@ Java
     Autenticavel a = new Gerente ();
 
-    @@Java
+    @@@ Java
     class Sistema {
 	    public boolean login (Autenticavel a, String senha) {
 		    return a.autentica ( senha );
@@ -326,7 +331,7 @@ Caso contrário, ocorre um erro de compilação.
 <!SLIDE>
 # A interface de um objeto é o conjunto das operações públicas que ele pode realizar
 
-    @@Java
+    @@@ Java
     public class ContaBancaria {
         private double saldo = 0.0;
         public ContaBancaria ( ) {
@@ -345,20 +350,20 @@ Caso contrário, ocorre um erro de compilação.
 # As interfaces estabelecem as mensagens que podem ser trocadas entre os componentes e ocultam os detalhes de implementação
 
 
-    @@Java
+    @@@ Java
     public interface Progressao {
         public int valorAtual ( );
         public void proximoValor ( );
     }
 
-    @@Java
+    @@@ Java
     public class ProgressaoAritmetica implements Progressao { ... }
 
-    @@Java
+    @@@ Java
     public class ProgressaoGeometrica implements Progressao { ... }
 
 
-    @@Java
+    @@@ Java
     public class ProgressaoFibonacci implements Progressao { ... }
 
 

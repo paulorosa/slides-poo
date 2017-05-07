@@ -115,6 +115,9 @@ http://blog.caelum.com.br/lendo-arquivos-texto-em-java/
 
 
 
+~~~SECTION:notes~~~
+###############################         PARTE 1         ###############################
+~~~ENDSECTION~~~
 
 
 <!SLIDE printonly>
@@ -182,6 +185,10 @@ Leitura de Arquivo - classe para ler informações de notas de alunos em aqruivo
 
 
 
+
+
+
+
 ~~~SECTION:notes~~~
 ###############################         PARTE 2         ###############################
 ~~~ENDSECTION~~~
@@ -238,6 +245,65 @@ A saída no console deveria ser:
     Mediana: 4.0
     
     
+<!SLIDE printonly>
+# Solução Professor
+
+1. Uma primeira solução a considerar seria adicionar um método novo 
+chamado _calcularMediana_ semelhante ao método já existente _calcularMedia_.
+
+O problema desta abordagem é a repetição do código.
+
+Observando o código, podemos identificar que o código repetido é a leitura do arquivo.
+
+Uma possível solução seria extrair a leitura do arquivo para um método.
+
+Podemos criar um método responsável pela leitura das informações dos arquivos.
+
+A informação que precisamos ler para o momento é a apenas a nota. 
+
+Desta forma o métodod poderia ter a seguinte assinatura
+
+    @@@ Java
+    public ArrayList<Double> lerNotas (String nomeDoArquivo) {
+      // ...
+    }
+
+
+
+2. 
+
+<!SLIDE printonly>
+# Solução Professor
+## Problema adição de muitos métodos de cálculo.
+
+A cada cálculo noov que pretende adicionar, alguns problemas podem surgir.
+
+* a classe começa a ficar cheia de métodos
+* como reaproveitar algum cálculo em algum outra classe.
+
+<!SLIDE printonly>
+# Solução Professor
+## Problema adição de muitos métodos de cálculo.
+
+Para resolver este problema podemos transformar cada um dos métodos
+em classes separadas onde cada classe realize o seu cálculo
+
+Por exemplo:
+* classe MediaAritimetica
+* classe Mediana
+
+
+~~~SECTION:notes~~~
+A primeira solução a considerar é criar mais um 
+1. A solução envolve a criação de uma classe para criar a média a partir da lista de notas.
+2. Criar uma classe para calcular a mediana a partir da lista de notas.
+3. a classe principal faz o new de cada classe para cada cáculo e lista de notas
+4. criação de uma classe para ler os arquivos
+5. a classe principal faz a orquestração.
+
+~~~ENDSECTION~~~
+
+
 
 
 
@@ -253,19 +319,57 @@ A saída no console deveria ser:
 # Tipos de Alunos
 ## Objetivo 
 
-Diferenciar entre Alunos de _Graduação_ e Alunos de _Pós-Graduação_.
+Diferenciar entre Alunos de _Graduação_ e Alunos de _Mestrado_.
+
+Cada tipo de aluno será identificado no arquivo por uma letra:
+
+* Mestrado: M
+* Graduação: G
+
+<!SLIDE>
+# Tipos de Alunos
+## Exemplo
 
 
+Dado um arquivo com o conteúdo abaixo:
 
+    @@@ Console
+    M joão  4
+    M maria 5
+    M paulo 9
+    G eduardo 4
+    G ricardo 6
+    G alessandra 8
+
+A saída no console poderia ser:    
+
+    @@@ Console
+    Graduação:
+		Média: 6.0 Mediana: 5.0
+	Mestrado:
+	    Média: 6.0 Mediana: 6.0
+    
 
 
 
 <!SLIDE printonly>
-# média por tipo de aluno
+# Solução Professor
 
-Nesta etapa vamos imprimir as médias por tipos de alunos
+~~~SECTION:notes~~~
+1. A solução envolve a criação de uma classe para criar a média a partir da lista de notas.
+2. Criar uma classe para calcular a mediana a partir da lista de notas.
+3. a classe principal faz o new de cada classe para cada cáculo e lista de notas
+4. criação de uma classe para ler os arquivos
+5. a classe principal faz a orquestração.
 
-Agora o arquivo tem uma coluna adicional contendo o tipo do aluno
+
+classe ImpressorRelatorio
+método: void imprime(ArrayList<Aluno> alunos)
+~~~ENDSECTION~~~
+
+
+
+
 
 
 
@@ -281,22 +385,39 @@ Agora o arquivo tem uma coluna adicional contendo o tipo do aluno
 # Parte 4
 
 <!SLIDE>
-# Tipos de Alunos
+# Novo Tipo de Aluno
 ## Objetivo 
 
-Diferenciar entre Alunos de _Graduação_ e Alunos de _Mestrado_.
+Adicionar um novo tipo de aluno, o aluno de _Doutorado_.
+
+
 
 <!SLIDE>
 # Formato do Arquivo
 
-O arquivo de notas possui agora outro formato. 
+Um novo tipo de aluno pode aparecer na lista:
 
-No início de cada linha foi adicionado uma letra para indicar o tipo de Aluno.
+* Doutorado: D
 
-* letra **G** - indica que o Aluno é de Gradução.
-* letra **M** - indica que o Aluno é de Mestrado.
+Download do Arquivo: <a href="/file/_files/share/notas-parte-4.txt">Notas com novo Tipo de Aluno</a>
 
-Dowload do Arquivo: <a href="/file/_files/share/notas-parte-4.txt">Notas com Tipos de Alunos</a>
+<!SLIDE>
+# Tipos de Alunos
+## Exemplo
+
+O exemplo
+
+<!SLIDE printonly>
+# Solução Professor
+
+~~~SECTION:notes~~~
+O objetivo desta parte do exerício é avaliar a dificuldade em adicionar um novo tipo de aluno no relatório.
+Este é o momento para apresentar sobre o padrão factory.
+
+classe: FabricaCalculos
+método: Calculo create (TipoCalculo tipo)
+
+~~~ENDSECTION~~~
 
 
 <!SLIDE>
@@ -321,7 +442,7 @@ A saída no console deveria apresentar as seguintes informações:
 
 
 
-<!SLIDE>
+<!SLIDE printonly>
 # Solução Professor
 
 
@@ -346,17 +467,29 @@ A saída no console deveria apresentar as seguintes informações:
 # Tipos de Alunos
 ## Objetivo 
 
-Diferenciar entre Alunos de _Graduação_ e Alunos de _Pós-Graduação_.
+Adicionar novo tipo de cálculo (novas médias).
 
 <!SLIDE printonly>
 # adicionar novas médias
 
-
-
 <!SLIDE>
+# Formato do Arquivo
+
+Download do Arquivo: <a href="/file/_files/share/notas-parte-5.txt">Notas com novo Tipo de Aluno</a>
+
+
+<!SLIDE printonly>
 # Solução Professor
 
-<!SLIDE>
+~~~SECTION:notes~~~
+O objetivo desta parte é aplicar a mesma ideia da parte anterior para o mesmo problema.
+O problema é a dificuldade de saber qual a classe que representa a média específica.
+
+
+~~~ENDSECTION~~~
+
+
+<!SLIDE printonly>
 # Considerações Soluções Alunos
 
 
@@ -369,12 +502,25 @@ Diferenciar entre Alunos de _Graduação_ e Alunos de _Pós-Graduação_.
 <!SLIDE center>
 # Parte 6
 
+<!SLIDE>
+# Considerar Cursos
+## Objetivo 
+
+Adicionar novo tipo de cálculo (novas médias).
 
 <!SLIDE printonly>
-# adicionar novas notas
-
+# adicionar novas médias
 
 <!SLIDE>
+# Formato do Arquivo
+
+Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso1-materia1.txt">Notas com novo Tipo de Aluno</a>
+Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso1-materia2.txt">Notas com novo Tipo de Aluno</a>
+Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso2-materia1.txt">Notas com novo Tipo de Aluno</a>
+Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso2-materia2.txt">Notas com novo Tipo de Aluno</a>
+
+
+<!SLIDE printonly>
 # Solução Professor
 
 <!SLIDE>
@@ -389,32 +535,24 @@ Diferenciar entre Alunos de _Graduação_ e Alunos de _Pós-Graduação_.
 <!SLIDE center>
 # Parte 7
 
+<!SLIDE>
+# Considerar Faculdade com vários cursos
+## Objetivo 
+
+<!SLIDE>
+# Formato do Arquivo
+
+Download do Arquivo: <a href="/file/_files/share/notas-parte-7.txt">Notas com novo Tipo de Aluno</a>
+
+
 <!SLIDE printonly>
-# Professor com várias turmas
-
-<!SLIDE>
 # Solução Professor
-
-<!SLIDE>
-# Considerações Soluções Alunos
-
 
 ~~~SECTION:notes~~~
-###############################         PARTE 8         ###############################
+O objetivo desta parte é 
+
 ~~~ENDSECTION~~~
 
-<!SLIDE center>
-# Parte 8
-
 <!SLIDE printonly>
-# Faculdade com vários professores
-
-
-
-<!SLIDE>
-# Solução Professor
-
-<!SLIDE>
 # Considerações Soluções Alunos
-
 
