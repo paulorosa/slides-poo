@@ -175,12 +175,12 @@ Calculo da Média - classe com método que recebe a lista de notas de alunos e c
 Leitura de Arquivo - classe para ler informações de notas de alunos em aqruivo e 
 	
 
-<!SLIDE>
+<!SLIDE printonly>
 # Solução Professor
 
 
 
-<!SLIDE>
+<!SLIDE printonly>
 # Considerações Soluções Alunos
 
 
@@ -189,14 +189,13 @@ Leitura de Arquivo - classe para ler informações de notas de alunos em aqruivo
 
 
 
-~~~SECTION:notes~~~
-###############################         PARTE 2         ###############################
-~~~ENDSECTION~~~
 
 
 <!SLIDE center>
-
 # Parte 2
+~~~SECTION:notes~~~
+###############################         PARTE 2         ###############################
+~~~ENDSECTION~~~
 
 <!SLIDE>
 # Mediana das Notas
@@ -308,12 +307,12 @@ A primeira solução a considerar é criar mais um
 
 
 
-~~~SECTION:notes~~~
-###############################         PARTE 3         ###############################
-~~~ENDSECTION~~~
 
 <!SLIDE center>
 # Parte 3
+~~~SECTION:notes~~~
+###############################         PARTE 3         ###############################
+~~~ENDSECTION~~~
 
 <!SLIDE>
 # Tipos de Alunos
@@ -356,6 +355,8 @@ A saída no console poderia ser:
 # Solução Professor
 
 ~~~SECTION:notes~~~
+O objetivo desta parte é ...
+
 1. A solução envolve a criação de uma classe para criar a média a partir da lista de notas.
 2. Criar uma classe para calcular a mediana a partir da lista de notas.
 3. a classe principal faz o new de cada classe para cada cáculo e lista de notas
@@ -367,6 +368,11 @@ classe ImpressorRelatorio
 método: void imprime(ArrayList<Aluno> alunos)
 ~~~ENDSECTION~~~
 
+<!SLIDE printonly>
+# Considerações Soluções Alunos
+
+<!SLIDE printonly>
+# Impactos na Alteração
 
 
 
@@ -377,12 +383,12 @@ método: void imprime(ArrayList<Aluno> alunos)
 
 
 
-~~~SECTION:notes~~~
-###############################         PARTE 4         ###############################
-~~~ENDSECTION~~~
 
 <!SLIDE center>
 # Parte 4
+~~~SECTION:notes~~~
+###############################         PARTE 4         ###############################
+~~~ENDSECTION~~~
 
 <!SLIDE>
 # Novo Tipo de Aluno
@@ -441,27 +447,30 @@ A saída no console deveria apresentar as seguintes informações:
     Mediana Alunos Mestrado: 6.0
 
 
-
 <!SLIDE printonly>
 # Solução Professor
 
+~~~SECTION:notes~~~
+O objetivo desta parte é ...
 
-    @@@ Java
-    
-    
-<!SLIDE>
+~~~ENDSECTION~~~
+
+<!SLIDE printonly>
 # Considerações Soluções Alunos
 
-<!SLIDE>
+
+<!SLIDE printonly>
 # Impactos na Alteração
 
 
-~~~SECTION:notes~~~
-###############################         PARTE 5         ###############################
-~~~ENDSECTION~~~
+
+
 
 <!SLIDE center>
 # Parte 5
+~~~SECTION:notes~~~
+###############################         PARTE 5         ###############################
+~~~ENDSECTION~~~
 
 <!SLIDE>
 # Tipos de Alunos
@@ -475,7 +484,7 @@ Adicionar novo tipo de cálculo (novas médias).
 <!SLIDE>
 # Formato do Arquivo
 
-Download do Arquivo: <a href="/file/_files/share/notas-parte-5.txt">Notas com novo Tipo de Aluno</a>
+Download do Arquivo: <a href="/file/_files/share/notas-parte-5.txt">Arquivo com Notas</a>
 
 
 <!SLIDE printonly>
@@ -492,15 +501,17 @@ O problema é a dificuldade de saber qual a classe que representa a média espec
 <!SLIDE printonly>
 # Considerações Soluções Alunos
 
+<!SLIDE printonly>
+# Impactos na Alteração
 
 
 
-~~~SECTION:notes~~~
-###############################         PARTE 6         ###############################
-~~~ENDSECTION~~~
 
 <!SLIDE center>
 # Parte 6
+~~~SECTION:notes~~~
+###############################         PARTE 6         ###############################
+~~~ENDSECTION~~~
 
 <!SLIDE>
 # Considerar Cursos
@@ -514,26 +525,33 @@ Adicionar novo tipo de cálculo (novas médias).
 <!SLIDE>
 # Formato do Arquivo
 
-Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso1-materia1.txt">Notas com novo Tipo de Aluno</a>
-Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso1-materia2.txt">Notas com novo Tipo de Aluno</a>
-Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso2-materia1.txt">Notas com novo Tipo de Aluno</a>
-Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso2-materia2.txt">Notas com novo Tipo de Aluno</a>
+Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso1-materia1.txt">Arquivo com Notas</a>
+Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso1-materia2.txt">Arquivo com Notas</a>
+Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso2-materia1.txt">Arquivo com Notas</a>
+Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso2-materia2.txt">Arquivo com Notas</a>
 
 
 <!SLIDE printonly>
 # Solução Professor
 
-<!SLIDE>
+~~~SECTION:notes~~~
+O objetivo desta parte é ...
+
+~~~ENDSECTION~~~
+
+<!SLIDE printonly>
 # Considerações Soluções Alunos
 
+<!SLIDE printonly>
+# Impactos na Alteração
 
 
-~~~SECTION:notes~~~
-###############################         PARTE 7         ###############################
-~~~ENDSECTION~~~
 
 <!SLIDE center>
 # Parte 7
+~~~SECTION:notes~~~
+###############################         PARTE 7         ###############################
+~~~ENDSECTION~~~
 
 <!SLIDE>
 # Considerar Faculdade com vários cursos
@@ -542,17 +560,19 @@ Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso2-materia2.t
 <!SLIDE>
 # Formato do Arquivo
 
-Download do Arquivo: <a href="/file/_files/share/notas-parte-7.txt">Notas com novo Tipo de Aluno</a>
+Download do Arquivo: <a href="/file/_files/share/notas-parte-7.txt">Arquivo com Notas</a>
 
 
 <!SLIDE printonly>
 # Solução Professor
 
 ~~~SECTION:notes~~~
-O objetivo desta parte é 
+O objetivo desta parte é ...
 
 ~~~ENDSECTION~~~
 
 <!SLIDE printonly>
 # Considerações Soluções Alunos
 
+<!SLIDE printonly>
+# Impactos na Alteração
