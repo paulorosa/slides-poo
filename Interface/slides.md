@@ -294,9 +294,14 @@ Considerando que o sistema agora recebe uma interface...
 
 <!SLIDE>
 # Representação de Interface em UML
-colocar imagem
 
+Na UML, a **Interface** pode ser representada utilizando-se o esteriótipo _interface_. 
 
+E a relação que uma classe implementa uma interface, por um linha pontilhada com um seta vazada.
+
+No exemplo, a representação fica da seguinte forma:
+
+![.fancyborder](/_images/representacao_interface_uml.png)
     
 
 <!SLIDE>

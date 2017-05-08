@@ -2,6 +2,7 @@
 # Relatório de Notas
 ## Atividade Sala de Aula
 
+
 <!SLIDE>
 # Objetivo
 
@@ -9,19 +10,74 @@ Criar um programa em Java que leia um arquivo com notas de provas de alunos e im
 
 ![.fancyborder](_images/relatorio_notas.png)
 
-<!SLIDE>
-# Exemplo
 
-como funciona
+<!SLIDE>
+# Atividade
+
+A atividade consiste em criar a classe _RelatorioNotas_, contendo o método
+main para que seja executado pela máquina virtual do java. O programa deve receber
+como argumento o nome do arquivo contendo a relação de notas.
 
     @@@ Console
     java RelatorioNotas notas.txt
     
-Resultado
+Como resultado, deve ser impresso um relatório com os valores.
 
     @@@ Console
     Média: 6.0
     
+Obs.: O programa pode ser executado tanto da linha de comando quanto da IDE.
+
+
+
+<!SLIDE>
+# Classe Principal
+
+O código abaixo é uma pequena sugestão de trecho para o programa principal.
+
+    @@@ Java
+    public class RelatorioNotas {
+    
+	  public static void main(String[] args) {
+	  
+		String filename = args[0];
+		
+		// Instanciar Classe 
+		// Chamar métodos
+
+      }
+    }
+    
+
+<!SLIDE>
+# Arquivo com Notas
+
+O formato e o conteúdo do arquivo pode variar a cada nova funcionalidade
+implementada na aplicação.
+
+Cada parte da atividade mostrará os detalhes.
+
+Cada parte também disponibilizará os arquivos necessários para teste.
+
+
+
+
+    
+<!SLIDE>
+# Leitura do Arquivo em Java
+
+Para a leitura de arquivo, o artigo abaixo explica como fazer:
+
+http://blog.caelum.com.br/lendo-arquivos-texto-em-java/
+
+
+
+<!SLIDE>
+# Formato da Saída
+
+O formato da saída não é importante, cada um pode mostrar da forma que achar melhor.
+O importante é o conteúdo, isto é, apresentar as informações solicitadas.
+
 
 
 
@@ -30,43 +86,59 @@ Resultado
 
 O desenvolvimento deste programa será realizado em várias etapas.
 
-A cada etapa um funcionalidade nova será implementada.
+A cada etapa uma funcionalidade nova será implementada.
 
 O programa será finalizado depois de todas as funcionalidades implementadas.
 
 
 <!SLIDE>
-# Considerações
+# Considerações Gerais
 
-Para adicionar o novo valor no Relatório de Notas, considerar os seguintes pontos:
+A cada parte desenvolvida do código considerar a alteração do código
+já existente para melhorar o trabalho das próximas partes.
 
-1. Eliminar possíveis códigos repetidos que apareçam. 
-
-.callout Dica: se um comportamento aparece repetido em mais de um lugar,
-trata-se de um comportamento reaproveitável, portanto, podemos transformá-la
-em um método ou criarmos uma classe para tratar apenas este comportamento.
-
-
-2. Identificar polimorfimos
-. callout 
-
+* Eliminar Possíveis Códigos Repetidos
+* Identificar Polimorfismos
+* Utilizar Classes Abstratas
 
 
 
 <!SLIDE>
-# Funcionalidades x Etapas
+# Funcionalidades
 
-1. Média Aritmética das Notas
-2. Média Aritmética por Tipo de Aluno
-3. Adição de novos Tipos de Alunos
-4. Adição de mais notas por alunos
-5. Adição de novas médias
-6. Professor com várias Cursos
-7. Faculdade com Cursos
+As seguintes funcionalidades serão implementadas incrementalmente.
+
+* Média Aritmética das Notas
+* Média Aritmética por Tipo de Aluno
+* Adição de novos Tipos de Alunos
+* Adição de mais notas por alunos
+* Adição de novas médias
+* Professor com várias Cursos
+
+
+
+
+
+
+
+<!SLIDE center>
+# Parte 1
+~~~SECTION:notes~~~
+###############################         PARTE 1         ###############################
+~~~ENDSECTION~~~
+
+<!SLIDE>
+# Média Aritmética das Notas
+## Objetivo 
+
+Adicionar ao relatório o valor da _Media Aritmética das Notas dos Alunos_.
+
+
 
 
 <!SLIDE>
 # Formato do Arquivo
+
 Cada linha do arquivo contém o nome do aluno e a sua nota.
 
 O nome é formado por um único nome e a nota por um número inteiro.
@@ -80,45 +152,6 @@ joão  4
 maria 7
 
 paulo 6
-
-
-<!SLIDE>
-# Formato da Saída no Console
-
-.callout.warn O formato da saída não é importante, cada um pode mostrar da forma que achar melhor.
-O importante é o conteúdo, isto é, apresentar as informações solicitadas.
-
-
-
-<!SLIDE>
-# Classe Principal
-
-    @@@ Java
-    public class RelatorioNotas {
-    
-	  public static void main(String[] args) {
-	  
-		String filename = args[0];
-		
-		// Instanciar Classe
-		// Chamar método para calcular média
-
-      }
-    }
-    
-
-
-<!SLIDE>
-# Leitura do Arquivo em Java
-
-http://blog.caelum.com.br/lendo-arquivos-texto-em-java/
-
-
-
-~~~SECTION:notes~~~
-###############################         PARTE 1         ###############################
-~~~ENDSECTION~~~
-
 
 <!SLIDE printonly>
 # Parte 1 - Possível Solução
