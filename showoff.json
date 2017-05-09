@@ -48,9 +48,9 @@
 
         {"section": "*AULA 12"},
         {"section": "*Exercícios*"},
-        {"section": "Interface"},
-        {"section": "Inicialização"},
-        {"section": "Vinculação Dinâmica"},
+        {"section": "*Interface"},
+        {"section": "*Inicialização"},
+        {"section": "*Vinculação Dinâmica"},
         
         {"section": "*AULA 13"},
         {"section": "***Acoplamento e Coesão"},

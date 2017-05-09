@@ -16,7 +16,6 @@ Considere a seguinte hierarquia de classes
 O método _autentica_ está definido na classe Funcionario e é utilizado para validar
 se uma senha passada no parâmetro de entrada do método é a mesma do funcionário. 
 
-# Hierarquia de Funcionários
     @@@ Java 
     public boolean autentica (String senha) {
       // ...

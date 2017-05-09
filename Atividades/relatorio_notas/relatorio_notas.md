@@ -275,6 +275,11 @@ A saída no console deveria ser:
     @@@ Console
     Média: 6.0
     Mediana: 4.0
+
+<!SLIDE>
+# Arquivo com Notas
+
+Download do Arquivo: <a href="/file/_files/share/notas-parte-2.txt">Arquivo com Notas</a>
     
     
 <!SLIDE printonly>
@@ -293,7 +298,7 @@ Podemos criar um método responsável pela leitura das informações dos arquivo
 
 A informação que precisamos ler para o momento é a apenas a nota. 
 
-Desta forma o métodod poderia ter a seguinte assinatura
+Desta forma o método poderia ter a seguinte assinatura
 
     @@@ Java
     public ArrayList<Double> lerNotas (String nomeDoArquivo) {
@@ -301,17 +306,16 @@ Desta forma o métodod poderia ter a seguinte assinatura
     }
 
 
-
-2. 
-
 <!SLIDE printonly>
 # Solução Professor
 ## Problema adição de muitos métodos de cálculo.
 
-A cada cálculo noov que pretende adicionar, alguns problemas podem surgir.
+A cada cálculo novo que pretende adicionar, alguns problemas podem surgir.
 
 * a classe começa a ficar cheia de métodos
 * como reaproveitar algum cálculo em algum outra classe.
+
+
 
 <!SLIDE printonly>
 # Solução Professor
@@ -382,6 +386,10 @@ A saída no console poderia ser:
 	    Média: 6.0 Mediana: 6.0
     
 
+<!SLIDE>
+# Arquivo com Notas
+
+Download do Arquivo: <a href="/file/_files/share/notas-parte-3.txt">Arquivo com Notas</a>
 
 
 <!SLIDE printonly>
@@ -417,13 +425,13 @@ método: void imprime(ArrayList<Aluno> alunos)
 
 
 
-<!SLIDE center>
+<!SLIDE center printonly>
 # Parte 4
 ~~~SECTION:notes~~~
 ###############################         PARTE 4         ###############################
 ~~~ENDSECTION~~~
 
-<!SLIDE>
+<!SLIDE printonly>
 # Novo Tipo de Aluno
 ## Objetivo 
 
@@ -431,7 +439,7 @@ Adicionar um novo tipo de aluno, o aluno de _Doutorado_.
 
 
 
-<!SLIDE>
+<!SLIDE printonly>
 # Formato do Arquivo
 
 Um novo tipo de aluno pode aparecer na lista:
@@ -440,7 +448,7 @@ Um novo tipo de aluno pode aparecer na lista:
 
 Download do Arquivo: <a href="/file/_files/share/notas-parte-4.txt">Notas com novo Tipo de Aluno</a>
 
-<!SLIDE>
+<!SLIDE printonly>
 # Tipos de Alunos
 ## Exemplo
 
@@ -459,7 +467,7 @@ método: Calculo create (TipoCalculo tipo)
 ~~~ENDSECTION~~~
 
 
-<!SLIDE>
+<!SLIDE printonly>
 # Tipos de Alunos
 ## Exemplo
 
@@ -499,13 +507,13 @@ O objetivo desta parte é ...
 
 
 
-<!SLIDE center>
+<!SLIDE center printonly>
 # Parte 5
 ~~~SECTION:notes~~~
 ###############################         PARTE 5         ###############################
 ~~~ENDSECTION~~~
 
-<!SLIDE>
+<!SLIDE printonly>
 # Tipos de Alunos
 ## Objetivo 
 
@@ -514,7 +522,7 @@ Adicionar novo tipo de cálculo (novas médias).
 <!SLIDE printonly>
 # adicionar novas médias
 
-<!SLIDE>
+<!SLIDE printonly>
 # Formato do Arquivo
 
 Download do Arquivo: <a href="/file/_files/share/notas-parte-5.txt">Arquivo com Notas</a>
@@ -540,13 +548,13 @@ O problema é a dificuldade de saber qual a classe que representa a média espec
 
 
 
-<!SLIDE center>
+<!SLIDE center printonly>
 # Parte 6
 ~~~SECTION:notes~~~
 ###############################         PARTE 6         ###############################
 ~~~ENDSECTION~~~
 
-<!SLIDE>
+<!SLIDE printonly>
 # Considerar Cursos
 ## Objetivo 
 
@@ -555,7 +563,7 @@ Adicionar novo tipo de cálculo (novas médias).
 <!SLIDE printonly>
 # adicionar novas médias
 
-<!SLIDE>
+<!SLIDE printonly>
 # Formato do Arquivo
 
 Download do Arquivo: <a href="/file/_files/share/notas-parte-6-curso1-materia1.txt">Arquivo com Notas</a>
@@ -580,17 +588,17 @@ O objetivo desta parte é ...
 
 
 
-<!SLIDE center>
+<!SLIDE center printonly>
 # Parte 7
 ~~~SECTION:notes~~~
 ###############################         PARTE 7         ###############################
 ~~~ENDSECTION~~~
 
-<!SLIDE>
+<!SLIDE printonly>
 # Considerar Faculdade com vários cursos
 ## Objetivo 
 
-<!SLIDE>
+<!SLIDE printonly>
 # Formato do Arquivo
 
 Download do Arquivo: <a href="/file/_files/share/notas-parte-7.txt">Arquivo com Notas</a>
