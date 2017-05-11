@@ -425,13 +425,13 @@ método: void imprime(ArrayList<Aluno> alunos)
 
 
 
-<!SLIDE center printonly>
+<!SLIDE center>
 # Parte 4
 ~~~SECTION:notes~~~
 ###############################         PARTE 4         ###############################
 ~~~ENDSECTION~~~
 
-<!SLIDE printonly>
+<!SLIDE>
 # Novo Tipo de Aluno
 ## Objetivo 
 
@@ -439,7 +439,7 @@ Adicionar um novo tipo de aluno, o aluno de _Doutorado_.
 
 
 
-<!SLIDE printonly>
+<!SLIDE>
 # Formato do Arquivo
 
 Um novo tipo de aluno pode aparecer na lista:
