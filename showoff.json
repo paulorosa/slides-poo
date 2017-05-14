@@ -47,13 +47,13 @@
         {"section": "*FERIADO*"},
 
         {"section": "*AULA 12"},
-        {"section": "*Exercícios*"},
-        {"section": "*Interface"},
-        {"section": "*Inicialização"},
-        {"section": "*Vinculação Dinâmica"},
+        {"section": "***Atividades/relatorio_notas"},
         
         {"section": "*AULA 13"},
+        {"section": "*Interface"},
         {"section": "***Acoplamento e Coesão"},
+        {"section": "*Inicialização"},
+        {"section": "*Vinculação Dinâmica"},
 
         {"section": "*AULA 14"},
         {"section": "***Tratamento Exceção"},
