@@ -269,3 +269,125 @@ Download do Arquivo: <a href="/file/_files/share/notas-parte-3.txt">Arquivo com 
 
 
 
+<!SLIDE center>
+# Parte 4
+~~~SECTION:notes~~~
+###############################         PARTE 4         ###############################
+~~~ENDSECTION~~~
+
+<!SLIDE>
+# Novo Tipo de Aluno
+## Objetivo 
+
+Adicionar um novo tipo de aluno, o aluno de _Doutorado_.
+
+
+
+<!SLIDE>
+# Formato do Arquivo
+
+Um novo tipo de aluno pode aparecer na lista:
+
+* Doutorado: D
+
+Download do Arquivo: <a href="/file/_files/share/notas-parte-4.txt">Notas com novo Tipo de Aluno</a>
+
+<!SLIDE printonly>
+# Tipos de Alunos
+## Exemplo
+
+O exemplo
+
+<!SLIDE printonly>
+# Solução Professor
+
+~~~SECTION:notes~~~
+O objetivo desta parte do exerício é avaliar a dificuldade em adicionar um novo tipo de aluno no relatório.
+Este é o momento para apresentar sobre o padrão factory.
+
+classe: FabricaCalculos
+método: Calculo create (TipoCalculo tipo)
+
+~~~ENDSECTION~~~
+
+
+<!SLIDE printonly>
+# Tipos de Alunos
+## Exemplo
+
+Dado um arquivo com o conteúdo abaixo ...
+
+    @@@ Console
+    G joão  4
+    G maria 7
+    M paulo 6
+    M marcos 6
+
+A saída no console deveria apresentar as seguintes informações:    
+
+    @@@ Console
+    Média Alunos Gradução: 6.0
+    Mediana Alunos Gradução: 6.0
+    Média Alunos Mestrado: 6.0
+    Mediana Alunos Mestrado: 6.0
+
+
+<!SLIDE printonly>
+# Solução Professor
+
+~~~SECTION:notes~~~
+O objetivo desta parte é ...
+
+~~~ENDSECTION~~~
+
+<!SLIDE printonly>
+# Considerações Soluções Alunos
+
+
+<!SLIDE printonly>
+# Impactos na Alteração
+
+
+
+
+
+<!SLIDE center printonly>
+# Parte 5
+~~~SECTION:notes~~~
+###############################         PARTE 5         ###############################
+~~~ENDSECTION~~~
+
+<!SLIDE printonly>
+# Tipos de Alunos
+## Objetivo 
+
+Adicionar novo tipo de cálculo (novas médias).
+
+<!SLIDE printonly>
+# adicionar novas médias
+
+<!SLIDE printonly>
+# Formato do Arquivo
+
+Download do Arquivo: <a href="/file/_files/share/notas-parte-5.txt">Arquivo com Notas</a>
+
+
+<!SLIDE printonly>
+# Solução Professor
+
+~~~SECTION:notes~~~
+O objetivo desta parte é aplicar a mesma ideia da parte anterior para o mesmo problema.
+O problema é a dificuldade de saber qual a classe que representa a média específica.
+
+
+~~~ENDSECTION~~~
+
+
+<!SLIDE printonly>
+# Considerações Soluções Alunos
+
+<!SLIDE printonly>
+# Impactos na Alteração
+
+
+

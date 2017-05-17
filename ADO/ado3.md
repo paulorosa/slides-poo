@@ -1,18 +1,24 @@
 <!SLIDE supplemental ado3>
 # ADO 3
-## -
-[ADO2] Interface DAO
-Uma grande parte das aplicações utilizam alguma forma de persistência para manipular dados. Entre as formas mais conhecidas, podemos citar texto, xml, json, banco de dados relacional, banco de dados não-relacional, entre outros.
+## Interface DAO
+
+Uma grande parte das aplicações utilizam alguma forma de persistência para manipular dados. 
+Entre as formas mais conhecidas, podemos citar texto, xml, json, banco de dados relacional, 
+banco de dados não-relacional, entre outros.
 
 A manipulação dos dados, em geral, é realizada com algumas operações básicas:
-Criação
-Leitura
-Atualização
-Remoção
 
-Nesta atividade utilizaremos a memória como forma de persistência de dados. As instruções para realizar esta atividade descritas a seguir devem ser respeitadas.
+* Criação
+* Leitura
+* Atualização
+* Remoção
+* Listagem
 
-Todas as classes devem ser criadas no pacote: br.senac.sp.poo.ado.aluno
+Nesta atividade utilizaremos a memória como forma de persistência de dados. 
+As instruções para realizar esta atividade descritas a seguir devem ser respeitadas.
+
+Todas as classes devem ser criadas no pacote: **br.senac.sp.poo.ado.aluno**
+~~~SECTION:notes~~~
 
 Utilizaremos informações sobre alunos para trabalhar com a persistência. Um aluno possui um nome é identificado pelo seu número de matricula. Uma classe Aluno deve ser criada e deve ter os métodos:
 String getNumeroMatricula ( ) - devolve o número de matrícula do aluno
@@ -93,3 +99,5 @@ public class Adicionar implements Command {
 }
 
 AlunoDao 
+
+~~~ENDSECTION~~~

@@ -24,10 +24,10 @@
   </tr>
   <tr>
     <td>3</td>
-    <td>-</td>
-    <td>Aula 12</td>
-    <td>Aula 14</td>
-    <td>Aula 14</td>
+    <td>[Gerenciamento de Alunos](/supplemental/ado3)</td>
+    <td>Aula 13</td>
+    <td>Aula 15</td>
+    <td>Aula 15</td>
     <td>-</td>
   </tr>
   <tr>

@@ -65,7 +65,7 @@ todos os funcionários pudessem executar a operação no sistema.
 
 Agora, há a necessidade de implementar um novo requisito:
 
-.callout Apenas o Diretor pode executar a operação no Sistema.
+.callout Apenas o **Diretor** pode executar a operação no Sistema.
 
 Vamos analisar algumas maneiras de resolver este problema.
 
@@ -83,33 +83,38 @@ para aceitar somente instâncias da Classe Diretor.
 	  }  
     }
 
-Uma tentativa de utilizar uma instância de outra classe gerará erro de compilação.
+_Requisito Implementado_
+
+.callout Uma tentativa de utilizar uma instância de outra classe gerará erro de compilação.
 
 
 
 <!SLIDE>
-# Possível Solução
-## Criação de dois métodos login no Sistema.
+# Alteração da Assinatura do Método
+
+O problema desta abordagem é que, caso haja a necessidade de adicionar mais
+tipos de funcionários, será necessário alterar o código e incluir um 
+novo método.
 
     @@@ Java
     public class Sistema {
-	  public boolean login (Diretor diretor, String senha) {
-		return diretor.autentica ( senha );
-	  }
-	  public boolean login (Gerente gerente, String senha) {
-		return gerente.autentica ( senha );
-      }
+      public void executa (Diretor diretor, String senha) {
+        // corpo do código
+	  }  
+      public void executa (Gerente gerente, String senha) {
+        // corpo do código
+	  }  
     }
 
-.callout Não é uma boa solução!!!
+_Problema desta Abordagem_
 
-Não é uma boa solução!!!
+.callout A cada novo tipo de funcionário é necessário um novo método.
 
-Para cada novo funcionário criado, é necessário incluir um método novo.
+
 
 
 <!SLIDE>
-# Abordagem: Identificação da Classe
+#Identificação da Classe
 
 Uma outra abordagem possível é a identificação da classe da instância 
 utilizando o operador **instanceof**.
@@ -118,38 +123,47 @@ utilizando o operador **instanceof**.
     public class Sistema {
       public void executa (Funcionario f, String senha) {
         if (f instanceof Diretor ) {
-           // corpo do código
+            Diretor diretor = (Diretor) f;
+           // ...
         }
 	  }  
     }
 
+_Problema desta Abordagem_
+
+.callout O problema ainda continua será necessário criar uma condicional
+para cada tipo de funcionário. Além disso, o tipo de funcionário permitido 
+a executar o sistema não é mais identificado em tempo de compilação.
+
 
 
 <!SLIDE>
-# Outra Solução - Criar uma Classe FuncionarioAutenticavel
+# Herança na Classe FuncionarioAutenticavel
 
-Nesta solução, 
+Nesta solução, uma classe intermediário abstrata é criada para identificar
+que filhos desta classe são funcionários que podem usar o Sistema.
 
 ![.fancyborder](/_images/hierarquia_funcionario_autenticavel.png)
+
 
 
 <!SLIDE>
 # Classe FuncionarioAutenticavel
 
+A herança resolve o problema da alteração e inclusão de código a cada
+tipo de funcionário que seja permitido utilizar o Sistema.
+
     @@@ Java
-    class Sistema {
-	    public boolean executaOperacao (FuncionarioAutenticavel fa, String senha) {
+    public class Sistema {
+      public void executa (FuncionarioAutenticavel fa, String senha) {
 		    return fa.autentica ( senha );
-	    }
+        }
+	  }  
     }
 
+_Problema desta Abordagem_
 
-A classe FuncionarioAutenticavel é candidata a classe abstrata.
-E o método autentica poderia ser abstrato.
-
-Portanto, herança resolve o problema.
-Mas a herança pode não fazer muito sentido.
-
+.callout O problema desta abordagem é que a herança pode não fazer sentido.
 
 
 
@@ -179,7 +193,7 @@ Encontrar uma forma de referenciar Diretor, Gerente e Cliente de uma mesma manei
 
 Uma forma na qual as classes garantissem a existência de um determinado método, através de um Contrato.
 
-Poderíamos criar o Contrato que define tudo o que a classe deve fazer.
+Poderíamos criar o _Contrato_ que define tudo o que a classe deve fazer.
 
 
 
@@ -204,7 +218,7 @@ possua este método, ou seja, podemos fazer com que a classe assine o contrato.
 <!SLIDE>
 # Como fazer em Orientação a Objetos?
 
-Podemos utilizar Interface.
+Podemos utilizar **Interface**.
 
 Em Java, temos:
 
@@ -247,7 +261,8 @@ O Como a classe faz será definido em uma implementação desta interface.
 
 
     @@@ Java
-    class <nome_classe> [extends <super_classe>] [implements interface1, interface2, …] {
+    class <nome_classe> [extends <super_classe>] 
+                [implements interface1, interface2, …] {
 	    // corpo da classe
     }
 
@@ -392,7 +407,9 @@ Caso contrário, ocorre um erro de compilação.
 
 
 <!SLIDE>
-# A interface de um objeto é o conjunto das operações públicas que ele pode realizar
+# Interface 
+
+A interface de um objeto é o conjunto das operações públicas que ele pode realizar
 
     @@@ Java
     public class ContaBancaria {
@@ -410,7 +427,9 @@ Caso contrário, ocorre um erro de compilação.
 
 
 <!SLIDE>
-# As interfaces estabelecem as mensagens que podem ser trocadas entre os componentes e ocultam os detalhes de implementação
+# Interface 
+
+As interfaces estabelecem as mensagens que podem ser trocadas entre os componentes e ocultam os detalhes de implementação
 
 
     @@@ Java
@@ -419,17 +438,13 @@ Caso contrário, ocorre um erro de compilação.
         public void proximoValor ( );
     }
 
-    @@@ Java
     public class ProgressaoAritmetica implements Progressao { ... }
 
-    @@@ Java
     public class ProgressaoGeometrica implements Progressao { ... }
 
-
-    @@@ Java
     public class ProgressaoFibonacci implements Progressao { ... }
 
-
+	
 Notes: As interfaces estabelecem as mensagens que podem ser trocadas entre os componentes de software e ocultam os detalhes de implementação.
 
 
@@ -445,7 +460,9 @@ Exemplo: Anfíbio - Terrestre e Marítimo
 <!SLIDE>
 # Hierarquia
 
-Da mesma forma que uma classe pode estender outra, uma interface também pode estender outra. Assim, quando uma classe implementar uma interface filha, além de implementar os métodos desta interface, também deverá implementar os métodos da interface mãe.
+Da mesma forma que uma classe pode estender outra, uma interface também pode estender outra. 
+Assim, quando uma classe implementar uma interface filha, além de implementar os métodos desta interface, 
+também deverá implementar os métodos da interface mãe.
 
 Exemplo: Interface Collection e List e classe ArrayList
 
@@ -459,7 +476,4 @@ Uma interface estabelece um contrato que é obedecido pelas classes que a implem
 
 Quando uma classe implementa uma interface, todas as funcionalidades especificadas pela interface serão oferecidas pela classe.
 
-
-<!SLIDE>
-# Possibilidades de Hierarquia
 

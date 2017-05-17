@@ -50,8 +50,8 @@
         {"section": "***Atividades/relatorio_notas"},
         
         {"section": "*AULA 13"},
-        {"section": "*Interface"},
-        {"section": "***Acoplamento e Coesão"},
+        {"section": "Interface"},
+        {"section": "Acoplamento e Coesão"},
         {"section": "*Inicialização"},
         {"section": "*Vinculação Dinâmica"},
 
@@ -80,7 +80,8 @@
         
         {"section": "ADO/slides.md"},
         {"section": "ADO/ado1.md"},
-        {"section": "ADO/ado2.md"}
+        {"section": "ADO/ado2.md"},
+        {"section": "ADO/ado3.md"}
         
     ]
 }
