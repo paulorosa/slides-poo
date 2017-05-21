@@ -56,10 +56,12 @@
         {"section": "*Vinculação Dinâmica"},
 
         {"section": "*AULA 14"},
-        {"section": "***Tratamento Exceção"},
+        {"section": "Tratamento Erros"},
+        {"section": "Inicialização"},
+        {"section": "Vinculação Dinâmica"},
+        {"section": "Estáticos"},
 
         {"section": "*AULA 15"},
-        {"section": "***Estáticos"},
         {"section": "***Teste de Software"},
 
         {"section": "*AULA 16"},
@@ -82,6 +84,7 @@
         {"section": "ADO/ado1.md"},
         {"section": "ADO/ado2.md"},
         {"section": "ADO/ado3.md"}
+        {"section": "ADO/ado4.md"}
         
     ]
 }

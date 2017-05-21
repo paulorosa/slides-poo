@@ -1,15 +1,15 @@
 <!SLIDE section center>
 # Tratamento de Exceções
-## Todos os slides copiados
-
 
 <!SLIDE>
 # Exemplo
-## 
 
 Classe: Universidade
+
 Método: void matricular (Aluno aluno, Curso curso)
+
 Este método matricula um aluno em um Curso da Universidade.
+
 Por exemplo, o aluno Paulo Rosa no Curso de BSI desta universidade.
 
 
@@ -17,11 +17,13 @@ Por exemplo, o aluno Paulo Rosa no Curso de BSI desta universidade.
 
 <!SLIDE>
 # Exemplo
-## 
 
 Classe: Universidade
+
 Método: void matricular (Aluno aluno, Curso curso)
+
 Este método matricula um aluno em um Curso da Universidade.
+
 Por exemplo, o aluno Paulo Rosa no Curso de BSI desta universidade.
 
 
@@ -31,24 +33,40 @@ Por exemplo, o aluno Paulo Rosa no Curso de BSI desta universidade.
 
 
 <!SLIDE>
-# Forma
+# Abordagem Retorno Booleano
 
-Uma forma de resolver o problema é retornar um boolean.
+Uma abordagem seria _alterar a assinatura do método para retornar um
+valor booleano_, sendo *true* quando a matrícula foi realizada com sucesso
+e *false* em caso contrário.
 
-* 
+Um trecho do tratamento do código poderia ficar da seguinte forma: 
+
     @@@ Java
-    if ( matricular(aluno, curso) ) {
-        System.out…(“Matricula não realizada”);
+    Faculdade faculdade = new Faculdade();
+    if ( faculdade.matricular (aluno, curso) ) {
+        System.out.println ("Matricula realizada com Sucesso!!!");
+    } else {
+        System.out.println ("Matricula não realizada!!!");
     }
 
-Problema: temos que lembrar de testar
+<!SLIDE>
+# Problema Abordagem Retorno Booleano
 
-Consequência: o aluno poderia pensar que sua matrícula foi feita, mas de fato não foi realizada.
+O problema desta abordagem é a possibilidade de apenas chamar o método sem realizar
+o tratamento da condicional. 
+
+    @@@ Java
+    Faculdade faculdade = new Faculdade();
+    faculdade.matricular (aluno, curso);
+    System.out.println ("Matricula realizada com Sucesso!!!");
+
+
+Neste caso, se não fosse possível realizar a matrícula, o resultado não seria identificado.
+
 
 
 <!SLIDE>
-#
-## 
+# Questão Abordagem Retorno Booleano
 
 Mesmo invocando o método da maneira correta, como indicaríamos o motivo pelo qual a matrícula não foi realizada?
 
@@ -56,20 +74,35 @@ Mesmo invocando o método da maneira correta, como indicaríamos o motivo pelo q
 
 
 <!SLIDE>
-#
-##
- 
-Mesmo invocando o método da maneira correta, como indicaríamos o motivo pelo qual a matrícula não foi realizada?
- 
-Uma solução seria retornar um código do erro.
+# Abordagem Retorno de Código
+
+Uma outra abordagem seria retornar um código para indicar o resultado da operação matricular.
 
     @@@ Java
-    int codigoErro = matricular(aluno, curso);
-    if ( codigoErro = -1 ) {
-        System.out…(“Matricula não realizada”);
+    Faculdade faculdade = new Faculdade();
+    int codigo = faculdade.matricular(aluno, curso);
+    if ( codigoErro == 0 ) {
+      System.out.println ("Matricula realizada com Sucesso!!!");
+    } else if ( codigoErro == -1 ) {
+      System.out…(“Matricula não realizada”);
     }
 
-Isso é uma má prática, conhecida como “magic numbers”. Só é legível de posse de uma documentação.
+
+<!SLIDE>
+# Problema Abordagem Retorno de Código
+
+O problema da abordagem baseada no tratamento do código é a necessidade
+de conhecer todos os tipos possíveis de códigos retornados.
+
+Além disso, uma quantidade grande de condicionais pode ser criado
+no caso de haver uma quantidade grande de códigos de retorno.
+
+Também fica complicado ter a cobertura de todos os códigos, ou seja,
+no caso de surgir um código de retorno novo, como garantir que o tratamento
+será realizado.
+
+Outro pronto, também importante, é a má prática conhecida como *Magic Numbers*.
+Só é legível de posse de uma documentação.
 
 
 
