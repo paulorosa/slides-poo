@@ -102,7 +102,13 @@ no caso de surgir um código de retorno novo, como garantir que o tratamento
 será realizado.
 
 Outro pronto, também importante, é a má prática conhecida como *Magic Numbers*.
-Só é legível de posse de uma documentação.
+Magic Numbers, ou números mágicos, são são números que aparecem no código cuja 
+semântica não é clara.
+
+
+
+<!SLIDE>
+# Remoção de Magic Numbers
 
 
 
