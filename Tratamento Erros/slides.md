@@ -113,8 +113,7 @@ semântica não é clara.
 
 
 <!SLIDE>
-#
-## 
+# Abordagem Tratamento de Erros
 
 Para resolver todos estes problemas de uma forma mais elegante, Java realiza estes tratamentos com exceções (ou exceptions).
 
@@ -125,55 +124,59 @@ Ou seja, uma forma de tratar casos onde acontece algo que fugiu do normal, que n
 
 <!SLIDE>
 # Exceções
-## 
-Uma exceção (ou exception) é um sinal que indica que algum tipo de condição excepcional ocorreu durante a execução do programa.
+
+
+Uma exceção é um evento que ocorre durante a execução de um programa em que 
+ocorre uma interrupção do fluxo normal das instruções de um programa.
+
+
+Uma exceção (ou exception) é um sinal que indica que algum tipo de 
+condição excepcional ocorreu durante a execução do programa.
 
 
 
 <!SLIDE>
 # Exceções
-## 
 
 Assim, exceções estão associadas a condições de erro que não tinham como serem verificadas durante a compilação do programa.
 
 
 
-
 <!SLIDE>
 # Sintaxe
-## 
+
 
     @@@ Java
     try {
         // código com comandos que podem gerar uma exceção.
-} catch ( Exception e) {
-  // código para o tratamento da exceção associada e.
-} catch ( ...Exception .) {
-  // código para o tratamento da exceção.
-} finally {
-  // bloco de código que sempre será executado.
-}
+    } catch ( Exception e) {
+        // código para o tratamento da exceção associada e.
+    } catch ( ...Exception .) {
+        // código para o tratamento da exceção.
+    } finally {
+        // bloco de código que sempre será executado.
+    }
 
 
 
 <!SLIDE>
-#
-## 
+# Atividades de Tratamento de Erros
 
 As atividades relacionadas à manipulação de exceções são:
 
-Geração
+* _Geração_
+
 Sinalização de que uma condição excepcional (por exemplo, um erro) ocorreu
 
-Captura
+* _Captura_
+
 A manipulação (tratamento) da situação excepcional onde as ações necessárias para a recuperação da situação de erro são definidas.
 
 
 
 
 <!SLIDE>
-#
-## 
+# Exception Handler
 
 Para toda a exceção que pode ocorrer durante a execução de um código, um bloco de ações de tratamento deve ser especificados.
 
@@ -183,8 +186,7 @@ As ações de tratamento são conhecidas como Exception Handler.
 
 
 <!SLIDE>
-#
-## 
+# checked exceptions
 
 O compilador Java verifica e força que toda exceção não-trivial tenha um bloco de tratamento associado.
 
@@ -197,7 +199,6 @@ As exceções deste tipo são chamadas:
 
 <!SLIDE>
 # Exemplo
-## 
 
     @@@ Java
     try {
@@ -213,20 +214,18 @@ As exceções deste tipo são chamadas:
 <!SLIDE>
 # Hierarquia de Exceções em Java
 
-Colocar imagem com a hierarquia
-
 
 
 
 <!SLIDE>
 # Alguns Exemplos de Erros
-## 
 
-NullPointerException
-ArrayIndexOutOfBoundsException
-ArithmeticException
+* NullPointerException
+* ArrayIndexOutOfBoundsException
+* ArithmeticException
 
 Estes são problemas que poderiam ser evitados pelo programador.
+
 Por este motivo, Java criou as Exceções não checadas (ou unchecked), não é necessário colocar try / catch.
 
 
@@ -243,12 +242,12 @@ Quando temos exceções do tipo checked, quem chama o método ou o construtor qu
 
 
 <!SLIDE>
-#
-## 
+# Bloco Try / Catch
 
-* 
+
 Há duas maneiras para fazer funcionar:
-tratar com try / cath
+
+* tratar com try / cath
 
     @@@ Java
     try {
@@ -256,27 +255,31 @@ tratar com try / cath
     } catch (java.io.FileNotFoundException e) {
         System.out.println("Nao foi possível abrir o arquivo para leitura");
   	}
-delegar para quem chamou, a exceção
-public static void metodo() throws java.io.FileNotFoundException {
+
+* delegar para quem chamou, a exceção
+
+    @@@ Java
+    public static void metodo() throws java.io.FileNotFoundException {
     	new java.io.FileInputStream("arquivo.txt");
-}
+    }
 
 
 
 <!SLIDE>
 # Classes de Exceção Customizadas
-## 
 
 * É possível criar as próprias classes de exceção.
+
 * Para criar uma nova exceção deve-se estender a classe Exception ou uma de suas subclasses.
+
 * Uma classe de exceção é uma classe normal e, portanto, pode ter métodos e atributos.
 
   
   
 
 <!SLIDE>
-# Exemplo
-## 
+# Exemplo Classe Customizada
+
 
     @@@ Java
     public class ArquivoMuitoGrandeException extends Exception {
@@ -295,8 +298,8 @@ Para gerar uma condição de erro durante a execução de um método e lançar u
 
 
 <!SLIDE>
-# Exemplo
-## 
+# Exemplo Condição de Exceção
+
 Lançar a execção criada
 
     @@@ Java
@@ -305,16 +308,15 @@ Lançar a execção criada
 
 <!SLIDE>
 # Bloco Finaly
-## 
 
+* O bloco finaly é opcional e quando presente é sempre executado.
 
-* O bloco finally é opcional e quando presente é sempre executado.
 * Em geral, é utilizado para a liberação de recursos independentemente se ocorreu uma exceção ou não.
 
 
 
 <!SLIDE>
-# Exemplo
+# Exemplo Bloco Finaly
 
 
     @@@ Java
@@ -322,43 +324,25 @@ Lançar a execção criada
 
 
 <!SLIDE>
-# Documentos para Estaudo
-## 
+# Referências para Estudo
 
 Exceções e controle de erros
+
 https://www.caelum.com.br/apostila-java-orientacao-objetos/excecoes-e-controle-de-erros/
 
 
 
 
 
-<!SLIDE>
-# O que é uma Exceção? 
-Uma exceção é um evento que ocorre durante a execução de um programa em que ocorre uma interrupção do fluxo normal das instruções de um programa.
 
 
 
-
-
-<!SLIDE>
-# Sintaxe de Exceção
-
-    @@@ Java
-    try {
-        //
-    } catch (AnyException e) {
-        //
-    } catch (AnotherException e) {
-        //
-    } finally {
-        // código executado sempre
-    }
 
 
 
 <!SLIDE>
 # Vantagens
-## 
+
 * Separação do código principal do programa do código de tratamento de erro.
 * Progagação de erros
 * Tratamento para diferentes tipos de exeções.
@@ -369,9 +353,7 @@ Uma exceção é um evento que ocorre durante a execução de um programa em que
 <!SLIDE>
 # Hierarquia de Exceções em Java
 
-## 
 
-colocar imagem
 
 
 <!SLIDE>
@@ -449,6 +431,7 @@ colocar imagem
 
 <!SLIDE>
 # Quando capturar uma exceção?
+
 * Quando você puder manipulá-la
 * Quando você quiser lançar outro tipo de exceção.
 
@@ -500,22 +483,8 @@ colocar imagem
 
     @@@ Java
     try {
-    // código que lança a exeção AnyException
-} catch ( AnyException e) {
-    throw new AnotherException (e);
-}
+      // código que lança a exeção AnyException
+    } catch ( AnyException e) {
+      throw new AnotherException (e);
+    }
 
-
-    
-    
-
-    @@@ Java
-    try {
-    // código que lança a exeção AnyException
-} catch ( AnyException e) {
-    throw new AnotherException (“mesagem”, e);
-}
-
-
-    
-    

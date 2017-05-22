@@ -27,7 +27,6 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=2
-FILE_NAME_0=2463;JSON;0;EUTF-8;1;1;0;%2Froot%2Fslides-poo%2Fshowoff.json;0;4
-FILE_NAME_1=3567;Markdown;0;EUTF-8;1;1;0;%2Froot%2Fslides-poo%2FTratamento%20Erros%2Fslides.md;0;4
-FILE_NAME_2=2430;Markdown;0;EUTF-8;1;1;0;%2Froot%2Fslides-poo%2FEstáticos%2Fslides.md;0;4
+current_page=1
+FILE_NAME_0=946;JSON;0;EUTF-8;1;1;0;%2Froot%2Fslides-poo%2Fshowoff.json;0;4
+FILE_NAME_1=0;Markdown;0;EUTF-8;1;1;0;%2Froot%2Fslides-poo%2FTratamento%20Erros%2Fslides.md;0;4

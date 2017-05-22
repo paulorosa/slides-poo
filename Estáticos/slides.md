@@ -33,6 +33,11 @@ e quando aplicados para **Classes**, temos:
 * _atributos de classe_ ou _atributos estáticos_
 * _métodos de classe_ ou _métodos estáticos_
 
+
+
+<!SLIDE>
+# Métodos e Atributos em Classes e Objetos
+
 Em resumo:
 
 * Métodos e Atributos Estáticos operam em classes.
@@ -86,45 +91,66 @@ A classe abaixo possui atributo de classe (_pi_) e método de classe (_area()_).
       private static double pi = 3.14;
 
       public static double area (double raio) {
-        return pi * raio * raio;
+        return Circulo.pi * raio * raio;
       }
     }
     
 Neste caso, não é necessário instância da classe para acessar um método, pois 
-estamos tratando com classes e não com instâncias. Portanto, o acesso é realizado
-diretamente pela classe.
+estamos tratando com classes e não com instâncias. Portanto, o _acesso é realizado
+diretamente pela classe_.
      
     @@@ Java
     double areaCirculo = Circulo.area(4);
 
+
+<!SLIDE>
+# Exemplos da Biblioteca Java
+
+Na biblioteca de classes do Java, disponibilizadas no JDK, há uma série de
+exemplos de métodos e classes estáticas.
+
+A classe java.lang.Integer possui, entre outros:
+
+O _método estático_ **parseInt()**, que transforma uma String em um 
+número inteiro.
+
+    @@@ Java
+    public static int parseInt(String s)
+
+
+O _atributo estático_ **MAX_VALUE**, que representa o máximo valor que um 
+número inteiro pode ter.
+
+    @@@ Java
+    static int	MAX_VALUE
+
+
+
+<!SLIDE>
+# Método Main do Java
+
+O método **main** é um _método estático_ como outro qualquer, contudo ele é
+utilizado como ponto de partida de um programa Java. A assinatura do método deve ser 
+_public static void main (String [] args)_
     
+A classe A possui o método estático main, que pode ter qualquer código,
+inclusive instanciar uma outra classe B. 
 
+    @@@ Java
+    public class A {
+      // Lista de atributos e métodos de instância
+      
+      public static void main (String [] args) {
+          B b = new B ();
+          b.c();
+      }
+    }
 
+Para executar o programa em Java, deve-se chamar a máquina virtual passando o
+nome da classe, que deve conter o método estático main.
 
-
-
-
-
-
-<!SLIDE>
-# Atributo Estático
-
-<!SLIDE>
-# Método Estático
-
-<!SLIDE>
-# Método de Classe
-
-
-
-    @@@Java
-    double x = Math.pow (3, 2);
-
-    int [ ] array = new int[10];
-    Arrays.sort (array);
-
-    String x = String.valueOf (123);
-
+    @@@ Console
+    java A
 
 
 <!SLIDE>
@@ -133,22 +159,45 @@ diretamente pela classe.
 Métodos estáticos não podem acessar atributos de objeto, pois estes são relativos a uma instância da classe, que não existe neste contexto.
 
 
+<!SLIDE>
+# Quando usar?
+
+Um atributo ou método estático é aquele que não requer uma instância para ser utilizado.
+
+Isso quer dizer que um método estático pode ser executado livremente sem a necessidade de instanciação de um objeto. 
+
+Entretanto, devido à sua forte ligação com a classe (uma vez que é declarado no escopo dela) 
+isso quer dizer que seu uso requer a menção à essa sua origem, 
+e por isso a classe serve como forma de organização de funções de uso mais geral.
+
 
 <!SLIDE>
-# Método Main do Java
+# Quando usar?
 
-O método **main** é um _método estático especial_, usado como ponto de partida de um programa Java.
+A criação de atributos ou métodosestáticos é interessante quando se deseja que sejam de livre utilização, 
+mas bem identificados por um contexto representado pela classe.
+
+Exemplos clássicos são as funções matemáticas como seno, cosseno, raíz quadrada, etc. 
+
+Muitas linguagens implementam essas funções de forma estática em uma classe específica 
+para elementos matemáticos, permitindo fazer, por exemplo:
 
     @@@ Java
-    public class X {
-      private String x;
-      
-      public static void main (String [] args) {
-          X x = new X ();
-          x.x();
-      }
-    }
-    
-O array de strings é a lista de argumentos da linha de comando;
+   float valor = Math.sin(Math.PI);
+   
+O método para o cálculo do seno (Math.sin) é geral porque calcula 
+o valor do seno dado apenas o ângulo em radianos recebido como parâmetro. 
+Por isso, não requer uma instância de objeto e faz sentido ser criado de forma estática. 
 
-Pode-se declarar métodos main em qualquer classe.
+Sua inclusão na classe de matemática (Math) juntamente com outros métodos e atributos contantes
+ (como o Math.PI) permite organizar essas implementações em um mesmo contexto significativo (isto é, de matemática) 
+ para o desenvolvedor que for utilizá-las.
+
+
+<!SLIDE>
+# Quando usar?
+
+Por outro lado, se essa implementação pode vir a fazer uso de estados ou informações previamente processados 
+ou pode ela mesmo produzir algo que persista para execuções futuras, 
+parece natural que uma instância seja necessária para no mínimo armazenar essas informações e estados.
+
