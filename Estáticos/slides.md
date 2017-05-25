@@ -41,7 +41,7 @@ e quando aplicados para **Classes**, temos:
 Em resumo:
 
 * Métodos e Atributos Estáticos operam em classes.
-* Métodos e Atributos de Instância operam em classes.
+* Métodos e Atributos de Instância operam em objetos	.
 
 
 <!SLIDE>
