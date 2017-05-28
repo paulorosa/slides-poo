@@ -891,38 +891,3 @@ São fundos que têm, no mínimo, 67% dos seus recursos aplicados em ações neg
 <tr><td>-</td><td>-</td></tr>
 </table>
 
-
-
-
-
-~~~SECTION:notes~~~
-
-exercício na sala de aula com hierarquia de funcionários.
-
-~~~ENDSECTION~~~
-
-
-~~~SECTION:notes~~~
-# Objetivos do Módulo
-
-Os objetivos para este módulo sobre Poliformismo são
-
-* compreender os conceitos herança e polimorfismo
-
-* saber quando utilizar
-
-* reutilizar código
-
-* criar classes filhas e reescrever métodos
-
-.callout.error Terminar este slide após finalizar tudo sobre poliformfismo.
-
-Pendências:
-
-* criar ADO sobre polimorfismo
-* criar lista de exercícios sobre polimorfismo
-* criar avaliação nos slides
-
-The Way of St. James (Camino de Santiago). Compostela | Documentary Part 1
-~~~ENDSECTION~~~
-

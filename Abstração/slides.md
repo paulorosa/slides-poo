@@ -322,8 +322,6 @@ Errado
 <!SLIDE>
 # Classes final
 
-
-
 * Não podem ser estendidas por uma subclasse
 
 * Todos os métodos em um classe final são implicitamente final.
@@ -332,18 +330,18 @@ Errado
 <!SLIDE>
 # Classes final
 
-    @@@Java
+    @@@ Java
     public final class Moto extends Veiculo {
-….
-}
+       // ...
+    }
 
 
 Errado
 
-    @@@Java
+    @@@ Java
     public final class Triciclo extends Moto {
-….
-}
+        // ...
+    }
 
 
 
