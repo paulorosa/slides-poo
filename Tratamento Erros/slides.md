@@ -212,7 +212,84 @@ As exceções deste tipo são chamadas:
 
 
 <!SLIDE>
-# Hierarquia de Exceções em Java
+# Hierarquia de Classes de Exceções
+
+Em Java, as exceções são representadas em uma hierarquia de classes.
+
+![.fancyborder](_images/hierarquia-exception.png)
+
+
+<!SLIDE>
+# Tipos de Exceções
+
+Para cada tipo de exceção existe uma interpretação especial feita pelo compilador que se reflete na forma como o programador tem que lidar com elas.  
+
+<table>
+  <tr><th> Exceção </th><th> Classe </th>/<tr>
+  <tr><td> Erro </td><td> Error</td>/<tr>
+  <tr><td> Falha </td><td> RuntimeException</td>/<tr>
+  <tr><td> Exceção de Contingência </td><td> Exception </td>/<tr>
+</table>
+
+
+A hierarquia de exceções em Java não tem como objetivo criar implementações ligeiramente diferentes da mesma coisa 
+e sim diferenciar categorias diferentes de exceções. 
+
+
+
+<!SLIDE>
+# Erros
+
+São exceções em que a aplicação não tem como resolver o problema. São erros todas as classes que descendem diretamente de Error.
+
+Neste tipo de exceção, é importante que os erros sejam reportados e que se saiba que aconteceram, 
+mas o programa não tem o que fazer para resolver o problema que eles apontam. 
+
+Erros indicam que alguma coisa está realmente muito errada no funcionamento do código ou no ambiente de execução. 
+
+Exemplos de erros:
+
+ * _OutOfMemoryError_: lançada quando o programa precisa de mais memória mas ela não está disponível
+ 
+ * _StackOverflowError_: lançada quando a pilha estoura (exemplo, quando um método se chama a si mesmo sem nunca retornar)
+
+
+
+
+<!SLIDE>
+# Falhas
+
+São exceções que a aplicação causa e _pode_ resolver, mas _não é obrigada_ a fazê-lo. 
+Se a aplicação nunca apanhar este tipo de exceção, tudo bem, a JVM irá capturá-la, mas provavelmente a aplicação não mais funcionará corretamente. 
+
+São falhas todas as classes que descendem diretamente de _RuntimeException_.
+
+Exemplos de falhas:
+
+* _IllegalArgumentException_: lançada quando se passa um parâmetro para um método e o método não o pode usar
+
+* _NullPointerException_: lançada sempre que tentar invocar um método em uma variável de objeto não inicializada (null).
+
+
+
+
+<!SLIDE>
+# Exceções de Contingência
+
+São aquelas que a aplicação pode causar ou não, mas que tem que tratar explicitamente. 
+
+Exceções de Contingência são todas aquelas que descendem diretamente de _Exception_ exceto as que descendem de RuntimeException.
+
+As exceções de contingência se chamam assim porque freqüentemente representam exceções para as quais o programa deve ter um plano de contingência. 
+
+Devido ao nome sugestivo é comum confundir o conceito de exceção com a própria classe Exception. 
+
+Exemplos de exceção de contigência:
+
+* _FileNotFoundException_:  significa que o arquivo que estamos tentando ler, não existe. 
+Isto é uma exceção no sentido que o programa espera que o arquivo exista, contudo, se ele não existir o 
+programa deve ter um plano B.
+
 
 
 
@@ -487,4 +564,19 @@ https://www.caelum.com.br/apostila-java-orientacao-objetos/excecoes-e-controle-d
     } catch ( AnyException e) {
       throw new AnotherException (e);
     }
+
+
+
+
+~~~SECTION:notes~~~
+
+Referências:
+ * http://www.javabuilding.com/academy/java-language/excecoes-conceitos.html
+ * https://pt.slideshare.net/elainececiliagatto/lpii-tratamento-de-erros
+ * https://pt.slideshare.net/leofreitas/exceptions-em-java-uff
+ * 
+ 
+~~~ENDSECTION~~~
+
+
 

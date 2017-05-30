@@ -3,19 +3,20 @@
 
 <!SLIDE>
 # Importância
-É importante pois objetos não inicializados são uma fonte grande de bugs.
+É importante pois _objetos não inicializados_ são uma _fonte grande de bugs_.
 
 <!SLIDE>
 # Mecanismos da Linguagem
-Os mecanismos da linguagem Java ajudam a assegurar uma correta inicialização dos objetos.
+Os mecanismos de uma linguagem orientada a objetos ajudam a assegurar uma _correta inicialização dos objetos_.
 
-Com o uso correto destes mecanismos é possível criar objetos com valores de seu estado inicial válido.
+Com o uso correto destes mecanismos é possível criar objetos com um _estado inicial válido_.
 
 
 <!SLIDE>
 # Mecanismo de Inicialização
 
-Java tem 3 mecanismos:
+A linguagem Java possui alguns mecanismos para a inicialização de objetos:
+
 * Construtores
 * Inicializadores de variável de Instância
 * Blocos de Inicializadores de Instância
@@ -24,7 +25,7 @@ Todos estes mecanismos são executados automaticamente quando um objeto é criad
 
 
 <!SLIDE>
-# Inicialização com Construtores
+# Inicialização no Construtor
 
     @@@ Java
     class Cafeteira {
@@ -39,7 +40,7 @@ Todos estes mecanismos são executados automaticamente quando um objeto é criad
 
 
 <!SLIDE>
-# Inicializadores de Variável de Instância
+# Inicialização com Variável de Instância
 
     @@@ Java
     class Cafeteira {
@@ -49,7 +50,7 @@ Todos estes mecanismos são executados automaticamente quando um objeto é criad
 
 
 <!SLIDE>
-# Bloco de Inicializadores de Instância
+# Inicialização com Bloco
 
     @@@ Java
     class Cafeteira {
@@ -64,33 +65,23 @@ Todos estes mecanismos são executados automaticamente quando um objeto é criad
     
 
 <!SLIDE>
-# Valores Iniciais Padrões (default)
-Se nenhuma inicialização explícita de variáveis de instância for realizada, serão atribuídos valores iniciais padrões previsíveis, baseados no tipo da variável.
+# Valores Iniciais Padrões
+Se nenhuma inicialização explícita de variáveis de instância for realizada, 
+serão atribuídos valores iniciais padrões previsíveis, baseados no tipo da variável.
 
- Tipo
-Valor Padrão
-boolean
-false
-byte
-(byte) 0
-short
-(short) 0
-int
-0
-long
-0L
-
-
- Tipo
-Valor Padrão
-char
-\u0000
-float
-0.0f
-double
-0.0d
-Object Reference
-null
+<table>
+  <tr><th> Tipo </th><th> Valor Padrão </th></tr>
+  <tr><td> boolean </td><td> false </td></tr>
+  <tr><td> byte </td><td> 0 </td></tr>
+  <tr><td> short </td><td> 0 </td></tr>
+  <tr><td> int </td><td> 0 </td></tr>
+  <tr><td> long </td><td> 0 </td></tr>
+  <tr><td> float </td><td> 0.0 </td></tr>
+  <tr><td> double</td><td> 0.0 </td></tr>
+  <tr><td> char </td><td> \u0000 </td></tr>
+  <tr><td> Instância de Classe</td><td> null </td></tr>
+</table>
+  
 
 
 

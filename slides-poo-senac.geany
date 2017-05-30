@@ -27,5 +27,10 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=0
-FILE_NAME_0=834;JSON;0;EUTF-8;1;1;0;%2Froot%2Fslides-poo%2Fshowoff.json;0;4
+current_page=3
+FILE_NAME_0=1744;JSON;0;EUTF-8;1;1;0;%2Froot%2Fslides-poo%2Fshowoff.json;0;4
+FILE_NAME_1=0;Markdown;0;EUTF-8;1;1;0;%2Froot%2Fslides-poo%2FInicialização%2Fslides.md;0;4
+FILE_NAME_2=0;Markdown;0;EUTF-8;1;1;0;%2Froot%2Fslides-poo%2FPadrões%20de%20Projeto%2Fslides.md;0;4
+FILE_NAME_3=5236;Markdown;0;EUTF-8;1;1;0;%2Froot%2Fslides-poo%2FTratamento%20Erros%2Fslides.md;0;4
+FILE_NAME_4=25829;Markdown;0;EUTF-8;1;1;0;%2Froot%2Fslides-poo%2FHerança%2Fslides.md;0;4
+FILE_NAME_5=1796;Markdown;0;EUTF-8;1;1;0;%2Froot%2Fslides-poo%2FCompilador%2Fslides.md;0;4
