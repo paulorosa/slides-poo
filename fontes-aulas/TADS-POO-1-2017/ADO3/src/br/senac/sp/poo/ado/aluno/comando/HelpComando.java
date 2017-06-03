@@ -2,7 +2,9 @@ package br.senac.sp.poo.ado.aluno.comando;
 
 public class HelpComando implements Comando{
 
-	public void executa () {
-		//
+	@Override
+	public void executar() {
+		// TODO Auto-generated method stub
+		
 	}
 }

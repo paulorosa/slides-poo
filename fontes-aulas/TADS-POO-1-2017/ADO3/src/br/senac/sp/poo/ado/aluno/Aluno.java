@@ -1,20 +1,11 @@
 package br.senac.sp.poo.ado.aluno;
 
 public class Aluno {
-
-	private Integer matricula;
 	private String nome;
+	private Integer matricula;
 
-	public Aluno(Integer matricula, String nome) {
-		this.matricula = matricula;
+	public Aluno(String nome, Integer matricula) {
 		this.nome = nome;
-	}
-
-	public Integer getMatricula() {
-		return matricula;
-	}
-
-	public void setMatricula(Integer matricula) {
 		this.matricula = matricula;
 	}
 
@@ -24,6 +15,14 @@ public class Aluno {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public Integer getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(Integer matricula) {
+		this.matricula = matricula;
 	}
 
 }

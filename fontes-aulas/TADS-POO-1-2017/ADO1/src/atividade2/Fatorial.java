@@ -1,6 +1,6 @@
 package atividade2;
-public class Fatorial extends SequenciaNumerica {
 
+public class Fatorial extends SequenciaNumerica {
 	private int posicao;
 
 	public Fatorial() {
@@ -9,13 +9,8 @@ public class Fatorial extends SequenciaNumerica {
 	}
 
 	public void proximoValor() {
-		// Posicao = 3
 		posicao = posicao + 1;
-		// posicao = 3 + 1 = 4
-
-		// 3! = 6
 		valorAtual = valorAtual * posicao;
-		// 4! = 3! * 4
 	}
 
 	public static void main(String[] args) {

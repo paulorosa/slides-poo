@@ -1,26 +1,33 @@
 package br.senac.sp.poo.ado.aluno;
 
-import java.util.ArrayList;
+import java.util.Collection;
 
 public class Faculdade {
 
-	private AlunoDAO alunoDao;
-	
-	public Faculdade(AlunoDAO alunoDao) {
+	private AlunoDao alunoDao;
+
+	public Faculdade(AlunoDao alunoDao) {
 		this.alunoDao = alunoDao;
 	}
 
-	public Aluno consultar (Integer matricula) {
-		return null;
+	public void matricular(Aluno aluno) {
+		alunoDao.create(aluno);
 	}
-	
-	public void matricular (Aluno aluno) {
-		alunoDao.criar(aluno);
+
+	public Aluno consultarAluno(Integer matricula) {
+		return alunoDao.read(matricula);
 	}
-	
-	public ArrayList<Aluno> listarTodosAlunos () {
-		return alunoDao.listarTodosAlunos();
+
+	public Collection<Aluno> listarTodosAlunos() {
+		return alunoDao.findAll();
 	}
-	
-	// ...
+
+	public void atualizarDadosAluno(Aluno aluno) {
+		alunoDao.update(aluno);
+	}
+
+	public void removerMatricula(Integer matricula) {
+		alunoDao.delete(matricula);
+	}
+
 }

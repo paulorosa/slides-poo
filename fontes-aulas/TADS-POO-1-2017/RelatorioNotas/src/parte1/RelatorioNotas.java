@@ -1,24 +1,32 @@
 package parte1;
 
-import java.io.FileReader;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 
 public class RelatorioNotas {
 
 	public void calcularMedia(String filename) throws Exception {
-		int quantidade = 0;
 		int soma = 0;
+		int quantidade = 0;
 
-		Scanner scanner = new Scanner(new FileReader(filename))
-				.useDelimiter("\\t|\\n");
-		while (scanner.hasNext()) {
-			String nome = scanner.next();
-			int nota = scanner.nextInt();
+		FileInputStream stream = new FileInputStream(filename);
+		InputStreamReader reader = new InputStreamReader(stream);
+		BufferedReader br = new BufferedReader(reader);
+		String linha = br.readLine();
+		while (linha != null) {
+			String nome = linha.substring(0, linha.indexOf('\t'));
+			String nota = linha.substring(linha.lastIndexOf('\t') + 1, linha.length());
 
-			soma += nota;
 			quantidade++;
+			soma += Integer.parseInt(nota);
+
+			// System.out.println(nome + " " + nota);
+			linha = br.readLine();
 		}
-		System.out.println("Media: " + soma / quantidade);
+		br.close();
+
+		System.out.println(soma + " " + quantidade);
 	}
 
 	public static void main(String[] args) throws Exception {
@@ -27,4 +35,5 @@ public class RelatorioNotas {
 		RelatorioNotas relatorioNotas = new RelatorioNotas();
 		relatorioNotas.calcularMedia(filename);
 	}
+
 }
