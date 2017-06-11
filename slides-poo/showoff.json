@@ -1,0 +1,90 @@
+{
+    "name": "POO - Senac",
+    "author": "Paulo Rosa",
+    "highlight": "agate",
+
+    "sections": [
+    
+        {"section": "AULA 01"},
+        {"section": "Estrutura do Curso"},
+        {"section": "Compilador"},
+        {"section": "Paradigmas de Programação"},
+        {"section": "Java"},
+        
+        {"section": "AULA 02"},
+        {"section": "Paradigma POO"},
+        {"section": "Classes e Objetos"},
+
+        {"section": "AULA 03"},
+        {"section": "Nomenclatura"},
+        {"section": "Herança"},
+
+        {"section": "AULA 04"},
+        {"section": "Modificadores"},
+        {"section": "UML"},
+
+        {"section": "AULA 05"},
+        {"section": "Polimorfismo"},
+        
+        {"section": "*AULA 06"},
+        {"section": "Abstração"},
+
+        {"section": "*AULA 07"},
+        {"section": "Pacotes"},
+        {"section": "*Exercícios"},
+        
+        {"section": "*AULA 08"},
+        {"section": "***Prova P1"},
+        
+        {"section": "*AULA 09"},
+        {"section": "Associação"},
+        {"section": "Coleções"},
+
+        {"section": "*AULA 10"},
+        {"section": "Atividades/relatorio_notas"},
+
+        {"section": "*AULA 11"},
+        {"section": "*FERIADO*"},
+
+        {"section": "*AULA 12"},
+        {"section": "***Atividades/relatorio_notas"},
+        
+        {"section": "*AULA 13"},
+        {"section": "Interface"},
+        {"section": "Acoplamento e Coesão"},
+
+        {"section": "*AULA 14"},
+        {"section": "Tratamento Erros"},
+        {"section": "Estáticos"},
+
+        {"section": "*AULA 15"},
+        {"section": "Inicialização"},
+        {"section": "Vinculação Dinâmica"},
+        {"section": "***Teste de Software"},
+
+        {"section": "Padrões de Projeto"},
+
+        {"section": "*AULA 16"},
+        {"section": "*Revisão*"},
+        {"section": "*Exercícios*"},
+        
+        {"section": "*AULA 17"},
+        {"section": "***Prova P2***"},
+
+        {"section": "*AULA 18"},
+        {"section": "***Prova Substitutiva*** (X)"},
+         
+        {"section": "*Referências"},
+
+        {"section": "Atividades/hierarquia_produtos.md"},
+        {"section": "Atividades/hierarquia_produtos_solucao.md"},
+        {"section": "Atividades/heranca_pessoa_fisica_juridica.md"},
+        
+        {"section": "ADO/slides.md"},
+        {"section": "ADO/ado1.md"},
+        {"section": "ADO/ado2.md"},
+        {"section": "ADO/ado3.md"},
+        {"section": "ADO/ado4.md"}
+        
+    ]
+}

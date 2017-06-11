@@ -1,0 +1,42 @@
+
+public class ProgressaoAritmetica {
+
+    private int valorAtual;
+    
+    public ProgressaoAritmetica (int valorInicial) {
+        this.valorAtual = valorInicial;
+    }
+
+    public int valorAtual () {
+        return this.valorAtual;
+    }
+    public void proximoValor () {
+        this.valorAtual = this.valorAtual + 1;
+    }
+}
+
+
+public class ProgramaPrincipal {
+
+
+    public static void main (String[] args) {
+		int valorInicial = 5;
+		int razao = 3;
+		
+        ProgressaoAritmetica pa = new ProgressaoAritmetica(valorInicial, razao);
+        
+        for (int i=0; i<10; i++) {
+            System.out.print (pa.valorAtual() + " ");
+            pa.proximoValor();
+        }
+    }
+        
+}
+
+
+
+
+<!SLIDE>
+
+* incluir exercício/exemplo com a classe de sequencia númérica.
+
